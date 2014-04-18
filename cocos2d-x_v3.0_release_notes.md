@@ -31,10 +31,10 @@
 			- [自动剔除](#auto-culling)
 			- [全局Z轴](#global-z-order)
 		- [Sprite和SpriteBatchNode](#sprite-vs-spritebatchnode)
-	- [提升 LabelTTF / LabelBMFont / LabelAtlas](#improved-labelttf--labelbmfont--labelatlas)
+	- [优化 LabelTTF / LabelBMFont / LabelAtlas](#improved-labelttf--labelbmfont--labelatlas)
 	- [新的事件分发机制](#new-eventdispatcher)
 	- [物理引擎集成](#physics-integration)
-- [其他API修改](#misc-api-changes)
+- [其他API变更](#misc-api-changes)
 	- [ccTypes.h](#cctypesh)
 	- [弃用的函数和全局变量](#deprecated-functions-and--global-variables)
 - [Lua绑定的修改](#changes-in-the-lua-bindings)
@@ -468,45 +468,45 @@ __总结__:
 - 使用相同的着色器（使用默认）
 - 不要将精灵添加到 `SpriteBatchNode`
 
-只有当你需要一些额外的性能上提升（虽然很小），`SpriteBatchNode` 才是你最后的选择（你需要对它的限制条件很熟悉）。
+只有当你需要一些额外的性能上提升（虽然很小），`SpriteBatchNode` 才会是你最后的选择（你需要对它的限制条件很熟悉）。
 
 
-## Improved LabelTTF / LabelBMFont / LabelAtlas
+## 优化 LabelTTF / LabelBMFont / LabelAtlas
 
-_Feature added in v3.0-alpha0_
+_这些特性从 v3.0-alpha0 开始被添加_
 
-`LabelTTF`, `LabelBMFont` and `LabelAtlas` will be replaced by new `Label`. The benefits of new `Label` are:
+`LabelTTF`, `LabelBMFont` 和 `LabelAtlas` 将会被新的 `Label` 代替. 新的 `Label` 带来的好处有:
 
-* uniform api to create `LabelTTF`, `LabelBMFont` and `LabelAtlas`
-* use `freetype` to generate texture for labels, which make sure that labels have the same effect on different platforms
-* will cache textures to improve performance
+* 统一了创建 `LabelTTF`, `LabelBMFont` 和 `LabelAtlas` 的 API
+* 使用 `freetype` 生成 labels 的纹理，这样就能保证在不同的平台下 labels 有相同的效果。
+* 缓存纹理以提高性能
 
-## New EventDispatcher
+## 新的事件分发机制
 
-_Feature added in v3.0-alpha0_
+_这些特性从 v3.0-alpha0 开始被添加_
 
-All events such as touch event, keyboard event, acceleration event and custom event are dispatched by `EventDispatcher`.
-`TouchDispatcher`, `KeypadDispatcher`, `KeyboardDispatcher`, `AccelerometerDispatcher` were removed.
+触摸事件，键盘事件，加速器事件和自定义事件等所有事件都由 `EventDispatcher` 分发。
+`TouchDispatcher`, `KeypadDispatcher`, `KeyboardDispatcher`, `AccelerometerDispatcher` 已经被移除。
 
-Features of `EventDispatcher` are:
+`EventDispatcher` 的特性主要有:
 
-* dispatch events based on rendering sequence
-* all events are dispatched by `EventDispatcher`
-* can use `EventDispatcher` to dispatch custom events
-* can register a lambda as call back function
+* 事件的分发基于渲染顺序
+* 所有的事件都由 `EventDispatcher` 分发
+* 可以使用 `EventDispatcher` 来分发自定义事件
+* 可以注册一个 lambda 表达式作为回调函数
 
-Detail information of `EventDispatcher` can refer to [this document](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/input/event-dispatcher/en.md).
+更多 `EventDispatcher` 细节可以参考 [this document](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/input/event-dispatcher/en.md)。
 
-## Physics Integration
+## 物理引擎集成
 
-_Feature added in v3.0-pre-alpha0_
+_这些特性从 v3.0-pre-alpha0 开始被添加_
 
-In v3.0, we integrate physics engine into cocos2d-x based on [Chipmunk2D](https://chipmunk-physics.net/). By using this feature, you can create physics based games without understanding physics engine.
+在 v3.0 中，我们把基于 [Chipmunk2D](https://chipmunk-physics.net/) 的物理引擎集成到 Cocos2d-x 中，通过这些特性，你可以很容易创建基于物理效果的游戏，而不必去理解物理引擎。
 
-More detail information of this feature, please refer to [this document](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/physics/physics-integration/en.md)
+更的关于物理引擎集成的细节可以参考 [this document](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/physics/physics-integration/en.md)。
 
 
-# Misc API Changes
+# 其他 API 变更
 
 ## `ccTypes.h`
 
