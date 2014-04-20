@@ -41,7 +41,7 @@
 	- [使用Lua绑定生成工具](#use-bindings-generator-tool-for-lua-binding)
 		- [绑定带命名空间的类到lua](#bind-the-classes-with-namespace-to-lua)
 		- [使用ScriptHandlerMgr来管理注册和注销lua函数](#use-scripthandlermgr-to-manage-the-register-and-unregister-of-lua-function)
-	- [其余API修改](#misc-api-changes-1)
+	- [其它API修改](#misc-api-changes-1)
 		- [使用cc、ccs、ccui、gl和sp作为模块名](#use-ccccsccui-gl-and-sp-as-module-name)
 		- [修改函数](#modified-functions)
 		- [增加一些模块](#add-some-modules)
@@ -510,7 +510,7 @@ _这些特性从 v3.0-pre-alpha0 开始被添加_
 
 ## `ccTypes.h`
 
-Remove *cc* prefix for structure names in ccTypes.h, move global functions into static member functions, and move global constants into const static member variables.
+在 ccType.h 中删除结构命名中的 *cc* 前缀，将全局函数移至静态成员函数，将全局常量移至静态成员常量。
 
 	| v2.1 struct names       | v3.0 struct names |
 	| ccColor3B 	          | Color3B |
@@ -533,7 +533,7 @@ Remove *cc* prefix for structure names in ccTypes.h, move global functions into 
 	| ccT2F_Quad 		      | T2F_Quad |
 	| ccAnimationFrameData    | AnimationFrameData |
 
-Global functions changed example
+全局函数变更示例
 ```c++
 // in v2.1
 ccColor3B color3B = ccc3(0, 0, 0);
@@ -560,7 +560,7 @@ color4B = Color4B(color4F);
 color3B = Color3B::WHITE;
 ```
 
-## deprecated functions and  global variables
+## 弃用的函数和全局变量
 
 	| v2.1 names 	| v3.0 names |
 	| ccp 			| Point |
@@ -646,15 +646,16 @@ color3B = Color3B::WHITE;
 	| ccGRAY 		| Color3B::GRAY |
 	| kBlendFuncDisable | BlendFunc::BLEND_FUNC_DISABLE |
 
-# Changes in the Lua bindings
+# Lua 绑定的修改
 
-## Use bindings-generator tool for lua binding
+## 使用 Lua 绑定生成工具
 
-Only have to write an ini file for a module, don't have to write a lot of .pkg files
+只需要为模块写个 ini 文件，而不必写一堆的 .pkg 文件。
 
-### Bind the classes with namespace to lua
+### 绑定带命名空间的类到 lua
 
-In previous, the lua binding can not bind classes that have the same class name but different namespaces. In order to resolve this issue, now the metatable name of a class is changed. For example, `CCNode` will be changed to `cc.Node`. This modification will affect some APIs as follows:
+之前不能绑定具有相同类名、不同命名空间的类到 lua。为了解决这个问题，现在类的元表名已被修改了。比如，`CCNode
+` 将会被改为 `cc.Node` 。这样的改变将会影响如下一些API的使用。
 
 	|           v2.x                   |                  v3.0             |
 	| tolua_usertype(tolua_S,"CCNode") | tolua_usertype(tolua_S,"cc.Node") |
@@ -664,50 +665,50 @@ In previous, the lua binding can not bind classes that have the same class name 
 	| tolua_pushusertype(tolua_S,(void*)tolua_ret,"CCFileUtils") 		| tolua_pushusertype(tolua_S,(void*)tolua_ret,"cc.FileUtils")  |
 	| tolua.cast(pChildren[i + 1], "CCNode") 			| tolua.cast(pChildren[i + 1], "cc.Node") |
 
-### Use ScriptHandlerMgr to manage the register and unregister of Lua function
+### 使用 ScriptHandlerMgr 来管理注册和注销 lua 函数
 
-When we want to add register and unregister functions of Lua function for class, we need to change the declarative and defined files and then bind to Lua.
-In v3.0, we use the `ScriptHandlerMgr`. As an example, lets see the `MenuItem` class:
-In the 2.x version, we needed to add a declaration in the MenuItem header file:
+当我们想要为类的 lua 函数添加注册和注销功能，我们需要改变声明和定义文件，然后绑定到 lua。
+在 v3.0 中，我们使用了 `ScriptHandlerMgr`。举个例子，我们可以看下 `MenuItem` 这个类：
+在 v2.x 中，我们需要在 MenuItem 的头文件中添加一个声明：
 ```c++
  virtual void registerScriptTapHandler(int nHandler);
  virtual void unregisterScriptTapHandler(void);
 ```
-then implement them in the .cpp file. In the Lua script ,we use it as follow:
+然后在 .cpp 文件中实现它们，在 lua 脚本中使用它们：
 ```lua
 menuItem:registerScriptTapHandler(luafunction)
 ```
 
-In v3.0 version, we only need to add the `HandlerType` enum in the `ScriptHandlerMgr`, and the implementation in luascript as follow:
+在 v3.0 中，我们只需要在 `ScriptHandlerMgr` 中添加一个 `HandlerType` 的枚举类型，然后在 luascript 中实现即可：
 ```lua
 ScriptHandlerMgr:getInstance():registerScriptHandler(menuItem, luafunction,cc.HANDLERTYPE_MENU_CLICKED)
 ```
 
-## Misc API changes
+## 其它 API 修改
 
-### Use `cc`、`ccs`、`ccui` `gl` and `sp` as module name
+### 使用 `cc`、`ccs`、`ccui` `gl` 和 `sp` 作为模块名
 
-Now classes are bound into different modules instead of using global module. This will avoid conflicts with other codes.
+现在类已经被绑定到不同的模块而不是使用全局模块。这可以避免和其他代码产生冲突。
 
-* classes in `cocos2d`、`cocos2d::extension`、`CocosDenshion` and `cocosbuilder`  were bound to `cc` module
-* classes in `cocos2d::ui` were bound to `ccui` module
-* classes in `spine` were bound to `sp` module
-* classes in `cocostudio` were bound to `ccs` module
-* global variables are bound to corresponding modules
-* all funcionts and constants about `openGl` were bound to `gl` module
+* `cocos2d`、`cocos2d::extension`、`CocosDenshion` 和 `cocosbuilder`  的类被绑到 `cc` 模块
+* `cocos2d:ui` 的类被绑到 `ccui` 模块
+* `spine` 的类被绑到 `sp` 模块
+* `cocostudio` 的类被绑到 `ccs` 模块
+* 全局变量被绑到相应的模块
+* 所有关于 `openGl` 的函数和常量被绑到 `gl` 模块
 
-Examples:
+示例:
 
     | v2.1                    | v3.0                    |
     | CCDirector              | cc.Director             |
     | CCArmature              | ccs.Armature            |
     | kCCTextAlignmentLeft    | cc.kCCTextAlignmentLeft |
 
-### Modified functions
+### 修改函数
 
-Some global function names are renamed:
+一些全局函数被重命名：
 
-Examples:
+示例:
 
     | v2.1                    | v3.0                    |
     | CCPoint/ccp             | cc.p                    |
@@ -716,33 +717,33 @@ Examples:
     | CCColor4B               | cc.c4b                  |
     | CCColor4F               | cc.c4f                  |
 
-### Add some modules
+### 添加一些模块
 
-In the version 3.0, more modules were bound to lua, specific as follows:
+在 v3.0 中，更多模块被绑定到 lua，具体如下：
 
 * physics
 * spine
 * XMLHttpRequest
 * OpenGL
- 
-The `XMLHttpRequest` and `physics` are in the `cc` module, the `spine` is in the `sp` module, and the `OpenGL` is in the `gl` module. Related test cases located in:
+
+`XMLHttpRequest` 和 `physics` 在 `cc` 模块中，`spine` 在 `sp` 模块中， `OpenGL` 在 `gl` 模块中，相关的测试例在：
 
 * physics   ---> TestLua/PhysicsTest
 * spine     ---> TestLua/SpineTest
 * XMLHttpRequest ---> TestLua/XMLHttpRequestTest
 * openGL    ---> TestLua/OpenGLTest
 
-### Add more lua bindings
-Such as: New Label、New EventDispatcher and AssetsManager,etc.Related test cases located in:
+### 增加更多的 lua 绑定
+比如：新的Label、新的事件分发机制和AssetsManager等等。相关的测试例在：
 
 * New Label ---> TestLua/LabelTestNew
 * New EventDispatcher --->TestLua/NewEventDispatcherTest
 * AssetsManager  ---> TestLua/AssetsManagerTest
 
-### Replace some lua-bindings of Class or Struct with lua table
-In the version 3.0, all the lua-binding of Struct type were replaced with the lua table
+### 将一些 lua 绑定的类或结构体替换成表
+在 v3.0中，所有 lua 绑定的结构体类型被替换成表
 
-Examples:
+示例:
  
     | v2.1                    | v3.0                    |
     | CCPoint                 | lua table               |
@@ -755,12 +756,12 @@ Examples:
     | CCDictionary            | lua table               |
     | CCPointArray            | lua table               |
     
-### Support lua script codes call Object-C codes and Java codes 
-`LuaObjcBridge` and `LuaJavaBridge` bound to lua supported lua script codes calls Object-C codes and java codes.
+### 支持lua脚本代码调用 Object-C 代码和 java 代码
+`LuaObjcBridge` 和 `LuaJavaBridge` 被绑定到 lua 以支持 lua 脚本代码调用 Object-C 代码和 java 代码。
     
-### Add some lua files to store the constants of different modules
+### 添加一些lua文件来储存不同的模块常量
 
-* Cocos2DConstants.lua store the constants of `cc` module
-* StudioConstants.lua store the constants of  `ccs` module
-* GuiConstants.lua store the constants of `ccui` module
-* OpenglConstants.lua store the constants of `gl` module
+* Cocos2DConstants.lua 储存 `cc` 模块的常量
+* StudioConstants.lua 储存 `ccs` 模块的常量
+* GuiConstants.lua 储存 `ccui` 模块的常量
+* OpenglConstants.lua 储存 `gl` 模块的常量
