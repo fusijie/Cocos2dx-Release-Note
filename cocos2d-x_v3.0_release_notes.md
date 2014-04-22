@@ -6,49 +6,49 @@
 - [需求](#requirements)
 	- [环境需求](#runtime-requirements)
 	- [编译需求](#compiler-requirements)
-	- [如何运行TestCpp](#how-to-run-testcpp)
+	- [如何运行 TestCpp](#how-to-run-testcpp)
 		- [Mac OSX & iOS](#mac-osx--ios)
 		- [Android](#android)
 		- [Windows](#windows)
 		- [Linux](#linux)
 	- [如何开始一个新游戏](#how-to-start-a-new-game)
-- [v3.0特色](#highlights-of-v30)
+- [v3.0 亮点](#highlights-of-v30)
 - [细节](#features-in-detail)
-	- [C++11特性](#c11-features)
+	- [C++11 特性](#c11-features)
 		- [std::function](#stdfunction)
 		- [强类型枚举](#strongly-typed-enums)
 		- [覆盖](#override)
-	- [去OC化](#removed-objective-c-patterns)
-		- [移除C++类的“cc”前缀以及free functions](#no-more-cc-prefix-for-c-classes-and-free-functions)
-		- [使用clone()替代copy()](#clone-instead-of-copy)
-		- [单例类采用了getInstance()和destroyInstance()](#singletons-use-getinstance-and-destroyinstance)
-		- [使用了Ref替代了Object](#object-is-replaced-with-ref)
+	- [去 OC 化](#removed-objective-c-patterns)
+		- [移除 C++ 类的 “cc” 前缀以及 free functions](#no-more-cc-prefix-for-c-classes-and-free-functions)
+		- [使用 clone() 替代 copy()](#clone-instead-of-copy)
+		- [单例类采用了 getInstance() 和 destroyInstance()](#singletons-use-getinstance-and-destroyinstance)
+		- [使用了 Ref 替代了 Object](#object-is-replaced-with-ref)
 		- [getters](#getters)
-		- [POD类型](#pod-types)
+		- [POD 类型](#pod-types)
 	- [新的渲染器](#new-renderer)
 		- [渲染器特性](#renderer-features)
 			- [自动批处理](#auto-batching)
 			- [自动剔除](#auto-culling)
-			- [全局Z轴](#global-z-order)
-		- [Sprite和SpriteBatchNode](#sprite-vs-spritebatchnode)
+			- [全局 Z 值](#global-z-order)
+		- [Sprite 和 SpriteBatchNode](#sprite-vs-spritebatchnode)
 	- [优化 LabelTTF / LabelBMFont / LabelAtlas](#improved-labelttf--labelbmfont--labelatlas)
 	- [新的事件分发机制](#new-eventdispatcher)
 	- [物理引擎集成](#physics-integration)
-- [其他API变更](#misc-api-changes)
+- [其他 API 变更](#misc-api-changes)
 	- [ccTypes.h](#cctypesh)
 	- [弃用的函数和全局变量](#deprecated-functions-and--global-variables)
 - [Lua绑定的修改](#changes-in-the-lua-bindings)
-	- [使用Lua绑定生成工具](#use-bindings-generator-tool-for-lua-binding)
-		- [绑定带命名空间的类到lua](#bind-the-classes-with-namespace-to-lua)
-		- [使用ScriptHandlerMgr来管理注册和注销lua函数](#use-scripthandlermgr-to-manage-the-register-and-unregister-of-lua-function)
-	- [其它API修改](#misc-api-changes-1)
-		- [使用cc、ccs、ccui、gl和sp作为模块名](#use-ccccsccui-gl-and-sp-as-module-name)
-		- [修改函数](#modified-functions)
+	- [使用 Lua 绑定生成工具](#use-bindings-generator-tool-for-lua-binding)
+		- [绑定带命名空间的类到 lua](#bind-the-classes-with-namespace-to-lua)
+		- [使用 ScriptHandlerMgr 来管理注册和注销 lua 函数](#use-scripthandlermgr-to-manage-the-register-and-unregister-of-lua-function)
+	- [其它 API 变更](#misc-api-changes-1)
+		- [使用 cc、ccs、ccui、gl 和 sp 作为模块名](#use-ccccsccui-gl-and-sp-as-module-name)
+		- [函数名改动](#modified-functions)
 		- [增加一些模块](#add-some-modules)
-		- [增加更多的lua绑定](#add-more-lua-bindings)
-		- [将一些lua绑定的类或结构体替换成表](#replace-some-lua-bindings-of-class-or-struct-with-lua-table)
-		- [支持lua脚本代码调用Object-C代码和java代码](#support-lua-script-codes-call-object-c-codes-and-java-codes)
-		- [添加一些lua文件来储存不同的模块常量](#add-some-lua-files-to-store-the-constants-of-different-modules)
+		- [增加更多的 lua 绑定](#add-more-lua-bindings)
+		- [将一些 lua 绑定的类或结构体替换成表](#replace-some-lua-bindings-of-class-or-struct-with-lua-table)
+		- [支持 lua 脚本代码调用 Object-C 代码和 java 代码](#support-lua-script-codes-call-object-c-codes-and-java-codes)
+		- [添加一些 lua 文件来储存不同的模块常量](#add-some-lua-files-to-store-the-constants-of-different-modules)
 
 # 概况
 
@@ -139,7 +139,7 @@
 请参考 [ReadMe](../README.md)
     
 
-# v3.0 特色
+# v3.0 亮点
 
 * 使用 C++(C++11) 的特性取代了 Objective-C 的特性
 * 优化了 Labels
@@ -413,7 +413,7 @@ Cocos2d-x v2.2 中渲染方式是没问题的，但是它难以进行优化，�
 当 `Sprite::draw()` 被调用的时候，它将会检查 `Sprite` 是否超出屏幕，如果是的话，它将不会发送 `QuadCommand` 命令给 `渲染器`,因此可以获得一些性能上的提升。
 
 
-#### 全局 Z 轴
+#### 全局 Z 值
 
 `Node` 增加了新的函数 `setGlobalZOrder()` / `getGlobalZOrder()`,之前的旧函数 `setZOrder()` / `getZOrder()` 也被重命名为 `setLocalZOrder()` / `getLocalZOrder()`。
 
@@ -684,7 +684,7 @@ menuItem:registerScriptTapHandler(luafunction)
 ScriptHandlerMgr:getInstance():registerScriptHandler(menuItem, luafunction,cc.HANDLERTYPE_MENU_CLICKED)
 ```
 
-## 其它 API 修改
+## 其它 API 变更
 
 ### 使用 `cc`、`ccs`、`ccui` `gl` 和 `sp` 作为模块名
 
@@ -704,7 +704,7 @@ ScriptHandlerMgr:getInstance():registerScriptHandler(menuItem, luafunction,cc.HA
     | CCArmature              | ccs.Armature            |
     | kCCTextAlignmentLeft    | cc.kCCTextAlignmentLeft |
 
-### 修改函数
+### 函数名修改
 
 一些全局函数被重命名：
 
