@@ -36,7 +36,7 @@ std::unordered_map<K,V> 是一个存储了由key-value键值对组合成构成�
 - T 必须是一个指向 [cocos2d::Object](https://github.com/cocos2d/cocos2d-x/blob/develop/cocos/base/CCObject.h) 子类对象的指针。不能是其他数据类型或者原生类型，因为我们已经将 Cocos2d-x 的内存管理模型集成到 `cocos2d::Map<k,V>` 中。 
 
 ##内存管理
-`cocos2d::Map<K,V>` 类包含了为一个数据成员：
+`cocos2d::Map<K,V>` 类包含了唯一一个数据成员：
 
 ```cpp
 typedef std::unordered_map<K, V> RefMap;
@@ -46,15 +46,15 @@ RefMap _data;
 
 如果你调用了 `new` 操作符来分配一块 `cocos2d::Map<K,V>` 的动态内存，那就需要在使用完后调用 `delete` 操作符来释放内存。这同样适用于 `new[]` 和 `delete[]`。
 
-**Note**：在新 C++ 中，它倾向于本地存储对象而不是堆存储对象。所以，请不要调用 `new` 操作符来分配 `cocos2d::Map<K,V>` 的堆对象，而是使用栈对象来代替。
+**注意**：在新 C++ 中，它倾向于本地存储对象而不是堆存储对象。所以，请不要调用 `new` 操作符来分配 `cocos2d::Map<K,V>` 的堆对象，而是使用栈对象来代替。
 
 如果你有足够的理由在堆上动态分配 `cocos2d::Map<K,V>` 的话，请使用智能指针替换原始指针，比如 `Shared_ptr`，`unique_ptr`。
 
-**WARNING**：`cocos2d::Map<K,V>` 不再像其他的 cocos2d 类一样使用 retain/release和引用计数内存管理。
+**警告**：`cocos2d::Map<K,V>` 不再像其他的 cocos2d 类一样使用 retain/release和引用计数内存管理。
 
-##基本使用
+##基本用法
 
-**WARNING**： `cocos2d::Map<K,V>` 没有重载 `operator[]`，所以你不能使用像 `map[i]`这样的操作来试图从 `cocos2d::Map<K,V>` 获取元素。
+**警告**： `cocos2d::Map<K,V>` 没有重载 `operator[]`，所以你不能使用像 `map[i]` 这样的操作来试图从 `cocos2d::Map<K,V>` 获取元素。
 
 更多 API 的使用，请参考引擎源码和 Cocos2d-x 3.0 beta 已实现的测试例。
 
@@ -121,5 +121,4 @@ cocos2d: After remove sp0, size of map is 1.
 ##最佳实践
 
 - 当将 `cocos2d::Map<K, V>()` 作为参数进行传递的时候，将它声明为一个常引用，如 `const cocos2d::Map<K, V>()&`。
-- T must be the a pointer to `cocos2d::Object` descendant object type. No other data type or primitives are allowed.
 - T 必须是是一个指向 `cocos2d::Object` 子类对象的指针，不能是其他数据类型或者原生类型。
