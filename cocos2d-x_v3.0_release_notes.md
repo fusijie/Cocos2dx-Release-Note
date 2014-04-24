@@ -52,7 +52,7 @@
 
 # 概况
 
-* 下载: http://cdn.cocos2d-x.org/cocos2d-x-3.0beta.zip
+* 下载: http://www.cocos2d-x.org/filedown/cocos2d-x-3.0-cn
 * 完整更新日记: https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0beta/CHANGELOG
 * API参考手册: http://www.cocos2d-x.org/reference/native-cpp/V3.0beta/index.html
 
@@ -136,7 +136,7 @@
     
 ## 如何开始一个新游戏
 
-请参考 [ReadMe](../README.md)
+请参考 [说明](https://github.com/cocos2d/cocos2d-x/blob/develop/README.md) 和 [文档](https://github.com/chukong/cocos-docs/blob/master/manual/framework/native/getting-started/v3.0/how-to-start-a-new-game/en.md) 。
     
 
 # v3.0 亮点
@@ -147,14 +147,14 @@
 * 新的事件分发机制
 * 物理引擎集成
 * 新的 UI 对象
-* [JavaScript 远程调试器](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/scripting/javascript/js-remote-debugger/en.md)
+* [JavaScript 远程调试器](https://github.com/fusijie/Cocos2d-x3.0-Release-Note/blob/master/Javascript_Remote_Debugging_zh.md)
 * 支持远程控制台
 * 重构 Image - 及时释放内存，统一了支持文件格式的 API
 * 自动生成 Lua 绑定，添加了 LuaJavaBridge 和 LuaObjcBridge
-* 模版容器
-    * 使用 `cocos2d::Map<>` 替代了 `CCDictionary` , [用法](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/data-structure/v3/map/en.md)
-    * 使用 `cocos2d::Vector<>` 替代了 `CCArray`, [用法](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/data-structure/v3/vector/en.md)
-    * 使用 `cocos2d::Value` 替代了 `CCBool`, `CCFLoat`, `CCDouble`, [用法](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/data-structure/v3/value/en.md)
+* 模板容器
+    * 使用 `cocos2d::Map<>` 替代了 `CCDictionary` , [用法](https://github.com/fusijie/Cocos2d-x3.0-Release-Note/blob/master/cocos2d--map%3C_k%2Cv_%3E.md)
+    * 使用 `cocos2d::Vector<>` 替代了 `CCArray`, [用法](https://github.com/fusijie/Cocos2d-x3.0-Release-Note/blob/master/cocos2d--vector%3C_t_%3E.md)
+    * 使用 `cocos2d::Value` 替代了 `CCBool`, `CCFLoat`, `CCDouble`, [用法](https://github.com/fusijie/Cocos2d-x3.0-Release-Note/blob/master/cocos2d--value.md)
 
 # 细节
 
