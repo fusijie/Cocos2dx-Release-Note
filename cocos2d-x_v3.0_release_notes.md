@@ -495,7 +495,7 @@ _这些特性从 v3.0-alpha0 开始被添加_
 * 可以使用 `EventDispatcher` 来分发自定义事件
 * 可以注册一个 lambda 表达式作为回调函数
 
-更多 `EventDispatcher` 细节可以参考 [this document](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/input/event-dispatcher/en.md)。
+更多 `EventDispatcher` 细节可以参考 [this document](https://github.com/fusijie/Cocos2d-x3.0-Release-Note/blob/master/eventdispatcher_mechanism_zh.md)。
 
 ## 物理引擎集成
 
