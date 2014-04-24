@@ -39,16 +39,16 @@
 	- [弃用的函数和全局变量](#弃用的函数和全局变量)
 - [Lua绑定的修改](#Lua 绑定的修改)
 	- [使用 Lua 绑定生成工具](#使用 Lua 绑定生成工具)
-		- [绑定带命名空间的类到 lua](#绑定带命名空间的类到 lua)
-		- [使用 ScriptHandlerMgr 来管理注册和注销 lua 函数](#使用 ScriptHandlerMgr 来管理注册和注销 lua 函数)
+		- [绑定带命名空间的类到 Lua](#绑定带命名空间的类到 Lua)
+		- [使用 ScriptHandlerMgr 来管理注册和注销 Lua 函数](#使用 ScriptHandlerMgr 来管理注册和注销 Lua 函数)
 	- [其它 API 变更](#其它 API 变更)
 		- [使用 cc、ccs、ccui、gl 和 sp 作为模块名](#使用 cc、ccs、ccui gl 和 sp 作为模块名)
 		- [函数名改动](#函数名修改)
 		- [增加一些模块](#添加一些模块)
-		- [增加更多的 lua 绑定](#增加更多的 lua 绑定)
-		- [将一些 lua 绑定的类或结构体替换成表](#将一些 lua 绑定的类或结构体替换成表)
-		- [支持 lua 脚本代码调用 Object-C 代码和 java 代码](#支持lua脚本代码调用 Object-C 代码和 java 代码)
-		- [添加一些 lua 文件来储存不同的模块常量](#添加一些lua文件来储存不同的模块常量)
+		- [增加更多的 Lua 绑定](#增加更多的 Lua 绑定)
+		- [将一些 Lua 绑定的类或结构体替换成表](#将一些 Lua 绑定的类或结构体替换成表)
+		- [支持 Lua 脚本代码调用 Object-C 代码和 java 代码](#支持lua脚本代码调用 Object-C 代码和 java 代码)
+		- [添加一些 Lua 文件来储存不同的模块常量](#添加一些 Lua 文件来储存不同的模块常量)
 
 # 概况
 
@@ -652,9 +652,9 @@ color3B = Color3B::WHITE;
 
 只需要为模块写个 ini 文件，而不必写一堆的 .pkg 文件。
 
-### 绑定带命名空间的类到 lua
+### 绑定带命名空间的类到 Lua
 
-之前不能绑定具有相同类名、不同命名空间的类到 lua。为了解决这个问题，现在类的元表名已被修改了。比如，`CCNode
+之前不能绑定具有相同类名、不同命名空间的类到 Lua。为了解决这个问题，现在类的元表名已被修改了。比如，`CCNode
 ` 将会被改为 `cc.Node` 。这样的改变将会影响如下一些API的使用。
 
 	|           v2.x                   |                  v3.0             |
@@ -665,16 +665,16 @@ color3B = Color3B::WHITE;
 	| tolua_pushusertype(tolua_S,(void*)tolua_ret,"CCFileUtils") 		| tolua_pushusertype(tolua_S,(void*)tolua_ret,"cc.FileUtils")  |
 	| tolua.cast(pChildren[i + 1], "CCNode") 			| tolua.cast(pChildren[i + 1], "cc.Node") |
 
-### 使用 ScriptHandlerMgr 来管理注册和注销 lua 函数
+### 使用 ScriptHandlerMgr 来管理注册和注销 Lua 函数
 
-当我们想要为类的 lua 函数添加注册和注销功能，我们需要改变声明和定义文件，然后绑定到 lua。
+当我们想要为类的 Lua 函数添加注册和注销功能，我们需要改变声明和定义文件，然后绑定到 Lua。
 在 v3.0 中，我们使用了 `ScriptHandlerMgr`。举个例子，我们可以看下 `MenuItem` 这个类：
 在 v2.x 中，我们需要在 MenuItem 的头文件中添加一个声明：
 ```c++
  virtual void registerScriptTapHandler(int nHandler);
  virtual void unregisterScriptTapHandler(void);
 ```
-然后在 .cpp 文件中实现它们，在 lua 脚本中使用它们：
+然后在 .cpp 文件中实现它们，在 Lua 脚本中使用它们：
 ```lua
 menuItem:registerScriptTapHandler(luafunction)
 ```
@@ -719,7 +719,7 @@ ScriptHandlerMgr:getInstance():registerScriptHandler(menuItem, luafunction,cc.HA
 
 ### 添加一些模块
 
-在 v3.0 中，更多模块被绑定到 lua，具体如下：
+在 v3.0 中，更多模块被绑定到 Lua，具体如下：
 
 * physics
 * spine
@@ -733,15 +733,15 @@ ScriptHandlerMgr:getInstance():registerScriptHandler(menuItem, luafunction,cc.HA
 * XMLHttpRequest ---> TestLua/XMLHttpRequestTest
 * openGL    ---> TestLua/OpenGLTest
 
-### 增加更多的 lua 绑定
-比如：新的Label、新的事件分发机制和AssetsManager等等。相关的测试例在：
+### 增加更多的 Lua 绑定
+比如：新的 Label、新的事件分发机制和 AssetsManager 等等。相关的测试例在：
 
 * New Label ---> TestLua/LabelTestNew
 * New EventDispatcher --->TestLua/NewEventDispatcherTest
 * AssetsManager  ---> TestLua/AssetsManagerTest
 
-### 将一些 lua 绑定的类或结构体替换成表
-在 v3.0中，所有 lua 绑定的结构体类型被替换成表
+### 将一些 Lua 绑定的类或结构体替换成表
+在 v3.0中，所有 Lua 绑定的结构体类型被替换成表
 
 示例:
  
@@ -756,10 +756,10 @@ ScriptHandlerMgr:getInstance():registerScriptHandler(menuItem, luafunction,cc.HA
     | CCDictionary            | lua table               |
     | CCPointArray            | lua table               |
     
-### 支持lua脚本代码调用 Object-C 代码和 java 代码
-`LuaObjcBridge` 和 `LuaJavaBridge` 被绑定到 lua 以支持 lua 脚本代码调用 Object-C 代码和 java 代码。
+### 支持 Lua 脚本代码调用 Object-C 代码和 java 代码
+`LuaObjcBridge` 和 `LuaJavaBridge` 被绑定到 Lua 以支持 Lua 脚本代码调用 Object-C 代码和 java 代码。
     
-### 添加一些lua文件来储存不同的模块常量
+### 添加一些 Lua 文件来储存不同的模块常量
 
 * Cocos2DConstants.lua 储存 `cc` 模块的常量
 * StudioConstants.lua 储存 `ccs` 模块的常量
