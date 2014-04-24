@@ -2,53 +2,53 @@
 
 **目录**  *由[DocToc](http://doctoc.herokuapp.com/)生成*
 
-- [概况](#misc-information)
-- [需求](#requirements)
+- [概况](#概况)
+- [需求](#需求)
 	- [环境需求](#环境需求)
-	- [编译需求](#compiler-requirements)
-	- [如何运行 TestCpp](#how-to-run-testcpp)
-		- [Mac OSX & iOS](#mac-osx--ios)
-		- [Android](#android)
-		- [Windows](#windows)
-		- [Linux](#linux)
-	- [如何开始一个新游戏](#how-to-start-a-new-game)
-- [v3.0 亮点](#highlights-of-v30)
-- [细节](#features-in-detail)
-	- [C++11 特性](#c11-features)
-		- [std::function](#stdfunction)
-		- [强类型枚举](#strongly-typed-enums)
-		- [覆盖](#override)
-	- [去 OC 化](#removed-objective-c-patterns)
-		- [移除 C++ 类的 “cc” 前缀以及 free functions](#no-more-cc-prefix-for-c-classes-and-free-functions)
-		- [使用 clone() 替代 copy()](#clone-instead-of-copy)
-		- [单例类采用了 getInstance() 和 destroyInstance()](#singletons-use-getinstance-and-destroyinstance)
-		- [使用了 Ref 替代了 Object](#object-is-replaced-with-ref)
+	- [编译需求](#编译需求)
+	- [如何运行 TestCpp](#如何运行 TestCpp)
+		- [Mac OSX & iOS](#Mac OSX & iOS)
+		- [Android](#Android)
+		- [Windows](#Windows)
+		- [Linux](#Linux)
+	- [如何开始一个新游戏](#如何开始一个新游戏)
+- [v3.0 亮点](#v3.0 亮点)
+- [细节](#细节)
+	- [C++11 特性](#C++11 特性)
+		- [std::function](#std::function)
+		- [强类型枚举](#强类型枚举)
+		- [覆盖](#覆盖)
+	- [去 OC 化](#去OC化)
+		- [移除 C++ 类的 “cc” 前缀以及 free functions](#移除C++类的“cc”前缀以及free functions)
+		- [使用 clone() 替代 copy()](#使用 clone 替代 copy)
+		- [单例类采用了 getInstance() 和 destroyInstance()](#单例类采用了 getInstance 和 destroyInstance)
+		- [使用了 Ref 替代了 Object](#使用了 Ref 代替了 Object)
 		- [getters](#getters)
-		- [POD 类型](#pod-types)
-	- [新的渲染器](#new-renderer)
-		- [渲染器特性](#renderer-features)
-			- [自动批处理](#auto-batching)
-			- [自动剔除](#auto-culling)
-			- [全局 Z 值](#global-z-order)
-		- [Sprite 和 SpriteBatchNode](#sprite-vs-spritebatchnode)
-	- [优化 LabelTTF / LabelBMFont / LabelAtlas](#improved-labelttf--labelbmfont--labelatlas)
-	- [新的事件分发机制](#new-eventdispatcher)
-	- [物理引擎集成](#physics-integration)
-- [其他 API 变更](#misc-api-changes)
-	- [ccTypes.h](#cctypesh)
-	- [弃用的函数和全局变量](#deprecated-functions-and--global-variables)
-- [Lua绑定的修改](#changes-in-the-lua-bindings)
-	- [使用 Lua 绑定生成工具](#use-bindings-generator-tool-for-lua-binding)
-		- [绑定带命名空间的类到 lua](#bind-the-classes-with-namespace-to-lua)
-		- [使用 ScriptHandlerMgr 来管理注册和注销 lua 函数](#use-scripthandlermgr-to-manage-the-register-and-unregister-of-lua-function)
-	- [其它 API 变更](#misc-api-changes-1)
-		- [使用 cc、ccs、ccui、gl 和 sp 作为模块名](#use-ccccsccui-gl-and-sp-as-module-name)
-		- [函数名改动](#modified-functions)
-		- [增加一些模块](#add-some-modules)
-		- [增加更多的 lua 绑定](#add-more-lua-bindings)
-		- [将一些 lua 绑定的类或结构体替换成表](#replace-some-lua-bindings-of-class-or-struct-with-lua-table)
-		- [支持 lua 脚本代码调用 Object-C 代码和 java 代码](#support-lua-script-codes-call-object-c-codes-and-java-codes)
-		- [添加一些 lua 文件来储存不同的模块常量](#add-some-lua-files-to-store-the-constants-of-different-modules)
+		- [POD 类型](#POD 类型)
+	- [新的渲染器](#新的渲染器)
+		- [渲染器特性](#渲染器特性)
+			- [自动批处理](#自动批处理)
+			- [自动剔除](#自动剔除)
+			- [全局 Z 值](#全局 Z 值)
+		- [Sprite 和 SpriteBatchNode](#Sprite 和 SpriteBatchNode)
+	- [优化 LabelTTF / LabelBMFont / LabelAtlas](#优化 LabelTTF / LabelBMFont / LabelAtlas)
+	- [新的事件分发机制](#新的事件分发机制)
+	- [物理引擎集成](#物理引擎集成)
+- [其他 API 变更](#其他 API 变更)
+	- [ccTypes.h](#ccTypes.h)
+	- [弃用的函数和全局变量](#弃用的函数和全局变量)
+- [Lua绑定的修改](#Lua 绑定的修改)
+	- [使用 Lua 绑定生成工具](#使用 Lua 绑定生成工具)
+		- [绑定带命名空间的类到 lua](#绑定带命名空间的类到 lua)
+		- [使用 ScriptHandlerMgr 来管理注册和注销 lua 函数](#使用 ScriptHandlerMgr 来管理注册和注销 lua 函数)
+	- [其它 API 变更](#其它 API 变更)
+		- [使用 cc、ccs、ccui、gl 和 sp 作为模块名](#使用 cc、ccs、ccui gl 和 sp 作为模块名)
+		- [函数名改动](#函数名修改)
+		- [增加一些模块](#添加一些模块)
+		- [增加更多的 lua 绑定](#增加更多的 lua 绑定)
+		- [将一些 lua 绑定的类或结构体替换成表](#将一些 lua 绑定的类或结构体替换成表)
+		- [支持 lua 脚本代码调用 Object-C 代码和 java 代码](#支持lua脚本代码调用 Object-C 代码和 java 代码)
+		- [添加一些 lua 文件来储存不同的模块常量](#添加一些lua文件来储存不同的模块常量)
 
 # 概况
 
@@ -74,7 +74,7 @@
 * gcc 4.7 for Linux or Android. Android 要求 ndk-r9 及以上.
 * Visual Studio 2012 (for Windows)
 
-## 如何运行TestCpp
+## 如何运行 TestCpp
 
 ### Mac OSX & iOS
 
@@ -302,7 +302,7 @@ v2.1 类名仍然有效，但是已经被标记为 deprecated。
 v2.1 free functions 仍然有效，但已经被标记为 deprecated。
 
 
-### 使用clone() 替代 copy()
+### 使用 clone 替代 copy
 
 `clone()` 返回了一份 autoreleased 版本的拷贝。
 
@@ -319,7 +319,7 @@ action->autorelease();
 auto action = move->clone();
 ```
 
-### 单例类采用了getInstance()和destroyInstance()
+### 单例类采用了 getInstance 和 destroyInstance
 
 所有的单例类使用 `getInstance()` 和 `destroyInstance()` (如果可用) 来获取和摧毁实例。
 
