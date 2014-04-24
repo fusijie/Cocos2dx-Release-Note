@@ -4,7 +4,7 @@
 
 - [概况](#misc-information)
 - [需求](#requirements)
-	- [环境需求](#runtime-requirements)
+	- [环境需求](#环境需求)
 	- [编译需求](#compiler-requirements)
 	- [如何运行 TestCpp](#how-to-run-testcpp)
 		- [Mac OSX & iOS](#mac-osx--ios)
