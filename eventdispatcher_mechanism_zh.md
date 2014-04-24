@@ -30,7 +30,6 @@ Cocos2d-X 3.0 引入了一个新的机制来响应用户事件。这篇文档将
 
 在下面的例子中， 我们将在Scene中添加3个部分重叠的按钮。 每一个按钮都响应触摸按钮。
 
-### Create three sprites with images for the buttons
 ### 使用图片创建3个Sprite作为按钮
 
 ```c++
@@ -48,7 +47,7 @@ Cocos2d-X 3.0 引入了一个新的机制来响应用户事件。这篇文档将
                                                 
 ```
                                                 
-![touchable_sprite](res/touchable_sprite.png)
+![touchable_sprite](https://github.com/chukong/cocos-docs/raw/master/manual/framework/native/input/event-dispatcher/res/touchable_sprite.png)
 
 ### 创建一个单点触摸事件监听器并且添加回调代码
 
@@ -132,13 +131,6 @@ Cocos2d-X 3.0 引入了一个新的机制来响应用户事件。这篇文档将
 3. 当 `listener1->setSwallowTouches(true)` 被设置的时候，将根据 onTouchBegan 的返回值, 决定触摸事件的显示顺序是否应该被向后传递。
 
 ### FixedPriority vs SceneGraphPriority
-
-The EventDispatcher uses priorities to decide which listeners get delivered an event first.
-
-- **FixedPriority** is an integer value. Event listeners with lower `Priority` values get to process events before event listeners with higher `Priority` values.
-- **SceneGraphPriority** is a pointer to a `Node`. Event listeners whose Nodes have higher Z order values (that is, are drawn on top) receive events before event listeners whose Nodes have lower Z order values (that is, are drawn below). This ensures that touch events, for example, get delivered front-to-back, as you would expect.
-
-The EventDispatcher uses priorities to decide which listeners get delivered an event first.
 
 - **FixedPriority** 是一个 int 值. 带有更小的 `Priority` 值事件监听器将先处理事件，更大的 `Priority` 值的将后处理。
 - **SceneGraphPriority** 是一个指向 `Node` 的指针. 拥有更高的 Z order 值的节点的监听器将比低 Z order 值的先接收到事件。（话句话说，Z order 越大就是被绘制在越表面）。这保证了触摸事件可以从前向后传递。
