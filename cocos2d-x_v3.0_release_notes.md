@@ -6,7 +6,7 @@
 - [需求](#需求)
 	- [环境需求](#环境需求)
 	- [编译需求](#编译需求)
-	- [如何运行 TestCpp](#如何运行TestCpp)
+	- [如何运行 TestCpp](#如何运行 TestCpp)
 		- [Mac OSX & iOS](#Mac OSX & iOS)
 		- [Android](#Android)
 		- [Windows](#Windows)
@@ -74,7 +74,7 @@
 * gcc 4.7 for Linux or Android. Android 要求 ndk-r9 及以上.
 * Visual Studio 2012 (for Windows)
 
-## 如何运行TestCpp
+## 如何运行 TestCpp
 
 ### Mac OSX & iOS
 
