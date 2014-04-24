@@ -2,7 +2,6 @@
 
 **目录**  *由[DocToc](http://doctoc.herokuapp.com/)生成*
 
-- [cocos2d-x v3.0 发布说明](#user-content-cocos2d-x-v30-%E5%8F%91%E5%B8%83%E8%AF%B4%E6%98%8E)
 - [概况](#user-content-%E6%A6%82%E5%86%B5)
 - [需求](#user-content-%E9%9C%80%E6%B1%82)
 	- [环境需求](#user-content-%E7%8E%AF%E5%A2%83%E9%9C%80%E6%B1%82)
