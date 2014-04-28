@@ -64,7 +64,7 @@
 * iOS 5.0 及以上
 * OS X 10.7 及以上
 * Windows 7 及以上
-* ~~Windows Phone 8 及以上~~ 暂不支持
+* Windows Phone 8 及以上（初级阶段）
 * Linux Ubuntu 12.04 及以上
 * ~~Browsers via Emscripten~~ 暂不支持
 
