@@ -1,7 +1,7 @@
 #cocos2d::Vector< T >
 
-- 版本: v3.0 beta
-- 语言: C++
+- 版本：v3.0 beta
+- 语言：C++
 
 定义在 “COCOS2DX_ROOT/cocos/base” 路径下的 "[CCVector.h](https://github.com/cocos2d/cocos2d-x/blob/develop/cocos/base/CCVector.h)" 的头文件中。
 
@@ -47,7 +47,7 @@ std::vector<T> _data;
 
 如果你调用了 `new` 操作符来分配一块 `cocos2d::Vector<T>` 的动态内存，那就需要在使用完后调用 `delete` 操作符来释放内存。这同样适用于 `new[]` 和 `delete[]`。
 
-**注意**：在新 C++ 中，它倾向于本地存储对象而不是堆存储对象。所以，请不要调用 `new` 操作符来分配 `cocos2d::Vector<T>` 的堆对象，而是使用栈对象来代替。
+**注意**：在新 C++ 中，它倾向于本地存储对象而不是堆存储对象。所以，请不要调用 `new` 操作符来分配 `cocos2d::Vector<T>` 的堆对象，而是使用栈对象来代替它。
 
 如果你有足够的理由在堆上动态分配 `cocos2d::Vector<T>` 的话，请使用智能指针替换原始指针，比如 `Shared_ptr`，`unique_ptr`。
 
@@ -60,11 +60,11 @@ std::vector<T> _data;
 
 所以 `pushBack()` 方法现在将会 retain 该函参的所有权，`popBack()` 方法将会 release 容器最后一个元素的所有权。
 
-当你使用这些操作时，你应该加倍注意底层的内存管理，这东西对于许多的cocos2d-X开发新手是常见陷阱。
+当你使用这些操作时，你应该加倍注意底层的内存管理，这东西对于许多的 Cocos2d-x 开发新手是常见陷阱。
 
 **警告**：`cocos2d::Vector<T>` 没有重载 `operator[]`，所以你不能使用像 `vec[i]` 这样的操作来试图从 `cocos2d::Vector<T>` 获取元素。
 
-`cocos2d::Vector<T>` 容器提供了许多不同种类的迭代器。我们受益于 C++ 标准库的标准基础设施；例如，大量专用的标准通用算法和for_each循环。
+`cocos2d::Vector<T>` 容器提供了许多不同种类的迭代器。我们受益于 C++ 标准库的标准基础设施；例如，大量专用的标准通用算法和 for_each 循环。
 
 除了 `std::vector<T>` 容器操作，我们还添加了很多标准算法到 `cocos2d::Vector<T>`，比如 `std::find`，`std::reverse` 和 `std::swap`，这样简化了很多有用的、常用的操作。
 
@@ -73,23 +73,23 @@ std::vector<T> _data;
 这里提供一个简单的示例：
 
 ```cpp
-//create Vector<Sprite*> with default size and add a sprite into it
+//使用默认大小创建一个 Vector<Sprite*>，然后往其中加入一个精灵
 auto sp0 = Sprite::create();
 sp0->setTag(0);
-//here we use shared_ptr just as a demo. in your code, please use stack object instead
+//这里我们 demo 使用了 shared_ptr，在你的代码中，请使用栈对象替代 
 std::shared_ptr<Vector<Sprite*>>  vec0 = std::make_shared<Vector<Sprite*>>();  //default constructor
 vec0->pushBack(sp0);
 
-//create a Vector<Object*> with a capacity of 5 and add a sprite into it
+//使用capacity为5来创建一个 Vector<Object*>，然后往其中加入一个精灵
 auto sp1 = Sprite::create();
 sp1->setTag(1);
 
-//initialize a vector with a capacity
+//用一个容量初始化一个 vector
 Vector<Sprite*>  vec1(5);
-//insert a certain object at a certain index
+//在一个确定的位置插入一个确定的对象
 vec1.insert(0, sp1);
 
-//we can also add a whole vector
+//我们也可以加入一整个 vector
 vec1.pushBack(*vec0);
 
 for(auto sp : vec1)
@@ -98,29 +98,29 @@ for(auto sp : vec1)
 }
 
 Vector<Sprite*> vec2(*vec0);
-if (vec0->equals(vec2)) { //returns true if the two vectors are equal
+if (vec0->equals(vec2)) { //如果两个 vector 相同的话返回真
     log("pVec0 is equal to pVec2");
 }
-if (!vec1.empty()) {  //whether the Vector is empty
-    //get the capacity and size of the Vector, noted that the capacity is not necessarily equal to the vector size.
+if (!vec1.empty()) {  //判断 vector 是否为空
+    //获取 vector 的 capacity 和 size，要注意的是 capacity 并不一定等于 size
     if (vec1.capacity() == vec1.size()) {
         log("pVec1->capacity()==pVec1->size()");
     }else{
-        vec1.shrinkToFit();   //shrinks the vector so the memory footprint corresponds with the number of items
+        vec1.shrinkToFit();   //收缩 vector 以便内存对应上元素的数量
         log("pVec1->capacity()==%zd; pVec1->size()==%zd",vec1.capacity(),vec1.size());
     }
-    //pVec1->swap(0, 1);  //swap two elements in Vector by their index
-    vec1.swap(vec1.front(), vec1.back());  //swap two elements in Vector by their value
-    if (vec2.contains(sp0)) {  //returns a Boolean value that indicates whether object is present in vector
+    //pVec1->swap(0, 1);  //通过索引交换 vector 中的两个元素
+    vec1.swap(vec1.front(), vec1.back());  //通过值交换 vector 中的两个元素 
+        if (vec2.contains(sp0)) {  //返回一个布尔值，用于指示该对象是否存在于 vector 中
         log("The index of sp0 in pVec2 is %zd",vec2.getIndex(sp0));
     }
-    //remove the element from the Vector
+    //从 vector 中移除元素
     vec1.erase(vec1.find(sp0));
     //pVec1->erase(1);
     //pVec1->eraseObject(sp0,true);
     //pVec1->popBack();
     
-    vec1.clear(); //remove all elements
+    vec1.clear(); //移除所有元素
     log("The size of pVec1 is %zd",vec1.size());
 }
  ```
