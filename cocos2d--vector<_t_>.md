@@ -77,7 +77,7 @@ std::vector<T> _data;
 auto sp0 = Sprite::create();
 sp0->setTag(0);
 //这里我们 demo 使用了 shared_ptr，在你的代码中，请使用栈对象替代 
-std::shared_ptr<Vector<Sprite*>>  vec0 = std::make_shared<Vector<Sprite*>>();  //default constructor
+std::shared_ptr<Vector<Sprite*>>  vec0 = std::make_shared<Vector<Sprite*>>();  //默认构造函数
 vec0->pushBack(sp0);
 
 //使用capacity为5来创建一个 Vector<Object*>，然后往其中加入一个精灵

@@ -61,14 +61,14 @@ RefMap _data;
 这里提供一个简单的示例:
 
 ```cpp
-//create Map<K, V> with default size and add a sprite into it
+//使用默认大小创建一个 Map<K, V>，然后往其中加入一个精灵
 auto sp0 = Sprite::create();
 sp0->setTag(0);
 Map<std::string, Sprite*> map0;
 std::string mapKey0 = "MAP_KEY_0";
 map0.insert(mapKey0, sp0);
 log("The size of map is %zd.",map0.size()); 
-//create a Map<K, V> with capacity equals 5
+//使用一个 Map 来初始化一个 Map<K, V>
 Map<std::string, Sprite*> map1(map0);
 std::string mapKey1 = "MAP_KEY_1";
 if(!map1.empty()){
@@ -77,7 +77,7 @@ if(!map1.empty()){
 	auto sp1 = Sprite::create();
 	sp1->setTag(1);
 	map1.insert(mapKey1, sp1);      
-	//get all keys,stored in std::vector, that matches the object
+	//获取所有的key，存储在 std::vector 中，用于匹配对象
 	std::vector<std::string> mapKeyVec;
 	mapKeyVec = map1.keys();
 	for(auto key : mapKeyVec)
@@ -88,17 +88,17 @@ if(!map1.empty()){
 	}
 	log("%zd buckets in the Map container",map1.bucketCount());
 	log("%zd element in bucket 1",map1.bucketSize(1));  
-	//get a random object if the map isn't empty, otherwise it returns nullptr
+	//如果 map 不为空的话，从中获取一个随机对象，否则返回一个空指针
 	log("The random object tag = %d",map1.getRandomObject()->getTag());  
-	//find(const K& key) can be used to search the container for an element with 'key'
-	//erase(const_iterator position) remove an element with an iterator
+	//find(const K& key) 可以用来在容器中根据 `key` 搜索一个元素
+	//erase(const_iterator position) 可以用来通过指定迭代器删除一个元素
 	log("Before remove sp0, size of map is %zd.",map1.size());
 	map1.erase(map1.find(mapKey0));
 	log("After remove sp0, size of map is %zd.",map1.size());
 }  
-//create a Map<K, V> with capacity equals 5
+//用指定容量为5来创建一个 Map<K, V>
 Map<std::string, Sprite*> map2(5);
-map2.reserve(10);  //set capacity of the map
+map2.reserve(10);  //设置 map 的容量
 ```
 
 输出:
