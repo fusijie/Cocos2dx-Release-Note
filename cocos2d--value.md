@@ -15,7 +15,7 @@ class Value;
 
 `cocos2d::Valie` 是一个包含了很多原生类型（`int`,`float`,`double`,`bool`,`unsigned char`,`char*` 和 `std::string`）外加 `std::vector<Value>`, `std::unordered_map<std::string,Value>` 和 `std::unordered_map<int,Value>` 的类。
 
-你可以把所有上面的提及的原生类型放入 `cocos2d::Value` 对象中，然后将它们转化为对于的原生类型，反之亦然。
+你可以把所有上面的提及的原生类型放入 `cocos2d::Value` 对象中，然后将它们转化为对应的原生类型，反之亦然。
 
 在内部，`cocos2d::Value` 使用了一个联合变量来保存各种原生类型，这样可以节省很多的内存空间。
 
@@ -56,7 +56,7 @@ Type _type;
 这里提供一个简单的示例:
 
 ```cpp
-Value val;   // call the default constructor
+Value val;   // 调用默认构造函数
 if (val.isNull()) {
 	log("val is null");
 }else{
@@ -64,35 +64,35 @@ if (val.isNull()) {
 	log("The description of val0:%s",str.c_str());
 }
 //----------------------------------------------------
-Value val1(65);   // initialize with a integer
-//Value val1(3.4f);   // initialize with a float value
-//Value val1(3.5);   // initialize with a double value
+Value val1(65);   // 用一个 int 初始化
+//Value val1(3.4f);   // 用一个 float 初始化
+//Value val1(3.5);   // 用一个 double 初始化
 log("The description of the integer value:%s",val1.getDescription().c_str());
 log("val1.asByte() = %c",val1.asByte());
 //----------------------------------------------------
 std::string strV = "string";
-Value val2(strV);   // initialize with string
+Value val2(strV);   // 用 string 初始化
 log("The description of the string value:%s",val2.getDescription().c_str());
 //----------------------------------------------------
 auto sp0 = Sprite::create();
 Vector<Object*>* vecV = new Vector<Object*>();
 vecV->pushBack(sp0);
-Value val3(vecV);   // initialize with Vector
+Value val3(vecV);   // 用 Vector 初始化
 log("The description of the Vector value:%s",val3.getDescription().c_str());
 delete vecV;
 //----------------------------------------------------
 Map<std::string, Object*>* mapV = new Map<std::string, Object*>();
 mapV->insert(strV,sp0);
-Value val4(mapV);   // initialize with Map
+Value val4(mapV);   // 用 Map 初始化
 log("The description of the Map value:%s",val4.getDescription().c_str());
 delete mapV;
 //----------------------------------------------------
-Value val6(&val4);   // initialize with Map
+Value val6(&val4);   // 用 Map 初始化
 log("The description of the Value-type value:%s",val6.getDescription().c_str());
 //----------------------------------------------------
-val2 = val1;   // assigning between 2 Value-type
+val2 = val1;   // 在两个不同指类型间赋值
 log("operator-> The description of val2:%s",val2.getDescription().c_str());
-val2 = 4;   //assigning directly
+val2 = 4;   // 直接赋值
 log("operator-> The description of val4:%s",val2.getDescription().c_str());
 ```
 
