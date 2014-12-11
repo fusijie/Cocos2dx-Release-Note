@@ -142,77 +142,76 @@ sprite3d->setRotation3D(Vec3(x,y,z));
 ```
 
 ## 提升了Shader子系统
-In order to support `Sprite3D`, we refactored our shader subsystem. The result is that we have an easier to use, yet more powerful shader system that can be used both for 2D and 3D.
+为了支持`Sprite3D`，我们重构了shader子系统，对2D和3D的而言，shader系统将会更强大也更易于使用。
 
+在v3.0中，`GLProgram`类即用于控制 _OpenGL program_ (shader)，同时也用于shader状态(uniforms变量，attributes变量)。
 
-In v3.0, the class `GLProgram` was used both for holdin the _OpenGL program_ (shader), and also the shader state (uniforms and attributes).
+这样的设计有个很大的局限：为了增加或者移除一个attribute或者uniform，你不得不去继承`GLProgram`子类。
 
-That design had one big constraint: In order to add or remove an attribute or uniform, you had to subclass `GLProgram`.
+在3.1中，我们将shader状态从shader中分离出来，我们添加了`GLProgramState`用于控制uniforms变量和attributes变量。
 
-In v3.1, we decoupled the shader state from the shader. We added the `GLProgramState` class which holds the attributes and uniforms.
-
-The API is the following:
+API如下:
 
 ```c++
 auto glprogram = GLProgram::create(...);
 
-// it will automatically parse all the attributes and uniforms
-// used by glprogram, and it will populate the glprogramstate dictionary
-// with them
+// 它将会自动解析所有的attributes和uniforms
+// 由glprogram使用，它将会填充glprogramstate dictionary
 auto glprogramstate = GLProgramState::create( glprogram );
 
-// How to set a uniform for Vec2 (Int, Texture, Vec3, Vec4, Mat4, are all supported)
+// 怎样去为Vec2设置一个uniform（Int, Texture, Vec3, Vec4, Mat4都支持）
 glprogramstate->setUniformVec2("u_my_uniform", Vec2(x,y));
-// or how to set it using a callback
+// 怎样用一个回调来设置它
 glprogramstate->setUniformCallback("u_my_uniform", [](Uniform*uniform){
     // do something
 });
 
-// How to set an attribute
+// 怎样设置一个属性
 glprogramstate->setVertexAttribPointer("a_my_attrib", 4, GL_FLOAT, GL_FALSE, 0, vertex);
-// or how to set it using a callback
+// 怎样用一个回调来设置它
 glprogramstate->setVertexAttribCallback("a_my_attrib", [](VertexAttrib*attrib){
     // do something
  });
 ```
 
-By using this API it is possible to change the effect on a `Sprite3D` (or even an `Sprite`) without subclassing any cocos2d class!
+通过使用这个API就可以改变一个`Sprite3D`的效果，而不需要去子类化任何cocos2d的类
 
-Possible examples:
+示例:
 
  - Outline / Shadow / Glow effects
  - Multi-texturing effects
- - Sepia, Grey or other color effects
- - and more
+ - Sepia, Grey 或者 other color effects
+ - 等等
  
-For a complete example, please see the [Shader - Sprite](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/tests/cpp-tests/Classes/ShaderTest/ShaderTest2.cpp) and [Shader - Basic](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/tests/cpp-tests/Classes/ShaderTest/ShaderTest.cpp) examples.
+完整示例请参考 [Shader - Sprite](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/tests/cpp-tests/Classes/ShaderTest/ShaderTest2.cpp) 和 [Shader - Basic](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/tests/cpp-tests/Classes/ShaderTest/ShaderTest.cpp)。
 
 
 
-## New math library
+## 新的数学库
 
-cocos2d-x v1.0 only supported 2D features. So it made sense to use a 2x3 Transform matrix for the operations.
+cocos2d-x v1.0仅支持2D的特性，所以它使用了一个2x3的变换矩阵来进行操作。
 
-In cocos2d-x v2.0 we added OpenGL ES 2.0 support (no more built-in OpenGL matrix operations) so it made sense to use [Kazmath](https://github.com/Kazade/kazmath), a math library that replaced the OpenGL ES 1.0 functionality. Kazmath was used internally, and most of the users never used the Kazmath API at all.
+在cocos2d-x v2.0中，我们添加了OpenGL ES 2.0支持（不再基于OpenGL矩阵操作）。所以使用了一个[Kazmath](https://github.com/Kazade/kazmath)数学库来替换openGL ES 1.0的功能。Kazmath在引擎内部使用，绝大多数的情况下，开发者并不会调用Kazmath的API。
 
-In cocos2d-x v3.0 we refactored the renderer and we exposed a bit more the Kazmath API to the users.
+在cocos2d-x v3.0中，我们重构了渲染器，同时也希望提供更多的Kazmath API给开发者使用。
 
-And in v3.1, with `Sprite3D` we needed to expose even more the the Kazmath API. And it no longer made sense to have multiple math libraries inside cocos2d-x.
+在cocos2d-x v3.1中，由于`Sprite3D`需要我们提供更多的API给开发者，这是Kazmath库所不能提供的，而cocos2d-x内部拥有多个数学库是没有意义的。
 
-The problems were:
+那么问题来了:
 
- * Part of the code was using the old 2D math library
- * Part of the code was using Kazmath
- * Part of the code was using ad-hoc math code
+ * 部分代码使用旧的2D数学库
+ * 部分代码使用Kazmath
+ * 部分代码使用专门的数学代码
  
-The goal was to use only one math library for cocos2d-x, with the following requirements:
- * Easy to use, easy to mantain
- * Proven
- * In C++ if possible
+我们的目标是在cocos2d-x只使用一个数学库，但有以下需求：
+
+ * 易于使用，易于维护
+ * 成熟的，被反复证明过的
+ * 如果可能的话，使用C++语言
   
-So we took the [GamePlay3D](http://gameplay3d.org/) math library, we did some minor changes, and the cocos2d-x math code with it.
+所以我们选择了[GamePlay3D](http://gameplay3d.org/)数学库，我们做了小幅的修改，添加了一些cocos2d-x数学代码。
 
-How to use it:
+如何使用它呢:
 
 ```c++
 // vector2
@@ -236,7 +235,7 @@ auto identity = Mat4::IDENTITY;
 node->setNodeToParentTransform(identity);
 ```
 
-The good news is that the old API still works since we `typedef` the old classes and structs to the new math classes.
+好消息是旧的API任然是有效的，因为我们使用`typeof`方法将旧的类和结构体定义到新的数学库类型上。
 
 
 ## 新的UIVideoPlayer
@@ -255,41 +254,42 @@ videoPlayer->play();
 ```
 
 
-## UI navigation
+## UI导航
 
-3.1 supports focus navigation of UI widget which is very useful for OTT manufacturer.
+3.1支持UI控件的焦点导航，这对OTT制造商是非常有用的。
 
-###Usage
-Suppose that your screen has 3 widgets layout horizontally. We could define it like this:
+###用法
+支持屏幕中拥有3个水平排布的窗口，我们可以这么定义：
 
 ```c++
 HBox(widget1, widget2, widget3)
 ```
 
-If you want the `widget1` to get focused, you could call
+如果你想要定位到`widget1`，那么就调用
 
 ```c++
 widget1->setfocused(true)
 ```
 
-If you want to move the focus to the next widget, you could just call
+如果你想要移动焦点到下一个窗口，那么就调用
 
 ```c++
 widget1->findNextFocusedWidget(Widget::FocusDirection::RIGHT, _firstFocusedWidget);
 ```
 
-When the focus goes to `widget3`, if you call 
+当你的焦点在`widget3`的时候，如果你调用
 
 ```c++
 widget3->findNextFocusedWidget(Widget::FocusDirection::RIGHT, _firstFocusedWidget);
 ```
-, the focus will stay there only when you call `HBox->setLoopFocus()` then the focus will move to `widget1` again.
 
-**Note:**
+，焦点仍然会停留，只有当你调用了`HBox->setLoopFocus()`，焦点才会重新移动到`widget1`。
 
-The HBox and VBox could be nested in any ways and all the widgets should be added into the HBox/VBox if you want them to be focused later.
+**注意：**
 
-When a focus moves from one widget to another, it will trigger a *focus event*. You could add the following code to handle these event:
+HBox和VBox可以通过任意的方式嵌套，所有的窗口都可以被添加到HBox/VBox如果你想要它们晚一点被定位的话。
+
+当焦点从一个窗口移动到另一个的时候，它将会触发一个*focus event*。你可以添加以下的代码来处理这些事件。
 
 ```c++
 auto eventListener = EventListenerFocus::create();
@@ -297,7 +297,7 @@ eventListener->onFocusChanged = CC_CALLBACK_2(UIFocusTestBase::onFocusChanged, t
 eventDispatcher->addEventListenerWithFixedPriority(_eventListener, 1);
 ``` 
 
-The onFocusChanged callback, when the widget lose focus, we change its color to white, when the widget get focus, we change its color to red. You could add more complex animations to them when focus change happens.
+onFocusChanged回调函数中，当窗口失去焦点的时候，我们把它的颜色改成白色的，当窗口得到焦点的时候，我们把它的颜色改成红的。当焦点切换的时候，你可以添加更复杂的动画。
 
 ```c++
 void UIFocusTestBase::onFocusChanged(cocos2d::ui::Widget *widgetLostFocus, cocos2d::ui::Widget *widgetGetFocus)
@@ -312,27 +312,29 @@ void UIFocusTestBase::onFocusChanged(cocos2d::ui::Widget *widgetLostFocus, cocos
     }
 }
 ```
-For more usage information, please refer to [this file](https://github.com/cocos2d/cocos2d-x/blob/v3/tests/cpp-tests/Classes/UITest/CocoStudioGUITest/UIFocusTest/UIFocusTest.cpp) for more information.
+
+更多使用信息请参考[这个文件](https://github.com/cocos2d/cocos2d-x/blob/v3/tests/cpp-tests/Classes/UITest/CocoStudioGUITest/UIFocusTest/UIFocusTest.cpp)。
 
 
-###Limitations
-Only Layout type `HORIZONTAL` and `VERTICAL` is supported which means we could not treat Scrollview and PageView as a base layout.
+###局限
 
-The following layouts:
+只支持两种类型的布局，`HORIZONTAL`和`VERTICAL`，这意味着我们不能使用Scrollview和PageView作为一个基础布局。
+
+如下布局：
 
 ```c++
 HBox(VBox, ScrollView(HBox(VBox, VBox, VBox)))
 VBox(HBox, PageView(VBox(HBox,HBox))))
 ```
- are not supported yet, we will implement it in cocos2d-x v3.2.
+目前暂不支持，我们将会在cocos2d-x v3.2中实现它。
  
- If you want to achieve the focus movement in scrollview, you could use a normal VBox or HBox to layout elements and call `setFocusEnabled(true/false)` manually to skip the unwanted widgets.
-  
-## Improved folder structure
+如果你想要实现在scrollview中焦点的移动，你可以使用一个普通的VBox或者HBox布局元素，然后调用`setFocusEnabled(true/false)`手动来跳过不想要的窗口。
+ 
+## 提升目录结构设计
 
-In v3.0 we started a folder re-organization for cocos2d-x. Unfortunately we didn't have the time to finish it on time.
+在v3.0中我们重新组织了cocos2d-x的目录结构。可惜我们没有时间及时完成它。
 
-In v3.1 we finished the folder re-organization, and it looks like this:
+在v3.1中我们完成了目录结构的重新组织，现在它是这样子的：
 
     cocos/: includes cocos2d.cpp and other build files
     cocos/2d/: includes base nodes, 2d nodes and related objects like Node, Scene, Sprite, etc.
@@ -345,21 +347,21 @@ In v3.1 we finished the folder re-organization, and it looks like this:
     cocos/network/: network retlated objects
     cocos/editor-support/: 3rd party editors file format
 
-## Particle System fixes
+## 粒子系统修复
 
-cocos2d-x v3.0 and earlier versions had a bug in `ParticleSystem` where the the Y-flipped parameter was not calculated correctly.
+cocos2d-x v3.0及更早的版本中，`ParticleSystem`有一个bug，Y-flipped参数计算错误。
 
-We fixed that bug in v3.1. The problem is that fixing this bug breaks backward compatiblility in particles that were relying on the broken behavior.
+我们在v3.1中修复了这个bug。但是问题是修复这个bug会破坏向后兼容性。
 
-In order to try to make the transition easier to v3.1, we created a tool that fixes the broken particle system files. How to use it:
+为了可以更简单地过渡到v3.1，我们创建了一个工具用来修复破坏的粒子系统文件。怎样使用它呢：
 
     # Will convert broken .plist files into fixed ones.
     # Will generate a backup file of the converted files
     $ cocos/tools/particle/convert_YCoordFlipped.py *.plist
 
 
-# Misc API Changes
+# 其他 API 变更
 
-## deprecated functions and  global variables
+## 弃用函数和全局变量
 
-TODO: The old Math API
+TODO: 旧的数学API
