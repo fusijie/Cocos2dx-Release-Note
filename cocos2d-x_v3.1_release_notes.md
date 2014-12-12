@@ -116,7 +116,7 @@
     
 ## 如何开始一个新游戏
 
-请参考: [ReadMe](../README.md)
+请参考: [ReadMe](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1/README.md)
 
 # v3.0 亮点
 
