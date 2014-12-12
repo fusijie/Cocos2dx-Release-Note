@@ -495,7 +495,7 @@ _这些特性从 v3.0-alpha0 开始被添加_
 * 可以使用 `EventDispatcher` 来分发自定义事件
 * 可以注册一个 lambda 表达式作为回调函数
 
-更多 `EventDispatcher` 细节可以参考 [this document](https://github.com/fusijie/Cocos2d-x3.0-Release-Note/blob/master/eventdispatcher_mechanism_zh.md)。
+更多 `EventDispatcher` 细节可以参考 [这个文档](https://github.com/fusijie/Cocos2d-x3.0-Release-Note/blob/master/eventdispatcher_mechanism_zh.md)。
 
 ## 物理引擎集成
 
@@ -503,7 +503,7 @@ _这些特性从 v3.0-pre-alpha0 开始被添加_
 
 在 v3.0 中，我们把基于 [Chipmunk2D](https://chipmunk-physics.net/) 的物理引擎集成到 Cocos2d-x 中，通过这些特性，你可以很容易创建基于物理效果的游戏，而不必去理解物理引擎。
 
-更的关于物理引擎集成的细节可以参考 [this document](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/physics/physics-integration/en.md)。
+更的关于物理引擎集成的细节可以参考 [这个文档](https://github.com/cocos2d/cocos-docs/blob/master/manual/framework/native/physics/physics-integration/en.md)。
 
 
 # 其他 API 变更
