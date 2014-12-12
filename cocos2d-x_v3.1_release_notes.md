@@ -336,16 +336,16 @@ VBox(HBox, PageView(VBox(HBox,HBox))))
 
 在v3.1中我们完成了目录结构的重新组织，现在它是这样子的：
 
-    cocos/: includes cocos2d.cpp and other build files
-    cocos/2d/: includes base nodes, 2d nodes and related objects like Node, Scene, Sprite, etc.
-    cocos/3d/: includes 3d nodes and related objects like Sprite3D
-    cocos/audio/: sound and music related objects
-    cocos/math/: math related objects
-    cocos/platform/: platform specific objects
-    cocos/renderer/: GPU related objects like Renderer, Texture2D, Render Commands, etc.
-    cocos/physcis/: physics related objects
-    cocos/network/: network retlated objects
-    cocos/editor-support/: 3rd party editors file format
+    cocos/: 包含cocos2d.cpp和其他编译文件
+    cocos/2d/: 包含基本的nodes，2d nodes和Node，Scene，Sprite之类的对象.
+    cocos/3d/: 包含3d nodes和Sprite3D之类的对象
+    cocos/audio/: 声音和音乐相关对象
+    cocos/math/: 数学库相关对象
+    cocos/platform/: 指定平台对象
+    cocos/renderer/: Renderer, Texture2D, Render Commands等GPU相关对象.
+    cocos/physcis/: 物理相关对象
+    cocos/network/: 网络相关对象
+    cocos/editor-support/: 第三方编辑器文件格式
 
 ## 粒子系统修复
 
@@ -355,8 +355,8 @@ cocos2d-x v3.0及更早的版本中，`ParticleSystem`有一个bug，Y-flipped�
 
 为了可以更简单地过渡到v3.1，我们创建了一个工具用来修复破坏的粒子系统文件。怎样使用它呢：
 
-    # Will convert broken .plist files into fixed ones.
-    # Will generate a backup file of the converted files
+    # 修复破坏的.plist文件
+    # 会生成一个被转换文件的备份
     $ cocos/tools/particle/convert_YCoordFlipped.py *.plist
 
 
