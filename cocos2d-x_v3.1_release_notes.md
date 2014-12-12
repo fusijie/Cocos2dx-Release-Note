@@ -107,7 +107,7 @@
     $ cd bin/cpp-empty-test
     $ ./cpp-empty-test
     
-## How to start a new game
+## 如何开始一个新游戏
 
 请参考: [ReadMe](../README.md)
 
