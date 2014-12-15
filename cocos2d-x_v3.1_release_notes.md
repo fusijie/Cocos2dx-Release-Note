@@ -85,7 +85,7 @@
     
 然后
 
-* 把 cocos2d-x Android 项目导入 Eclipse 中，导入的路径是 `cocos/2d/platform/android`
+* 把 cocos2d-x Android 项目导入 Eclipse 中，导入的路径是 `cocos/platform/android`
 * 把 `cpp-empty-test` Android 项目导入 Eclipse 中，导入的路径是 `tests/cpp-empty-test/proj.android`
 * 编译 `cpp-empty-test` Android 项目，然后运行即可
 
