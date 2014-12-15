@@ -143,12 +143,13 @@ auto sprite3d = Sprite3D::create("mymodel.obj");
 //如果.obj文件中没有指定材质，你可以重写它：
 auto sprite3d = Sprite3D::create("mymodel.obj", "texture.png");
 
-//因为Sprite3D是一个常规的节点，所以你可以像其他节点一样添加到场景中
+//因为Sprite3D就是一个普通的节点，所以你可以像其他节点一样添加到场景中
 scene->addChild(sprite3d);
 sprite3d->setRotation3D(Vec3(x,y,z));
 ```
 
 ## 提升了Shader子系统
+
 为了支持`Sprite3D`，我们重构了shader子系统，对2D和3D的而言，shader系统将会更强大也更易于使用。
 
 在v3.0中，`GLProgram`类即用于控制 _OpenGL program_ (shader)，同时也用于shader状态(uniforms变量，attributes变量)。
@@ -166,16 +167,16 @@ auto glprogram = GLProgram::create(...);
 // 由glprogram使用，它将会填充glprogramstate dictionary
 auto glprogramstate = GLProgramState::create( glprogram );
 
-// 怎样去为Vec2设置一个uniform（Int, Texture, Vec3, Vec4, Mat4都支持）
+// 为Vec2设置一个uniform（Int, Texture, Vec3, Vec4, Mat4都支持）
 glprogramstate->setUniformVec2("u_my_uniform", Vec2(x,y));
-// 怎样用一个回调来设置它
+// 用一个回调来设置它
 glprogramstate->setUniformCallback("u_my_uniform", [](Uniform*uniform){
     // do something
 });
 
-// 怎样设置一个属性
+// 设置一个属性
 glprogramstate->setVertexAttribPointer("a_my_attrib", 4, GL_FLOAT, GL_FALSE, 0, vertex);
-// 怎样用一个回调来设置它
+// 用一个回调来设置它
 glprogramstate->setVertexAttribCallback("a_my_attrib", [](VertexAttrib*attrib){
     // do something
  });
@@ -242,7 +243,7 @@ auto identity = Mat4::IDENTITY;
 node->setNodeToParentTransform(identity);
 ```
 
-好消息是旧的API任然是有效的，因为我们使用`typeof`方法将旧的类和结构体定义到新的数学库类型上。
+好消息是旧的API仍然是有效的，因为我们使用`typeof`方法将旧的类和结构体定义到新的数学库类型上。
 
 
 ## 新的UIVideoPlayer
@@ -266,6 +267,7 @@ videoPlayer->play();
 3.1支持UI控件的焦点导航，这对OTT制造商是非常有用的。
 
 ###用法
+
 支持屏幕中拥有3个水平排布的窗口，我们可以这么定义：
 
 ```c++
@@ -356,7 +358,7 @@ VBox(HBox, PageView(VBox(HBox,HBox))))
 
 ## 粒子系统修复
 
-cocos2d-x v3.0及更早的版本中，`ParticleSystem`有一个bug，Y-flipped参数计算错误。
+cocos2d-x v3.0及更早的版本中，`ParticleSystem`有一个Y-flipped参数计算错误的bug。
 
 我们在v3.1中修复了这个bug。但是问题是修复这个bug会破坏向后兼容性。
 
