@@ -55,7 +55,7 @@
 # 概括
 
 * 完整更新日记: https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.3/CHANGELOG
-* v3.0 发布说明: [v3.0 Release Notes](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md)
+* v3.0 发布说明: [v3.0 Release Notes](https://github.com/fusijie/Cocos2dx-ReleaseNote-zh/blob/master/cocos2d-x_v3.0_release_notes.md)
 
 # 需求
 
@@ -138,7 +138,7 @@
     
 ## 如何开始一个新游戏
 
-请参考: [ReadMe](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.2/README.md)
+请参考: [ReadMe](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.3/README.md)
 
 # v3.3
 
@@ -174,7 +174,7 @@ http://discuss.cocos2d-x.org/t/build-android-base-on-ndk-r10c/18543.
 
 **lua**
 
-当创建一个新的lua项目的时候，所有的内部lua文件会被拷贝到`src/cocos`目录。我们添加了`cocos/init.lua`文件来加载所有这些内部lua文件。你不必自己手动加载这些lua文件，因为`cocos/init.lua`是默认加载的。所以，你需要在你的代码中移除所有的这些代码：
+当创建一个新的lua项目的时候，所有的内部lua文件会被拷贝到`src/cocos`目录。我们添加了`cocos/init.lua`文件来加载所有这些内部lua文件。你不必自己手动加载这些lua文件，因为`cocos/init.lua`是由引擎默认加载的。所以，如果你想升级旧引擎的话需要在你的代码中移除所有的这些代码：
 
 * require "Cocos2d"
 * require "Cocos2dConstants" 
@@ -223,12 +223,12 @@ require "cocos.init"
 
 ## v3.3rc0亮点
 
-* 3d：添加光源支持：包含directional light, point light, spot light 和 ambient light
+* 3d：添加光源支持：包含方向光，点光，聚光和环境光
 * New audio: 更多平台支持(Mac OS X and Windows)
 * Spine runtime: 升级到 v2.0.18
 * Application: 添加 openURL()
 * 添加 `AssetsManagerEx`，这是一个 `AssetsManager`的增强版本
-* TileMap: 支持交叉的 tile map
+* TileMap: 支持staggered tile map
 * 添加 `ClippingRectangleNode`，这是一个更高效的矩形裁剪
 * Node: schedule/unschedule lambda 函数
 * iOS和Android的Facebook平台支持，全特性添加，但是API需要Facebook的伙伴打磨。
@@ -237,11 +237,11 @@ require "cocos.init"
 
 ### 光源
 
-为了使3d对象看起来更加真实，我们在这个版本中添加了光源。cocos2d-x支持4种类型的光源：directional light, point light, spot light 和 ambient light。
+为了使3d对象看起来更加真实，我们在这个版本中添加了光源。cocos2d-x支持4种类型的光源：方向光，点光，聚光和环境光。
 
-`DirectionLight`代表着一个非常遥远的光源（比如太阳或者月亮）。光线从天空中的每一个点定向平行地投射下来，通常用于模拟太阳光。
+`方向光`代表着一个非常遥远的光源（比如太阳或者月亮）。光线从天空中的每一个点定向平行地投射下来，通常用于模拟太阳光。
 
-以下代码用于添加一个directional light到场景中，
+以下代码用于添加一个方向光到场景中，
 
 ```c++
 auto directionalLight = DirectionLight::create(Vec3(-1.0f, -1.0f, 0.0f), Color3B(200, 200, 200));
@@ -262,11 +262,11 @@ directionalLight->setLightFlag(LightFlag::LIGHT0);
 
 如果某个3d精灵的光掩码和光的标识进行与操作后不等于0，那么这个3d精灵就会受光影响。
 
-`PointLight`代表着从一个3D空间向外投射光线的单一无限小的点。通常用于模拟全向光源。
+`点光`代表着从一个3D空间向外投射光线的单一无限小的点。通常用于模拟全向光源。
 
-`SpotLight`代表着一个空间中可以发射出一个锥形光场的点。它可以用来模拟台灯，天花板上锥形灯光等等。注意`SpotLight`会更消耗GPU时间。
+`聚光`代表着一个空间中可以发射出一个锥形光场的点。它可以用来模拟台灯，天花板上锥形灯光等等。注意`聚光`会更消耗GPU时间。
 
-`AmbientLight`在每一个方向上投下柔和的灯光。
+`环境光`在每一个方向上投下柔和的灯光。
 
 需要注意的是我们使用了前向渲染方法，光源的数量会影响性能。你可以在配置文件中设置着色器支持的最大光源数。
 
@@ -281,7 +281,7 @@ directionalLight->setLightFlag(LightFlag::LIGHT0);
 
 ### Spine runtime
 
-Spine runtime升级到最新版本`v2.0.18`。这个版本支持`Free-Form-Deformation(FFD)`，它允许meshes可以拉伸，挤压，混合，弹跳，这是使用矩形图片所不允许的。
+Spine runtime升级到最新版本`v2.0.18`。这个版本支持`Free-Form-Deformation(FFD)`，它允许meshes拉伸，挤压，混合，弹跳，这是使用矩形图片所不允许的。
 
 `Spine runtime 已经升级了它的授权许可，只允许引擎使用未修改的版本，即使有bug也一样。所以童鞋们就不要发spine runtime的pull request了，我们不能合并。`
 
@@ -366,7 +366,7 @@ addChild(billboard);
 //创建一个摄像机来对准这个billboard。否则，它会被默认的摄像机看见
 auto camera = Camera::createPerspective(60, (GLfloat)s.width/s.height, 1, 1000);
 camera->setCameraFlag(CameraFlag::CAMERA_USER1);
-addChild(camera); //add this camera
+addChild(camera); //添加camera
 
 //这个billboard只被设置了CameraFlag::CAMERA_USER1标识的摄像机看见
 billboard->setCameraMask((unsigned short)CameraFlag::CAMERA_USER1);
@@ -438,34 +438,34 @@ WebView是一个允许你在Cocos2d-x内部显示web内容的控件。目前我�
 * 不管是音乐还是音效，只有一个调用方法`play2d()`
 * 应该使用`Audio::getState()`来确定一个声音是在播放还是暂停
 * 在C++中它的类名是`cocos2d::experimental::AudioEngine`，在lua-binding中它的模块名是`ccexp.AudioEngine`
-* 没有预加载功能，你可以马上播放一个声音
+* 没有预加载功能，你可以立即播放一个声音
 
 更完整的测试例，请参考 `tests/cpp-tests/Classes/NewAudioEngineTest/NewAudioEngineTest.cpp`.
 
 # v3.3alpha0
 
-## Highlights of v3.3alpha0
+## v3.3alpha0亮点
 
-* 3d: `Camera`, `Reskin`, `Attachment`, `Better support for FBX`, `New fbx-conv`, `AABB`, `OBB` and `Ray`
-* ui: added `Scale9Sprite`
-* FileUitls: added `isDirectoryExist()`, `createDirectory()`, `removeDirectory()`, `removeFile()`, `renameFile()` and `getFileSize()`
-* Device: added `setKeepScreenOn()` on iOS and Android 
-* Added c++11 random support
-* RenderTexture: added a call back function for `saveToFile()`
-* Primitive: Support Points, Lines and Triangles for rendering
-* SpriteFrameCache: support loading from plist file content data
-* Added a consistent way to set GL context attributes for all platforms
-* Only two libraries in cocos2d-x, one for c++ codes, another one for lua-binding codes
-* Many other small features added and many bugs fixed
+* 3d: `Camera`, `Reskin`, `Attachment`, `更好地支持FBX`, `新的fbx-conv工具`, `AABB`, `OBB` 和 `Ray`
+* ui: 添加 `Scale9Sprite`
+* FileUitls: 添加 `isDirectoryExist()`, `createDirectory()`, `removeDirectory()`, `removeFile()`, `renameFile()` 和 `getFileSize()`
+* Device: 在iOS和Android上添加 `setKeepScreenOn()`
+* 添加C++11随机数支持
+* RenderTexture: 为`saveToFile()`添加回调
+* Primitive: 支持点，线，三角形的渲染
+* SpriteFrameCache: 支持从plist文件中加载数据内容
+* 为各平台添加了一致性接口来设置GL上下文属性
+* 只保留了2个库，一个是C++代码，一个是lua-binding
+* 其他功能添加以及bug修复
 
-## Features in detail
+## 细节
 
 ### Camera
 
-This version of camera is powerful than previous one. And you can add it as a child anywhere. If you want to let a Node to be visited by a camera, Node's camera mask should include Camera's flag:
+这个版本的camera比之前的版本更加的强大。你可以将它作为一个子节点添加到任意的地方。如果你想让节点可以被camera访问，Node的掩码必须包含Camera的标识：
 
 ```c++
-// let sprite to be visited by a camera
+// 让sprite可以被camera访问
 auto sprite = Sprite::create("myFile.png");
 sprite->setCameraMask(CameraFlag::USER1);
 auto camera = Camera::createPerspective(60, winSize.width/winSize.height, 1, 1000);
@@ -473,7 +473,7 @@ camera->setCameraFlag(CameraFlag::USER1);
 scene->addChild(camera);
 ```
 
-If you have many Nodes that want to be visited by a camera, there is a convenient way:
+如果你有很多节点需要被camera访问，这里有一种简便的方法：
 
 ```c++
 auto layer = Layer::create();
@@ -481,7 +481,7 @@ auto sprite1 = Sprite::create();
 auto sprite2 = Sprite::create();
 layer->addChild(sprite1);
 layer->addChild(sprite2);
-// it will set camera mask for all its children
+//它将会为所有的子节点设置camera的掩码
 layer->setCameraMask(CameraFlg::USER1); 
 
 auto camera = Camera::createPerspective();
@@ -489,36 +489,35 @@ camera->setCameraFlag(CameraFlag::USER1);
 scene->addChild(camera);
 ```
 
-Full test case please  refer to `tests/cpp-tests/res/Camera3DTest/Camera3DTest.cpp`.
+更完整的测试例，请参考 `tests/cpp-tests/res/Camera3DTest/Camera3DTest.cpp`。
 
 ### Reskin
 
-It is a powerful feature, all the user change the appearance of character.
+这是一个很给力的特性，用户可以改变角色的外观。
 
-For example, there a model named girl.c3b, which has two coats, coat0 and coat1. 
-The character's coat can be changed like this,
+举个例子，有一个模型叫girl.c3b，模型有两件外套，coat0和coat1。那么，角色的外套可以这样改变：
 
 ```c++
-//load the girl from file
+//从文件中加载girl
 auto sprite3d = Sprite3D::create("girl.c3b");
-//get the mesh named coat0
+//获取名为coat0的mesh
 auto mesh0 = sprite3d->getMeshByName("coat0");
-//you can change texture of this mesh if you like
+//如果你愿意的话可以修改mesh的纹理
 mesh0->setTexture("cloth.png");
-//you can change visibility for this mesh, too
+//当然你也可以修改这个mesh的可见性
 mesh0->setVisible(true);
-//hide coat1
+//隐藏coat1
 auto mesh1 = sprite3d->getMeshByName("coat1");
 mesh1->setVisible(false);
 ```
 
-Full test case please refer to 'tests/cpp-tests/Classes/Spret3DTest/Sprite3DTest.cpp'
+更完整的测试例，请参考 `tests/cpp-tests/Classes/Spret3DTest/Sprite3DTest.cpp`
 
 ### Attachment
 
-Allows to attach a node to a bone
+允许附加一个节点到一个骨骼
 
-Usage,
+用法，
 
 ```c++
 auto sprite = Sprite3D::create("girl.c3b");
@@ -527,31 +526,31 @@ auto attachNode = sprite->getAttachNode("left_hand");
 attachNode->addChild(weapon);
 ```
 
-Full test case please refer to 'tests/cpp-tests/Classes/Spret3DTest/Sprite3DTest.cpp'
+更完整的测试例，请参考 `tests/cpp-tests/Classes/Spret3DTest/Sprite3DTest.cpp`
 
-### Better support for FBX
+### 更好地支持FBX
 
-support multiple mesh
-support multiple material
-bones bind to each mesh limited to 40. But the FBX model can contain more meshes. So the model can contain much more bones.
+支持多个mesh
+支持多个material
+每个mesh绑定的骨骼数限制在40个以内。但是FBX模型可以包含多个mesh。所以模型可以包含更多的骨骼。
 
-### New fbx-conv
+### 新的fbx-conv工具
 
-It can export more complex model, which contains multiple meshes and multiple materials.
+可以导出包含多个mesh多个material的复杂模型。
 
 ### AABB, OBB and Ray
 
-AABB means Axis Aligned Bounding Box
-OBB means Oriented Bounding Box
-Ray has a origin position and direction
+AABB 意思是 Axis Aligned Bounding Box
+OBB 意思是 Oriented Bounding Box
+Ray 有一个原点和方向
 
-Each Sprite3D or Mesh has its own AABB.
-AABB and OBB can be picked by Ray.
+每一个Sprite3D或者Mesh都有自己的AABB。
+AABB 和 OBB可以被Ray选中。
 
-Usage,
+用法，
 
 ```c++
-//get ray from camera
+//从Camera获取Ray
 Vec3 nearP(location.x, location.y, -1.0f), farP(location.x, location.y, 1.0f); 
 auto size = Director::getInstance()->getWinSize();
 camera->unproject(size, &nearP, &nearP);
@@ -561,23 +560,24 @@ ray._direction = farP - nearP;
 ray.intersects(sprite3d->getAABB( ) );
 ```
 
-Full test case please refer to 'tests/cpp-tests/Classes/Spret3DTest/Sprite3DTest.cpp'
+更完整的测试例，请参考 `tests/cpp-tests/Classes/Spret3DTest/Sprite3DTest.cpp`
 
 ### ui::Scale9Sprite
 
-Now we have implemented a new Scale9Sprite class under ui module. Its internal implementation is concise than the previous one plus more features.
-The main reason of reimplementing this class is that the Scale9Sprite is heavily used in ui module. Now the ui module is not dependent from extension module.
-By applying the new ui::Scale9Sprite, the code inside many widget classes are more cleaner and elegant.
+我们在ui模块下实现了一个新的Scale9Sprite类。它的内部实现比之前的Scale9Sprite更为简洁，功能也更为强大。
+重新实现这个类的主要的原因是，Scale9Sprite在UI模块被大量使用。现在UI模块不再依赖于extension模块。
+通过采用全新的UI::Scale9Sprite，很多部件类内部的代码更加简洁，优雅。
 
 We could manually toggle "slice 9" feature by one function call:
+我们可以通过一个函数来手动切换“slice 9”的特性。
 
 ```c++
-//ui::Scale9Sprite is slice 9 enabled on default
+//ui::Scale9Sprite默认是开启“slice 9”
 auto sprite = ui::Scale9Sprite::create("foo.png");
 sprite->setScale9Enabled(false);
 ```
 
-It also supports Flipping now.
+现在也支持翻转了，
 
 ```c++
 auto sprite = ui::Scale9Sprite::create("bar.png");
@@ -585,23 +585,22 @@ sprite->setFlippedX(true);
 sprite->setFlippedY(false);
 ```
 
-Since the ui::Scale9Sprite is a Node rather than a Sprite, so you can't add it to a batch node. If you do want to do some actions on the internal sprite, 
-you could call `sprite->getSprite()` to access it. 
+因为ui::Scale9Sprite是一个节点而不是Sprite，所以你不能将它加入批处理节点中，如果你想要在sprite的内部去做一些动作，你可以调用`sprite->getSprite()`来访问它。
 
-Full test case please refer to `tests/cpp-tests/Classes/UITests/CocostudioGUITest/UIScale9SpriteTest.cpp`.
+更完整的测试例，请参考 `tests/cpp-tests/Classes/UITests/CocostudioGUITest/UIScale9SpriteTest.cpp`
 
-### c++11 random support
+### c++11随机数支持
 
-Since `rand()` is not good(refer to [this document](http://c-faq.com/lib/randrange.html)), we use c++11 random library to do generate random number, and provide a function to easily using:
+因为`rand()`不好用(参考[这个文档](http://c-faq.com/lib/randrange.html)),我们使用C++11随机数库来生成一个随机数，同时提供了一个函数供调用：
 
 ```c++
 int randInt = cocos2d::random(1, 10);
 float randFloat = cocos2d::random(1.f, 10.f);
 ```
 
-### RenderTexture save function
+### RenderTexture保存功能
 
-`RenderTexture::saveToFile()` will not save rendertexture when the function returns, because it just send render command to renderer. The file will be saved after render command is executed. It is not convenient if you want to use the saved file to do some work. So we added a parameter in `RenderTexture::saveToFile()` to set a call back function when the file is saved.
+`RenderTexture::saveToFile()`函数返回的时候后不再保存rendertexture，因为它只是发送render command到renderer而已。render command执行的时候文件才会保存。如果你想用保存文件来做一些事情的时候会很不方便，所以我们在`RenderTexture::saveToFile()`添加了一个参数用来设置文件保存时的回调函数。
 
 ```c++
 renderTexture->begin();
@@ -614,18 +613,18 @@ renderTexture->saveToFile("myFile.png", true, callback);
 
 ### Primitive
 
-`Primitive` is added to support `Points`,`Lines`,`Triangles` rendering. Previously, if we want to draw a custom geometry(sphere, line), we can only do this by using `CustomCommand`. Now, what is need is to create a Primitive, set datas, and use the corresponding `PrimitiveCommand` to draw the Primitive. 
+`Primitive` 被添加用来支持 `Points`,`Lines`,`Triangles` 的渲染。之前，如果我们想要画一个自定义的几何体（球面，线），只能通过使用`CustomCommand`。现在，只需要创建一个Primitive，设置数据，然后使用相应的`PrimitiveCommand`来画这个Primitive。
 
-Here is a simple example of rendering a quad in `Sprite`.
+这里有一个简单的在`Sprite`中渲染一个四边形的示例。
 
-1. create verexBuffer
+1. 创建 verexBuffer
 
 	```c++
 	auto vertexBuffer = VerexBuffer::create(sizeof(V3F_C4B_T2F), 4);
 	vertexBuffer->updateVertices(&_quad, 4, 0);
 	```
 
-2. create vertexData
+2. 创建 vertexData
 
 	```c++
 	auto vertexData = VertexData::create();
@@ -633,35 +632,35 @@ Here is a simple example of rendering a quad in `Sprite`.
 	vertexData->addStream(vertexBuffer, VertexStreamAttribute(12, VERTEX_ATTRIB_COLOR, GL_UNSIGNED_BTYE, 4, true));
 	vertexData->addStream(vertexBuffer, VertexStreamAttribute(16, VERTEX_ATTRIB_TEX_COORD, GL_FLOAT, 2, fasle));
 	```
-3. create IndexBuffer
+3. 创建 IndexBuffer
 	
 	```c++
 	auto indexBuffer = IndexBuffer::create(IndexType::INDEX_TYPE_SHORT_16, 6);
 	short indices[6] = {0,1,2,3,2,1};
 	indexBuffer->updateIndices(indices,6, 0);
 	```
-4. create primitive
+4. 创建 primitive
 	
 	```c++
 	auto primitve = Primitive::create(vertexData, indexBuffer, GL_TRIANGLES);
 	primitive->setStart(0);
 	primitive->setCount(6);
 	```
-5. add command to renderer
+5. 添加 command 到 renderer
 	
 	```c++
 	_command->init(globalZorder,textureID, glprogramState, blend, primitve, modelViewMatrix);
 	renderer->addCommand(&_command);
 	```
 
-Primitive supports three typs of primitives (POINTS, LINES, TRIANGLES), vertex and index sharing, multiple streams. It has some constrains:
+Primitive 支持3种类型的primitives（POINTS, LINES, TRIANGLES），vertex 和 index sharing, multiple streams。它有一些约束条件：
 
-1. The size of vertex and index Buffer is fixed, which means data must be pre allocated.
-2. Batching is not supported.
+1.顶点和索引缓冲器的大小是固定的，这意味着数据必须预先进行分配。
+2.不支持批处理。
 
-### Consistent way to set GL context attributes
+### 更方便地设置GL上下文属性
 
-Now you can set GL context attributes by override `Application::initGLContextAttrs()`, then set GL context attributes there.
+现在你可以通过重写`Application::initGLContextAttrs()`来设置GL上下文属性，然后在里面设置GL上下文属性。
 
 ```c++
 void AppDelegate::initGLContextAttrs()
@@ -672,15 +671,15 @@ void AppDelegate::initGLContextAttrs()
 }
 ```
 
-Now can only support setting bits of `r`, `g`, `b`, `a`, `depth buffer` and `stencil buffer`. We will support other attributes if needed.
+现在仅支持设置`r`，`g`，`b`，`a`，`depth buffer`和`stencil buffer`。如果有需要的话我们会添加更多的支持。
 
-### Only two libraries left
+### 只留2个库
 
-Now there are two libraries left: one for all c++ codes and another one for lua-bindings codes. 
+现在只留下2个库：一个是对于所有C++代码的，另一个是对于lua_bindings代码。
 
-If you are developing with c++, you only have to link to `libcocos2d`. `libcocos2d` includes all c++ codes:
+如果你使用C++进行开发，你只需链接`libcocos2d`。`libcocos2d`包含所有的C++代码：
 
-* cocos2d(including 2d and 3d)
+* cocos2d(包含2d和3d)
 * network
 * cocosstudio
 * ui
@@ -690,21 +689,22 @@ If you are developing with c++, you only have to link to `libcocos2d`. `libcocos
 * box2d
 * ...
 
-Not used codes will be stripped by linker.
+未使用的代码会由链接器自动剥离。
 
 If you are developing with lua, you should link to `libcocos2d` and `libluacocos2d`. You can comment codes in `lua_module_register.h` if you don't want to some module.
+如果你使用lua进行开发，你应该链接`libcocos2d`和`libluacocos2d`。如果不需要某些模块的话，你可以在`lua_module_register.h`中注释掉这些代码。
 
 ```c++
 int lua_module_register(lua_State* L)
 {
-    register_cocosdenshion_module(L); // comment this line to remove cocosdenshion
-    register_network_module(L);       // comment this line to remove network
-    register_cocosbuilder_module(L);  // comment this line to remove cocosbuilder
-    register_cocostudio_module(L);    // comment this line to remove cocostudio
-    register_extension_module(L);     // comment this line to remove extension
-    register_ui_moudle(L);            // comment this line to remove ui
-    register_spine_module(L);         // comment this line to remove spine
-    register_cocos3d_module(L);       // comment this line to remove 3d
+    register_cocosdenshion_module(L); // 注释此行以移除 cocosdenshion
+    register_network_module(L);       // 注释此行以移除 network
+    register_cocosbuilder_module(L);  // 注释此行以移除 cocosbuilder
+    register_cocostudio_module(L);    // 注释此行以移除 cocostudio
+    register_extension_module(L);     // 注释此行以移除 extension
+    register_ui_moudle(L);            // 注释此行以移除 ui
+    register_spine_module(L);         // 注释此行以移除 spine
+    register_cocos3d_module(L);       // 注释此行以移除 3d
     return 1;
 }
 ```
