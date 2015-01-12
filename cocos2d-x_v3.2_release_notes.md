@@ -1,4 +1,4 @@
-# cocos2d-x v3.2 Release Notes #
+# cocos2d-x v3.2 发布说明 #
 
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
@@ -26,46 +26,48 @@
 	- [utils::findChildren](#user-content-utilsfindchildren)
 	- [Node::setNormalizedPosition](#user-content-nodesetnormalizedposition)
 
-# Misc Information
+# 概况
 
-* Download: http://cdn.cocos2d-x.org/cocos2d-x-3.2.zip
-* Full Changelog: https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.2/CHANGELOG
-* API Reference: http://www.cocos2d-x.org/reference/native-cpp/V3.2/index.html
-* v3.0 Release Notes can be found here: [v3.0 Release Notes](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md)
+* 下载: http://cdn.cocos2d-x.org/cocos2d-x-3.2.zip
+* 完整更新日记: https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.2/CHANGELOG
+* API参考手册: http://www.cocos2d-x.org/reference/native-cpp/V3.2/index.html
+* v3.0 发布说明: [v3.0 Release Notes](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md)
 
-# Requirements
+# 需求
 
 ## Runtime Requirements
 
-* Android 2.3 or newer
-* iOS 5.0 or newer
-* OS X 10.7 or newer
-* Windows 7 or newer
-* Windows Phone 8 or newer
-* Linux Ubuntu 14.04 or newer
-* ~~Browsers via Emscripten~~ N/A for the moment
+## 环境需求
 
-## Compiler Requirements
+* Android 2.3 及以上
+* iOS 5.0 及以上
+* OS X 10.7 及以上
+* Windows 7 及以上
+* Windows Phone 8 及以上
+* Linux Ubuntu 14.04 及以上
+* ~~Browsers via Emscripten~~ 暂不支持
 
-* Xcode 5.1 or newer for iOS or Mac
-* gcc 4.9 or newer for Linux
-* ndk-r9d or newer for Android
-* Visual Studio 2012  or newer for Windows (win32)
-* Visual Studio 2012  or newer for Windows Phone 8
+## 编译需求
 
-## How to run tests
+* Xcode 5.1 及以上 for iOS or Mac
+* gcc 4.9 及以上 for Linux
+* ndk-r9d 及以上 for Android
+* Visual Studio 2012 及以上 for Windows (win32)
+* Visual Studio 2012 及以上 for Windows Phone 8
+
+## 如何运行 TestCpp
 
 ### Mac OSX & iOS
 
-* Enter `cocos2d-x/build` folder, open `cocos2d_test.xcodeproj`
-* Select `iOS` or `OS X` target in scheme toolbar
-* Click `run` button
+* 进入 `cocos2d-x/build` 文件夹, 打开 `cocos2d_test.xcodeproj`
+* 在 Xcode 的 scheme toolbar 选择 `iOS` 或者 `OS X` 平台
+* 点击 `run` 按钮
 
 ### Android
 
-You can run the samples...
+你可以运行一下示例...
 
-**Using command line:**
+**使用命令行：**
 
     $ cd cocos2d-x
     $ ./setup.py
@@ -73,26 +75,26 @@ You can run the samples...
     $ ./android-build.py cpp-empty-test -p 10
     $ adb install cocos2d-x/tests/cpp-empty-test/proj.android/bin/CppEmptyTest-debug.apk
     
-Then click item on Android device to run tests. Available value of `-p` is the API level, cocos2d-x supports from level 10.
+然后点击安卓设备上的程序运行测试例，`-p` 指定了 Android API 等级，cocos2d-x 支持 level10 以上。
 
-**Using Eclipse:**
+**使用 Eclipse:**
 
     $ cd cocos2d-x
     $ ./setup.py
     $ cd build
     $ ./android-build.py cpp-empty-test -p 10
     
-Then
+然后
 
-* Import cocos2d-x Android project into Eclipse, the path used to import is `cocos/2d/platform/android`
-* Import `cpp-empty-test` Android project into Eclipse, the path used to import is `tests/cpp-empty-test/proj.android`
-* Build `cpp-empty-test` Android project and run
+* 把 cocos2d-x Android 项目导入 Eclipse 中，导入的路径是 `cocos/platform/android`
+* 把 `cpp-empty-test` Android 项目导入 Eclipse 中，导入的路径是 `tests/cpp-empty-test/proj.android`
+* 编译 `cpp-empty-test` Android 项目，然后运行即可
 
 ### Windows
 
-* Enter `cocos2d-x/build`, and open `cocos2d-win32.vs2012.sln`
-* Select `cpp-empty-test` as running target
-* Click run button
+* 进入 `cocos2d-x/build` 目录, 然后打开 `cocos2d-win32.vs2012.sln` 文件
+* 选择 `cpp-empty-test` 作为启动项
+* 点击运行按钮
 
 
 ### Linux
@@ -101,69 +103,69 @@ Then
     $ ./install-deps-linux.sh
     $ cd ../..
     
-Then
+然后
 
     $ mkdir build
     $ cd build
     $ cmake ../cocos2d-x
     $ make -j4
     
-Run
+运行
 
     $ cd bin/cpp-empty-test
     $ ./cpp-empty-test
     
-## How to start a new game
+## 如何开始一个新游戏
 
-Please refer to this document: [ReadMe](../README.md)
+请参考: [ReadMe](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.2/README.md)
 
-# Highlights of v3.2
+# v3.2 亮点
 
-* `Animation3D`/`Animate3D`, new nodes for 3d animation
-* `fbx-conv` supports generating binary format which is supported by `Sprite3D`
-* Game controller support
-* Fast tilemap support
-* Added `utils::cpatureScreen` to take screenshot
-* Physics body supports scale and rotation
-* Added `Node::enumerateChildren` and `utils::findChildren`, and support c++ 11 regular expression
-* Added `Node::setNormalizedPosition`, `Node`'s position in pixel will be calculated according its parent's content size
+* `Animation3D`/`Animate3D`，3d animation新节点
+* `fbx-conv` 支持生成供`Sprite3D`使用的二进制文件
+* 支持游戏控制器
+* 支持Fast tilemap
+* 添加 `utils::cpatureScreen` 支持截图
+* Physics body 支持缩放和旋转
+* 添加 `Node::enumerateChildren` 和 `utils::findChildren`，支持C++11正则表达式
+* 添加 `Node::setNormalizedPosition`，`Node`的位置会根据父节点content size来计算
 
-# Documents
+# 文档
 
 * [Sprite3D & Animation3D](http://cocos2d-x.org/wiki/Sprite3D)
-* [Game controller](http://www.cocos2d-x.org/wiki/Game_Controller)
-* [How to compile shader on WP8](http://cocos2d-x.org/wiki/How_to_update_wp8_shader)
+* [Game 控制器](http://www.cocos2d-x.org/wiki/Game_Controller)
+* [如何在WP8上编译shader](http://cocos2d-x.org/wiki/How_to_update_wp8_shader)
 
-# Toolchain requirement changed
+# Toolchain 需求变更
 
-`Node::enumerateChildren()` uses `std::regex` which will cause crash using gcc v4.8 or lower version. 
-Because `OTHER_LDFLAGS` can not work in Xcode6 beta3. So we used fat library(including 64-bit libaries) on iOS. But Xcode 5.0 or lower version has building problem by this way.
+`Node::enumerateChildren()` 使用了 `std::regex`，后者如果使用gcc v4.8或者更低的版本，将会导致崩溃。
+因为 `OTHER_LDFLAGS` 不能在 XCode6 beta3上正常工作，所以我们在iOS上使用了胖包（包含64位库）。但是XCode5.0或者更低的版本通过这种方式会有编译的问题。
 
-So
+所以
 
-* NDK r9d or newer version is required for Android building
-* gcc 4.9 is required for linux building
-* Xcode 5.1 or newer is required on iOS
+* 安卓编译需要NDK r9d或者更新的版本
+* linux编译需要gcc 4.9
+* iOS上需要Xcode 5.1或者更新的版本
 
-# atof issue on Android
+# 安卓上的 atof 问题
 
-We found a bug of `atof` on Android when using libc++. The bug is that, the return value of `atof` may be `-inf` when passing some valid digit string.
+我们发现当在Android上用libc++的时候，`atof` 有个bug。这个bug就是，当传入一些有效的数字字符串时，`atof` 的返回值可能是 `-inf`。
 
-For example
+举个例子
 
 ```c++
-atof("90.099998474121094"); // -> return value is -inf
+atof("90.099998474121094"); // -> 返回值是 -inf
 ```
 
-We have reported it to google guys, and they confirmed that it is a bug. In order to work around this issue, we added `utils::atof()`.
+我们已经把这个问题反馈给谷歌的工作人员，他们确认了这是一个bug。为了解决这个问题，我们添加了 `utils::atof()`。
 
-The corresponding pull request for this issue is [here](https://github.com/cocos2d/cocos2d-x/pull/7440). You can refer to this pull request for demail information.
+对于的这个问题的PR在[这里](https://github.com/cocos2d/cocos2d-x/pull/7440)。你可以参考这个PR获取更多详细信息。
 
-# Features in detail
+# 细节
 
 ## Sprite3D & Animation3D
 
-Sample code to use binary version
+使用二进制版本的示例代码
 ```c++
 auto sprite3d = Sprite3D::create("filename.c3b");
 addChild(sprite3d);
@@ -173,9 +175,9 @@ auto animate3d = Animate3D::create(animation3d);
 sprite3d->runAction(RepeatForEver::create(animate));
 ```
 
-Detail information please refer to [Sprite3D & Animation3D](http://cocos2d-x.org/wiki/Sprite3D).
+更多详细信息请参考[Sprite3D & Animation3D](http://cocos2d-x.org/wiki/Sprite3D).
 
-### `fbx-conv` usage
+### `fbx-conv` 用法
 
 * Mac OS X
 
@@ -193,33 +195,33 @@ fbx-conv [-a|-b|-t] FBXFile
 
 Options:
 
-* -a: export both text and binary format
-* -b: export binary format
-* -t: export text format
+* -a: 导出文本和二进制格式
+* -b: 导出二进制格式
+* -t: 导出文本格式
 
-## Game controller
+## Game 控制器
 
-Supported controller type:
+支持的游戏控制器类型：
 
-* Android standard controllers
+* Android 标准控制器
 * Amazon tv
 * OUYA
 * Moga
 * Nibiru
-* iOS standard controllers
+* iOS 标准控制器
 
-Sample codes
+示例代码
 ```c++
-// register event listener
+// 注册事件监听
 auto listener = EventListenerController::create();
 listner->onKeyDown = ...
 ...
 eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 
-// start connecting controller
+// 开始连接控制器
 Controller::startDiscoveryController();
 
-// handler key down/ key up event
+//处理按键按下/弹起事件
 void GameControllerTest::onKeyDown(Controller *controller, int keyCode, Event *event)
 {
     switch (keyCode)
@@ -233,45 +235,45 @@ void GameControllerTest::onKeyDown(Controller *controller, int keyCode, Event *e
 }
 ```
 
-Detail information please refer to [Game controller](http://www.cocos2d-x.org/wiki/Game_Controller).
+更多详细信息请参考 [Game controller](http://www.cocos2d-x.org/wiki/Game_Controller).
 
 ## Fast tilemap
 
-Fast tilemap has the same API as `TMXTiledMap` without deprecated functions.
+Fast tilemap 和 `TMXTiledMap `有着相同的API，不包括deprecated函数。
 
-Sample code
+示例代码
 ```c++
 auto tilemap = cocos2d::experimental::TMXTiledMap::create("MyFile.tmx");
 addChild(tilemap);
 ```
 
-Full demo please refer to `COCOS2DX_ROOT/tests/cpp-tests/Classes/TileMapTest/TileMapTest2.cpp`.
+完整的测试例请参考 `COCOS2DX_ROOT/tests/cpp-tests/Classes/TileMapTest/TileMapTest2.cpp`.
 
 ## Node::enumerateChildren
 
-This functions is used to enumerate children of a `Node`. It supports c++ 11 regular expression.
+这个函数是用于枚举 `Node` 的子节点。它支持C++11正则表达式。
 
 ```c++
-// Find nodes whose name is 'nameToFind' and end with digits.
+// 查找名字是'nameToFind’，同时以数字结尾的节点。
 node->enumerateChildren("nameToFind[[:digit:]]+", [](Node* node) -> bool {
     ...
     return false; // return true to stop at first match
 });
 
-// Find nodes whose name is 'nameToFind' and end with digits recursively.
+//递归查找名字是'nameToFind’，同时以数字结尾的节点。
 node->enumerateChildren("nameToFind[[:digit:]]+", [](Node* node) -> bool {
     ...
     return false; // return true to stop at first match
 });
 ```
 
-Full test please refer to `NodeNameTest` in `COCOS2DX_ROOT/tests/cpp-tests/NodeTest/NodeTest.cpp`.
+完整的 `NodeNameTest` 请参照 `COCOS2DX_ROOT/tests/cpp-tests/NodeTest/NodeTest.cpp`.
 
-Because this function uses `std::regex` which is not supported well in gcc 4.8 or lower version. So we use `clang` and `stdc++` instead for Android building. This lead to the result that `NDK r9d` or newer is required. And `gcc 4.9` is required on linux.
+因为这个函数使用了`std::regex`，`std::regex`在gcc 4.8或者更低的版本支持并不好，所以我们使用了`clang`和`stdc++`取代了安卓编译。这将导致编译要求 `NDK r9d` 或者更高的版本。Linux上也要求 `gcc 4.9`。
 
 ## utils::findChildren
 
-This is a helper function to find children of a `Node` share a name. The implementation of this function bases on `Node::enumerateChildren`.
+这是一个辅助函数用于通过名字查找一个节点的子节点。这个函数是基于 `Node::enumerateChildren` 实现的。
 
 ```c++
 auto children = utils::findChildren(node, "nameToFind");
@@ -281,7 +283,7 @@ auto children = utils::findChildren(node, "nameToFind");
 
 ## Node::setNormalizedPosition
 
-Can use this function to set Node's position(x,y) using value between 0 and 1. `Can use this function when it has a parent node.` The positions in pixels is calculated like the following:
+可以通过这个函数使用0～1之间的值设置Node的位置（x，y），`当它有一个父节点的时候可以使用这个函数。`像素上的位置是像这样被计算的：
 
 ```c++
 // pseudo code
@@ -292,4 +294,4 @@ void setNormalizedPosition(Vec2 pos)
 }
 ```
 
-Full test please refer to `NodeNormalizedPositionTest1/2` in `tests/cpp-tests/Classes/NodeTest/NodeTest.cpp`.
+完整的 `NodeNormalizedPositionTest1/2` 请参考 `tests/cpp-tests/Classes/NodeTest/NodeTest.cpp`.
