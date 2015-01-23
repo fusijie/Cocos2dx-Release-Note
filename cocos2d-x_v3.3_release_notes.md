@@ -1,4 +1,4 @@
-# cocos2d-x v3.3 发布 #
+# cocos2d-x v3.3 发布说明 #
 
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
