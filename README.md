@@ -1,20 +1,49 @@
 Cocos2d-x 版本发布说明
 =========================
 
-* [Cocos2d-x v3.x 系列](#)	 
-	* [Cocos2d-x v3.0 发布说明](#)
-		* [Cocos2d-x v3.0 中文发布说明](cocos2d-x_v3.0_release_notes.md)
-		* [Cocos2d-x v3.0 英文发布说明](cocos2d-x_v3.0_release_notes_en.md)
-	* [Cocos2d-x v3.1 发布说明](#)
-		* [Cocos2d-x v3.1 中文发布说明](cocos2d-x_v3.1_release_notes.md)
-		* [Cocos2d-x v3.1 英文发布说明](cocos2d-x_v3.1_release_notes_en.md)
-	* [Cocos2d-x v3.2 发布说明](#)
-		* [Cocos2d-x v3.2 中文发布说明](cocos2d-x_v3.2_release_notes.md)
-		* [Cocos2d-x v3.2 英文发布说明](cocos2d-x_v3.2_release_notes_en.md)
-	* [Cocos2d-x v3.3 发布说明](#)
-		* [Cocos2d-x v3.3 中文发布说明](cocos2d-x_v3.3_release_notes.md)
-		* [Cocos2d-x v3.3 英文发布说明](cocos2d-x_v3.3_release_notes_en.md)
-	* [Cocos2d-x v3.4 发布说明](#)
-		* [Cocos2d-x v3.4 中文发布说明](#)
-		* [Cocos2d-x v3.4 英文发布说明](#)
-* [Cocos2d-x v4.x 系列](#)
+![](cocos.png)
+
+###Cocos2d-x是什么？
+
+* Cocos2d-x是一个**免费，开源，跨平台的游戏引擎**。
+
+* 官方网站：[http://www.cocos2d-x.org](http://www.cocos2d-x.org)
+
+* 官方仓库：[https://github.com/cocos2d/cocos2d-x](https://github.com/cocos2d/cocos2d-x)
+
+* 开发指南：[http://www.cocos2d-x.org/programmersguide/](http://www.cocos2d-x.org/programmersguide/)
+
+* 官方英文论坛：[http://discuss.cocos2d-x.org/](http://discuss.cocos2d-x.org/)
+
+* 官方中文论坛：[http://www.cocoachina.com/bbs/thread.php?fid-41.html](http://www.cocoachina.com/bbs/thread.php?fid-41.html)
+
+###版本发布说明
+
+* 本书包含中文和英文两个版本的Cocos2d-x发布说明。
+
+* 英文发布说明来自[官方github仓库](https://github.com/cocos2d/cocos2d-x)。
+
+* 中文发布说明为个人翻译，如有错误，欢迎[指正](https://github.com/fusijie/Cocos2dx-ReleaseNote-zh/issues)。
+
+###本书地址
+
+* GitBook地址：[http://fusijie.gitbooks.io/cocos2d-x-release-note](http://fusijie.gitbooks.io/cocos2d-x-release-note)
+
+* Github地址：[https://github.com/fusijie/Cocos2dx-ReleaseNote-zh](https://github.com/fusijie/Cocos2dx-ReleaseNote-zh)
+
+###联系我
+
+* Email: Geek.Jacky@Gmail.com
+
+* QQ: 754505629
+
+* Website: [http://www.fusijie.com/](http://www.fusijie.com/)
+
+
+ 
+
+
+
+
+
+
