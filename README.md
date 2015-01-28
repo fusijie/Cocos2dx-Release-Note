@@ -1,8 +1,7 @@
 Cocos2d-x 版本发布说明
 =========================
 
-![](cocos.png)
-
+<div align="center"><img src="cocos.png" alt="" border="0" title="Cocos" /><br></br></div>
 ###Cocos2d-x是什么？
 
 * Cocos2d-x是一个**免费，开源，跨平台的游戏引擎**。
