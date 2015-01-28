@@ -22,13 +22,13 @@ Cocos2d-x 版本发布说明
 
 * 英文发布说明来自[官方github仓库](https://github.com/cocos2d/cocos2d-x)。
 
-* 中文发布说明为个人翻译，如有错误，欢迎[指正](https://github.com/fusijie/Cocos2dx-ReleaseNote-zh/issues)。
+* 中文发布说明为个人翻译，如有错误，欢迎[指正](https://github.com/fusijie/Cocos2dx-Release-Note/issues)。
 
 ###本书地址
 
 * GitBook地址：[http://fusijie.gitbooks.io/cocos2d-x-release-note](http://fusijie.gitbooks.io/cocos2d-x-release-note)
 
-* Github地址：[https://github.com/fusijie/Cocos2dx-ReleaseNote-zh](https://github.com/fusijie/Cocos2dx-ReleaseNote-zh)
+* Github地址：[https://github.com/fusijie/Cocos2dx-Release-Note](https://github.com/fusijie/Cocos2dx-Release-Note)
 
 ###联系我
 
