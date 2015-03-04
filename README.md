@@ -36,9 +36,6 @@ Cocos2d-x 版本发布说明
 
 * QQ: 754505629
 
-* Website: [http://www.fusijie.com/](http://www.fusijie.com/)
-
-
  
 
 
