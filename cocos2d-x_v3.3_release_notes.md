@@ -52,7 +52,7 @@
 		- [更方便地设置GL上下文属性](#)
 		- [只留2个库](#)
 
-# 概括
+# 概况
 
 * 完整更新日记: https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.3/CHANGELOG
 * v3.0 发布说明: [v3.0 Release Notes](https://github.com/fusijie/Cocos2dx-ReleaseNote-zh/blob/master/cocos2d-x_v3.0_release_notes.md)
