@@ -10,4 +10,6 @@
 	* [Cocos2d-x v3.3 英文发布说明](cocos2d-x_v3.3_release_notes_en.md)
 	* [Cocos2d-x v3.4 中文发布说明](cocos2d-x_v3.4_release_notes.md)
 	* [Cocos2d-x v3.4 英文发布说明](cocos2d-x_v3.4_release_notes_en.md)
+	* [Cocos2d-x v3.5 中文发布说明](cocos2d-x_v3.5_release_notes.md)
+	* [Cocos2d-x v3.5 英文发布说明](cocos2d-x_v3.5_release_notes_en.md)
 * [Cocos2d-x v4.x 系列](cocos2d-x_v4.x_release_notes.md)
