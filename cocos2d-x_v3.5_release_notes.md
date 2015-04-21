@@ -1,97 +1,96 @@
-To be Chinesization.
-# cocos2d-x v3.5 Release Notes #
+# cocos2d-x v3.5 发布说明 #
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Misc Information](#misc-information)
-- [Requirements](#requirements)
-  - [Runtime Requirements](#runtime-requirements)
-  - [Compiler Requirements](#compiler-requirements)
-  - [How to run tests](#how-to-run-tests)
-    - [Mac OSX & iOS](#mac-osx-&-ios)
-    - [Android](#android)
-    - [Windows](#windows)
-    - [Linux](#linux)
-  - [How to start a new game](#how-to-start-a-new-game)
-- [v3.5](#v35)
-- [v3.5rc0](#v35rc0)
-  - [Highlights of v3.5rc0](#highlights-of-v35rc0)
-  - [Features in detail](#features-in-detail)
-    - [More 3D particle features of (PU) supported](#more-3d-particle-features-of-pu-supported)
-- [v3.5beta0](#v35beta0)
-  - [Highlights of v3.5beta0](#highlights-of-v35beta0)
-  - [Features in detail](#features-in-detail-1)
-    - [3D Particles](#3d-particles)
-      - [Supported PU features](#supported-pu-features)
-      - [Particle usage](#particle-usage)
+- [概况](#misc-information)
+- [需求](#requirements)
+  - [环境需求](#)
+  - [编译需求](#)
+  - [如何运行 TestCpp](#)
+    - [Mac OSX & iOS](#)
+    - [Android](#)
+    - [Windows](#)
+    - [Linux](#)
+  - [如何开始一个新游戏](#)
+- [v3.5](#)
+- [v3.5rc0](#)
+  - [v3.5rc0亮点](#)
+  - [细节](#)
+    - [支持更多的particle](#)
+- [v3.5beta0](#)
+  - [v3.5beta0亮点](#)
+  - [细节](#)
+    - [3D粒子](#)
+      - [支持PU特性](#)
+      - [3D粒子使用示例](#)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Misc Information
+# 概况
 
-* [Full Changelog](https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG)
-* v3.0 Release Notes can be found here: [v3.0 Release Notes](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md)
+* [完整更新日记](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.5/CHANGELOG)
+* v3.0 发布说明: [v3.0 Release Notes](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md)
 
-# Requirements
+# 需求
 
-## Runtime Requirements
+## 环境需求
 
-* Android 2.3 or newer
-* iOS 5.0 or newer
-* OS X 10.7 or newer
-* Windows 7 or newer
-* Windows Phone 8 or newer
-* Linux Ubuntu 14.04 or newer
+* Android 2.3 及以上
+* iOS 5.0 及以上
+* OS X 10.7 及以上
+* Windows 7 及以上
+* Windows Phone 8 及以上
+* Linux Ubuntu 14.04 及以上
 
-## Compiler Requirements
+## 编译需求
 
-* Xcode 5.1 or newer for iOS or Mac
-* gcc 4.9 or newer for Linux
-* ndk-r10c for Android
-* Visual Studio 2012  or newer for Windows (win32)
-* Visual Studio 2012  or newer for Windows Phone 8
+* Xcode 5.1 及以上 (for iOS or Mac)
+* gcc 4.9 及以上 (for Linux)
+* ndk-r10c (for Android)
+* Visual Studio 2012 及以上 (for Windows (win32))
+* Visual Studio 2012 及以上 (for Windows Phone 8)
 
-## How to run tests
+## 如何运行 TestCpp
 
 ### Mac OSX & iOS
 
-* Enter `cocos2d-x/build` folder, open `cocos2d_test.xcodeproj`
-* Select `iOS` or `OS X` target in scheme toolbar
-* Click `run` button
+* 进入 `cocos2d-x/build` 文件夹, 打开 `cocos2d_test.xcodeproj`
+* 在 Xcode 的 scheme toolbar 选择 `iOS` 或者 `OS X` 平台
+* 点击 `run` 按钮
 
 ### Android
 
-You can run the samples...
+你可以运行一下示例...
 
-**Using command line:**
+**使用命令行：**
 
     $ cd cocos2d-x
     $ ./setup.py
     $ cd build
     $ ./android-build.py cpp-empty-test -p 10
     $ adb install cocos2d-x/tests/cpp-empty-test/proj.android/bin/CppEmptyTest-debug.apk
+    
+然后点击安卓设备上的程序运行测试例，`-p` 指定了 Android API 等级，cocos2d-x 支持 level10 以上。
 
-Then click item on Android device to run tests. Available value of `-p` is the API level, cocos2d-x supports from level 10.
-
-**Using Eclipse:**
+**使用 Eclipse:**
 
     $ cd cocos2d-x
     $ ./setup.py
     $ cd build
     $ ./android-build.py cpp-empty-test -p 10
+    
+然后
 
-Then
-
-* Import cocos2d-x Android project into Eclipse, the path used to import is `cocos/2d/platform/android`
-* Import `cpp-empty-test` Android project into Eclipse, the path used to import is `tests/cpp-empty-test/proj.android`
-* Build `cpp-empty-test` Android project and run
+* 把 cocos2d-x Android 项目导入 Eclipse 中，导入的路径是 `cocos/platform/android`
+* 把 `cpp-empty-test` Android 项目导入 Eclipse 中，导入的路径是 `tests/cpp-empty-test/proj.android`
+* 编译 `cpp-empty-test` Android 项目，然后运行即可
 
 ### Windows
 
-* Enter `cocos2d-x/build`, and open `cocos2d-win32.vs2012.sln`
-* Select `cpp-empty-test` as running target
-* Click run button
+* 进入 `cocos2d-x/build` 目录, 然后打开 `cocos2d-win32.vs2012.sln` 文件
+* 选择 `cpp-empty-test` 作为启动项
+* 点击运行按钮
 
 
 ### Linux
@@ -99,68 +98,70 @@ Then
     $ cd cocos2d-x/build
     $ ./install-deps-linux.sh
     $ cd ../..
-
-Then
+    
+然后
 
     $ mkdir build
     $ cd build
     $ cmake ../cocos2d-x
     $ make -j4
-
-Run
+    
+运行
 
     $ cd bin/cpp-empty-test
     $ ./cpp-empty-test
+    
+## 如何开始一个新游戏
 
-## How to start a new game
+请参考: [ReadMe](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.5/README.md)
 
-Please refer to this document: [ReadMe](../README.md)
 # v3.5
-There are only some minor changes and bug fixes in this verison.
+这个版本只有一些小的改动和bug修复。
 
-* EditBox: Color4B font color is supported
-* Fix memory leak in AutoReleasePool
-* Fix FileUtils:getWritablePath() return wrong path on Mac&Windows
+* EditBox：支持Color4B字体颜色
+* 修复AutoReleasePool的内存泄露
+* 修复FileUtils:getWritablePath()在Windows和Mac上返回错误的路径。
 
 # v3.5rc0
-## Highlights of v3.5rc0
-* More features of Particle(PU) is supported
-* Disable reverse of MoveTo
-* CsLoader: add callback when loading a CSB file
-* Fix transparent Billboard and Sprite3D rendering error
-* Fix Motionstreak does not work with MoveTo and MoveBy
-* More bugs fixed
+## v3.5rc0亮点
+* 支持更多的Particle(PU)
+* 禁用MoveTo的反动作
+* CsLoader：增加CSB文件加载的回调
+* 修复透明的Billboard和Sprite3D的渲染错误
+* 修复MotionStreak无法正常运行MoveTo和MoveBy的错误
+* 其他bug修复
 
-## Features in detail
-###More 3D particle features of (PU) supported
+##细节
+###支持更多的particle（PU）
 * Observer: On Count Observer, On Emission Observer, On Expire Observer, On Position observer, On Clear Observer, On Time Observer, On Quota Observer, On Velocity Observer, On Collision Observer, On Event Flag Observer, On Random Observer.
+* 
 
 * Event Handler: Do Enable Component Event Handler, Do Expire Event Handler, Do Placement Particle Event Handler, Do Stop System Event Handler, Do Affector Event Handler, Do Freeze Event Handler, Do Scale Event Handler.
 
 * Behavior: Slave Behavior
 
-Observer and Event Handler allow you to listen to the particle system and trigger some events. The Event handler can do something when the event happens. For example, there is a observer on the particle system, and it listens to the particle number when the number is greater than 100, it tirggers an event to stop the particle system. This allows you to create more complex particles. For more details, please refer to the Particle Universe User's Guide.
+观察者和事件处理者允许你来监听粒子系统和监听事件。当事件发生时，事件处理者可以做一些事情。比如，粒子系统有个观察者，它监听了粒子的数量，当数量超过100个的时候，它会触发一个停止粒子系统的事件。这允许你来创建更复杂的粒子。更多细节，请参考Particle Universe用户指南。
 
 # v3.5beta0
 
-## Highlights of v3.5beta0
-## Features in detail
+## v3.5beta0亮点
+## 细节
 
-### 3D Particles
+### 3D粒子
 
-#### Supported PU features
+#### 支持PU特性
 
-* Render: Billboard Renderer, Box Renderer, Sphere Renderer, Entity Renderer, Ribbon Trail Renderer.
+* 渲染器：Billboard Renderer, Box Renderer, Sphere Renderer, Entity Renderer, Ribbon Trail Renderer.
 
-* Emitter: Point Emitter, Box Emitter, Sphere Surface Emitter, Line Emitter, Circle Emitter, Position Emitter, Slave Emitter.
+* 粒子发射器： Point Emitter, Box Emitter, Sphere Surface Emitter, Line Emitter, Circle Emitter, Position Emitter, Slave Emitter.
 
-* Affector: Gravity Affector, Linear Force Affector, Scale Affector, Sine Force Affector, Color Affector, Randomiser, Line Affector, Align Affector, Jet Affector, Vortex Affector, Geometry Rotator, Texture Rotator, Texture Animator, Particle Follower, Sphere Collider, Plane Collider, box Collider, Path Follower, Flock Centering Affector, Velocity Matching Affector.
+* 影响器: Gravity Affector, Linear Force Affector, Scale Affector, Sine Force Affector, Color Affector, Randomiser, Line Affector, Align Affector, Jet Affector, Vortex Affector, Geometry Rotator, Texture Rotator, Texture Animator, Particle Follower, Sphere Collider, Plane Collider, box Collider, Path Follower, Flock Centering Affector, Velocity Matching Affector.
 
-#### Particle usage
+#### 3D粒子使用示例
 
-It allows to import particles from Particle Universe (http://www.fxpression.com). The usage of particles is as follow,
+它允许从Particle Universe (http://www.fxpression.com)导入。3D粒子的使用示例如下，
 
-Option 1, create 3D particle with particle (.pu) file and material file
+第一种，使用particle文件（.pu）和材质文件创建3D粒子。
 
 ```c++
 auto rootps = PUParticleSystem3D::create("lineStreak.pu", "pu_mediapack_01.material");
@@ -168,7 +169,7 @@ addChild(rootps);
 rootps->startParticleSystem();
 ```
 
-Option 2, you can also create 3d particle with particle (.pu) file only, it will load all the material files in the material path
+第二种，你也可只使用particle文件（.pu）来创建3D粒子，它将会从材质路径下加载所有的材质文件。
 ```c++
 auto rootps = PUParticleSystem3D::create("advancedLodSystem.pu");
 addChild(rootps);
@@ -176,3 +177,4 @@ rootps->startParticleSystem();
 ```
 
 For more information, please refer to `cpp-tests/Particle3DTest`
+更多详细信息请参考 `cpp-tests/Particle3DTest`
