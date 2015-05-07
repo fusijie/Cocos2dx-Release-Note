@@ -17,4 +17,10 @@ Cocos2d-x 版本发布说明
 	* Cocos2d-x v3.4 发布说明
 		* [Cocos2d-x v3.4 中文发布说明](cocos2d-x_v3.4_release_notes.md)
 		* [Cocos2d-x v3.4 英文发布说明](cocos2d-x_v3.4_release_notes_en.md)
+	* Cocos2d-x v3.5 发布说明
+		* [Cocos2d-x v3.5 中文发布说明](cocos2d-x_v3.5_release_notes.md)
+		* [Cocos2d-x v3.5 英文发布说明](cocos2d-x_v3.5_release_notes_en.md)
+	* Cocos2d-x v3.6 发布说明
+		* [Cocos2d-x v3.6 中文发布说明](cocos2d-x_v3.6_release_notes.md)
+		* [Cocos2d-x v3.6 英文发布说明](cocos2d-x_v3.6_release_notes_en.md)
 * Cocos2d-x v4.x 系列
