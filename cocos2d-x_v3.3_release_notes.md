@@ -1,3 +1,5 @@
+# cocos2d-x v3.3 发布说明 #
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **目录**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -53,60 +55,6 @@
     - [只留2个库](#%E5%8F%AA%E7%95%992%E4%B8%AA%E5%BA%93)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# cocos2d-x v3.3 发布说明 #
-
-**目录**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
-- [cocos2d-x v3.3 发布](#)
-- [概括](#)
-- [需求](#)
-	- [环境需求](#)
-	- [编译需求](#)
-	- [如何运行 TestCpp](#)
-		- [Mac OSX & iOS](#)
-		- [Android](#)
-		- [Windows](#)
-		- [Linux](#)
-	- [如何开始一个新游戏](#)
-- [v3.3](#)
-- [v3.3rc2](#)
-	- [v3.3rc2亮点](#)
-	- [v3.3rc1说明](#)
-- [v3.3rc1](#)
-	- [v3.3rc1亮点](#)
-	- [v3.3rc0说明](#)
-- [v3.3rc0](#)
-	- [v3.3rc0亮点](#)
-	- [细节](#)
-		- [光源](#)
-		- [Spine runtime](#)
-		- [AssetsManagerEx](#)
-		- [Application::openURL](#)
-		- [ClippingRectangleNode](#)
-		- [Facebook 平台支持](#)
-- [v3.3beta0](#)
-	- [v3.3beta0亮点](#)
-	- [细节](#)
-		- [BillBoard](#)
-		- [Triangles command](#)
-		- [WebView](#)
-		- [新的声音引擎](#)
-- [v3.3alpha0](#)
-	- [v3.3alpha0亮点](#)
-	- [细节](#)
-		- [Camera](#)
-		- [Reskin](#)
-		- [Attachment](#)
-		- [更好地支持FBX](#)
-		- [新的fbx-conv工具](#)
-		- [AABB, OBB and Ray](#)
-		- [ui::Scale9Sprite](#)
-		- [c++11随机数支持](#)
-		- [RenderTexture保存功能](#)
-		- [Primitive](#)
-		- [更方便地设置GL上下文属性](#)
-		- [只留2个库](#)
 
 # 概况
 

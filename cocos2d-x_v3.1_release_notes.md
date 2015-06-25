@@ -1,3 +1,5 @@
+# cocos2d-x v3.1 发布说明 #
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **目录**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -28,35 +30,6 @@
   - [弃用函数和全局变量](#%E5%BC%83%E7%94%A8%E5%87%BD%E6%95%B0%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# cocos2d-x v3.1 发布说明 #
-
-**目录**  *由[DocToc](http://doctoc.herokuapp.com/)生成*
-
-- [cocos2d-x v3.1 发布说明](#)
-- [概况](#)
-- [需求](#)
-	- [环境需求](#)
-	- [编译需求](#)
-	- [如何运行 TestCpp](#)
-		- [Mac OSX & iOS](#)
-		- [Android](#)
-		- [Windows](#)
-		- [Linux](#)
-	- [如何开始一个新游戏](#)
-- [v3.0 亮点](#)
-- [细节](#)
-	- [Sprite3D](#)
-	- [提升了Shader子系统](#)
-	- [新的数学库](#)
-	- [新的UIVideoPlayer](#)
-	- [UI导航](#)
-		- [用法](#)
-		- [局限](#)
-	- [提升目录结构设计](#)
-	- [粒子系统修复](#)
-- [其他 API 变更](#)
-	- [弃用函数和全局变量](#)
 
 # 概况
 

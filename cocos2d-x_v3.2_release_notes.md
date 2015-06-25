@@ -1,3 +1,5 @@
+# cocos2d-x v3.2 发布说明 #
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **目录**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -28,35 +30,6 @@
   - [Node::setNormalizedPosition](#nodesetnormalizedposition)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# cocos2d-x v3.2 发布说明 #
-
-**目录**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
-- [cocos2d-x v3.2 发布说明](#)
-- [概况](#)
-- [需求](#)
-	- [Runtime Requirements](#)
-	- [环境需求](#)
-	- [编译需求](#)
-	- [如何运行 TestCpp](#)
-		- [Mac OSX & iOS](#)
-		- [Android](#)
-		- [Windows](#)
-		- [Linux](#)
-	- [如何开始一个新游戏](#)
-- [v3.2 亮点](#)
-- [文档](#)
-- [Toolchain 需求变更](#)
-- [安卓上的 atof 问题](#)
-- [细节](#)
-	- [Sprite3D & Animation3D](#)
-		- [fbx-conv 用法](#)
-	- [Game 控制器](#)
-	- [Fast tilemap](#)
-	- [Node::enumerateChildren](#)
-	- [utils::findChildren](#)
-	- [Node::setNormalizedPosition](#)
 
 # 概况
 

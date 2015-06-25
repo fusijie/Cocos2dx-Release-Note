@@ -1,3 +1,5 @@
+# cocos2d-x v3.0 发布说明 #
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **目录**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -52,58 +54,6 @@
     - [添加一些 Lua 文件来储存不同的模块常量](#%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%BA%9B-lua-%E6%96%87%E4%BB%B6%E6%9D%A5%E5%82%A8%E5%AD%98%E4%B8%8D%E5%90%8C%E7%9A%84%E6%A8%A1%E5%9D%97%E5%B8%B8%E9%87%8F)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# cocos2d-x v3.0 发布说明 #
-
-**目录**  *由[DocToc](http://doctoc.herokuapp.com/)生成*
-
-- [概况](#user-content-%E6%A6%82%E5%86%B5)
-- [需求](#user-content-%E9%9C%80%E6%B1%82)
-	- [环境需求](#user-content-%E7%8E%AF%E5%A2%83%E9%9C%80%E6%B1%82)
-	- [编译需求](#user-content-%E7%BC%96%E8%AF%91%E9%9C%80%E6%B1%82)
-	- [如何运行 TestCpp](#user-content-%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C-testcpp)
-		- [Mac OSX & iOS](#user-content-mac-osx--ios)
-		- [Android](#user-content-android)
-		- [Windows](#user-content-windows)
-		- [Linux](#user-content-linux)
-	- [如何开始一个新游戏](#user-content-%E5%A6%82%E4%BD%95%E5%BC%80%E5%A7%8B%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E6%88%8F)
-- [v3.0 亮点](#user-content-v30-%E4%BA%AE%E7%82%B9)
-- [细节](#user-content-%E7%BB%86%E8%8A%82)
-	- [C++11 特性](#user-content-c11-%E7%89%B9%E6%80%A7)
-		- [std::function](#user-content-stdfunction)
-		- [强类型枚举](#user-content-%E5%BC%BA%E7%B1%BB%E5%9E%8B%E6%9E%9A%E4%B8%BE)
-		- [覆盖](#user-content-%E8%A6%86%E7%9B%96)
-	- [去OC化](#user-content-%E5%8E%BBoc%E5%8C%96)
-		- [移除C++类的“cc”前缀以及free functions](#user-content-%E7%A7%BB%E9%99%A4c%E7%B1%BB%E7%9A%84cc%E5%89%8D%E7%BC%80%E4%BB%A5%E5%8F%8Afree-functions)
-		- [使用 clone 替代 copy](#user-content-%E4%BD%BF%E7%94%A8-clone-%E6%9B%BF%E4%BB%A3-copy)
-		- [单例类采用了 getInstance 和 destroyInstance](#user-content-%E5%8D%95%E4%BE%8B%E7%B1%BB%E9%87%87%E7%94%A8%E4%BA%86-getinstance-%E5%92%8C-destroyinstance)
-		- [使用了 Ref 代替了 Object](#user-content-%E4%BD%BF%E7%94%A8%E4%BA%86-ref-%E4%BB%A3%E6%9B%BF%E4%BA%86-object)
-		- [getters](#user-content-getters)
-		- [POD 类型](#user-content-pod-%E7%B1%BB%E5%9E%8B)
-	- [新的渲染器](#user-content-%E6%96%B0%E7%9A%84%E6%B8%B2%E6%9F%93%E5%99%A8)
-		- [渲染器特性](#user-content-%E6%B8%B2%E6%9F%93%E5%99%A8%E7%89%B9%E6%80%A7)
-			- [自动批处理](#user-content-%E8%87%AA%E5%8A%A8%E6%89%B9%E5%A4%84%E7%90%86)
-			- [自动剔除](#user-content-%E8%87%AA%E5%8A%A8%E5%89%94%E9%99%A4)
-			- [全局 Z 值](#user-content-%E5%85%A8%E5%B1%80-z-%E5%80%BC)
-		- [Sprite 和 SpriteBatchNode](#user-content-sprite-%E5%92%8C-spritebatchnode)
-	- [优化 LabelTTF / LabelBMFont / LabelAtlas](#user-content-%E4%BC%98%E5%8C%96-labelttf--labelbmfont--labelatlas)
-	- [新的事件分发机制](#user-content-%E6%96%B0%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E6%9C%BA%E5%88%B6)
-	- [物理引擎集成](#user-content-%E7%89%A9%E7%90%86%E5%BC%95%E6%93%8E%E9%9B%86%E6%88%90)
-- [其他 API 变更](#user-content-%E5%85%B6%E4%BB%96-api-%E5%8F%98%E6%9B%B4)
-	- [ccTypes.h](#user-content-cctypesh)
-	- [弃用的函数和全局变量](#user-content-%E5%BC%83%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F)
-- [Lua 绑定的修改](#user-content-lua-%E7%BB%91%E5%AE%9A%E7%9A%84%E4%BF%AE%E6%94%B9)
-	- [使用 Lua 绑定生成工具](#user-content-%E4%BD%BF%E7%94%A8-lua-%E7%BB%91%E5%AE%9A%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7)
-		- [绑定带命名空间的类到 Lua](#user-content-%E7%BB%91%E5%AE%9A%E5%B8%A6%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E7%9A%84%E7%B1%BB%E5%88%B0-lua)
-		- [使用 ScriptHandlerMgr 来管理注册和注销 Lua 函数](#user-content-%E4%BD%BF%E7%94%A8-scripthandlermgr-%E6%9D%A5%E7%AE%A1%E7%90%86%E6%B3%A8%E5%86%8C%E5%92%8C%E6%B3%A8%E9%94%80-lua-%E5%87%BD%E6%95%B0)
-	- [其它 API 变更](#user-content-%E5%85%B6%E5%AE%83-api-%E5%8F%98%E6%9B%B4)
-		- [使用 cc、ccs、ccui gl 和 sp 作为模块名](#user-content-%E4%BD%BF%E7%94%A8-ccccsccui-gl-%E5%92%8C-sp-%E4%BD%9C%E4%B8%BA%E6%A8%A1%E5%9D%97%E5%90%8D)
-		- [函数名修改](#user-content-%E5%87%BD%E6%95%B0%E5%90%8D%E4%BF%AE%E6%94%B9)
-		- [添加一些模块](#user-content-%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%BA%9B%E6%A8%A1%E5%9D%97)
-		- [增加更多的 Lua 绑定](#user-content-%E5%A2%9E%E5%8A%A0%E6%9B%B4%E5%A4%9A%E7%9A%84-lua-%E7%BB%91%E5%AE%9A)
-		- [将一些 Lua 绑定的类或结构体替换成表](#user-content-%E5%B0%86%E4%B8%80%E4%BA%9B-lua-%E7%BB%91%E5%AE%9A%E7%9A%84%E7%B1%BB%E6%88%96%E7%BB%93%E6%9E%84%E4%BD%93%E6%9B%BF%E6%8D%A2%E6%88%90%E8%A1%A8)
-		- [支持 Lua 脚本代码调用 Object-C 代码和 java 代码](#user-content-%E6%94%AF%E6%8C%81-lua-%E8%84%9A%E6%9C%AC%E4%BB%A3%E7%A0%81%E8%B0%83%E7%94%A8-object-c-%E4%BB%A3%E7%A0%81%E5%92%8C-java-%E4%BB%A3%E7%A0%81)
-		- [添加一些 Lua 文件来储存不同的模块常量](#user-content-%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%BA%9B-lua-%E6%96%87%E4%BB%B6%E6%9D%A5%E5%82%A8%E5%AD%98%E4%B8%8D%E5%90%8C%E7%9A%84%E6%A8%A1%E5%9D%97%E5%B8%B8%E9%87%8F)
 
 # 概况
 
