@@ -1,97 +1,96 @@
 
-to be Chinesization.
-# cocos2d-x v3.6 Release Notes #
+# cocos2d-x v3.6 发布说明 #
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**目录  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Misc Information](#misc-information)
-- [Requirements](#requirements)
-  - [Runtime Requirements](#runtime-requirements)
-  - [Compiler Requirements](#compiler-requirements)
-  - [How to run tests](#how-to-run-tests)
-    - [Mac OSX & iOS](#mac-osx-&-ios)
-    - [Android](#android)
-    - [Windows](#windows)
-    - [Linux](#linux)
-  - [How to start a new game](#how-to-start-a-new-game)
-- [v3.6](#v36)
-  - [Highlights of v3.6](#highlights-of-v36)
-  - [Features in detail](#features-in-detail-1)
-    - [3D TextureCube](#3d-texturecube)
-    - [3D Skybox](#3d-skybox)
-    - [3D Terrain](#3d-terrain)
-    - [Animate3D Quality Control](#animate3d-quality-control)
-    - [Un-bottleneck your fill-rate with SpritePolygon](#un-bottleneck-your-fill-rate-with-spritepolygon)
-    - [LuaJit ARM64](#luajit-arm64)
-    - [Button memory usage optimization](#button-memory-usage-optimization)
+- [概况](#)
+- [需求](#)
+  - [环境需求](#)
+  - [编译需求](#)
+  - [如何运行 TestCpp](#)
+    - [Mac OSX & iOS](#)
+    - [Android](#)
+    - [Windows](#)
+    - [Linux](#)
+  - [如何开始一个新游戏](#)
+- [v3.6](#)
+  - [v3.6亮点](#)
+  - [细节](#)
+    - [3D立方纹理](#)
+    - [3D天空盒](#)
+    - [3D地形](#)
+    - [3D骨骼动画质量控制](#)
+    - [使用SpritePolygon，让填充率不再成为你的瓶颈](#)
+    - [LuaJit ARM64](#)
+    - [Button内存使用优化](#)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Misc Information
+# 概况
 
-* [Full Changelog](https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG)
-* v3.0 Release Notes can be found here: [v3.0 Release Notes](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md)
+* [完整更新日记](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.6/CHANGELOG)
+* v3.0 发布说明: [v3.0 Release Notes](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md)
 
-# Requirements
+# 需求
 
-## Runtime Requirements
+## 环境需求
 
-* Android 2.3 or newer
-* iOS 5.0 or newer
-* OS X 10.7 or newer
-* Windows 7 or newer
+* Android 2.3 及以上
+* iOS 5.0 及以上
+* OS X 10.7 及以上
+* Windows 7 及以上
 * Windows Phone 8.1
-* Linux Ubuntu 14.04 or newer
+* Linux Ubuntu 14.04 及以上
 
-## Compiler Requirements
+## 编译需求
 
-* Xcode 5.1 or newer for iOS or Mac
-* gcc 4.9 or newer for Linux
-* ndk-r10c for Android
-* Visual Studio 2012  or newer for Windows (win32)
-* Visual Studio 2012  or newer for Windows Phone 8
+* Xcode 5.1 及以上 (for iOS or Mac)
+* gcc 4.9 及以上 (for Linux)
+* ndk-r10c (for Android)
+* Visual Studio 2012 及以上 (for Windows (win32))
+* Visual Studio 2012 及以上 (for Windows Phone 8)
 
-## How to run tests
+## 如何运行 TestCpp
 
 ### Mac OSX & iOS
 
-* Enter `cocos2d-x/build` folder, open `cocos2d_test.xcodeproj`
-* Select `iOS` or `OS X` target in scheme toolbar
-* Click `run` button
+* 进入 `cocos2d-x/build` 文件夹, 打开 `cocos2d_test.xcodeproj`
+* 在 Xcode 的 scheme toolbar 选择 `iOS` 或者 `OS X` 平台
+* 点击 `run` 按钮
 
 ### Android
 
-You can run the samples...
+你可以运行一下示例...
 
-**Using command line:**
+**使用命令行：**
 
     $ cd cocos2d-x
     $ ./setup.py
     $ cd build
     $ ./android-build.py cpp-empty-test -p 10
     $ adb install cocos2d-x/tests/cpp-empty-test/proj.android/bin/CppEmptyTest-debug.apk
+    
+然后点击安卓设备上的程序运行测试例，`-p` 指定了 Android API 等级，cocos2d-x 支持 level10 以上。
 
-Then click item on Android device to run tests. Available value of `-p` is the API level, cocos2d-x supports from level 10.
-
-**Using Eclipse:**
+**使用 Eclipse:**
 
     $ cd cocos2d-x
     $ ./setup.py
     $ cd build
     $ ./android-build.py cpp-empty-test -p 10
+    
+然后
 
-Then
-
-* Import cocos2d-x Android project into Eclipse, the path used to import is `cocos/2d/platform/android`
-* Import `cpp-empty-test` Android project into Eclipse, the path used to import is `tests/cpp-empty-test/proj.android`
-* Build `cpp-empty-test` Android project and run
+* 把 cocos2d-x Android 项目导入 Eclipse 中，导入的路径是 `cocos/platform/android`
+* 把 `cpp-empty-test` Android 项目导入 Eclipse 中，导入的路径是 `tests/cpp-empty-test/proj.android`
+* 编译 `cpp-empty-test` Android 项目，然后运行即可
 
 ### Windows
 
-* Enter `cocos2d-x/build`, and open `cocos2d-win32.vs2012.sln`
-* Select `cpp-empty-test` as running target
-* Click run button
+* 进入 `cocos2d-x/build` 目录, 然后打开 `cocos2d-win32.vs2012.sln` 文件
+* 选择 `cpp-empty-test` 作为启动项
+* 点击运行按钮
 
 
 ### Linux
@@ -99,54 +98,54 @@ Then
     $ cd cocos2d-x/build
     $ ./install-deps-linux.sh
     $ cd ../..
-
-Then
+    
+然后
 
     $ mkdir build
     $ cd build
     $ cmake ../cocos2d-x
     $ make -j4
-
-Run
+    
+运行
 
     $ cd bin/cpp-empty-test
     $ ./cpp-empty-test
+    
+## 如何开始一个新游戏
 
-## How to start a new game
-
-Please refer to this document: [ReadMe](../README.md)
+请参考: [ReadMe](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.6/README.md)
 
 # v3.6
 
-## Highlights of v3.6
+## v3.6亮点
 
-* 3D: added skybox support
-* 3D: added terrain support
-* added `SpritePolygon` to fix overdraw issue
-* used luajit v2.1-20150331 on 64-bit iOS devices
-* removed WP8 support
-* memory usage optimization of `ui::Button`
-* 3rd: updated Spine runtime to v2.1.25
-* 3rd: updated libcurl to v7.4 on all supported platforms except WP8.1 universal
-* 3rd: updated chipmunk to v6.2.2
-* 3rd: updated openssl to v1.0.11
-* 3rd: updated freetype to v2.5.5
-* 3rd: updated png to v1.6.16
+* 3D: 添加天空盒支持
+* 3D: 添加地形支持
+* 添加`SpritePolygon`以解决绘制填充率的问题
+* iOS 64位架构使用luajit v2.1-20150331版本
+* 移除WP8支持
+* 优化`ui::Button`内存使用
+* 第三方库: Spine运行时库更新到v2.1.25版本
+* 第三方库: libcurl更新到v7.4版本（支持全平台，除了WP8.1平台）
+* 第三方库: chipmunk更新到v6.2.2版本
+* 第三方库: openssl更新到v1.0.11版本
+* 第三方库: freetype更新到v2.5.5版本
+* 第三方库: png更新到v1.6.16版本
 
-Because Angle doesn't support WP8 any more, and WP8's market share is around 20% worldwide with variations across countries, so we removed WP8 support suggested by MS OPEN TECK guys since v3.6.
+因为Angle不再支持WP8，而且全世界范围内WP8的市场份额大概在20%左右，所以在微软OPEN TECH的建议下，从3.6版本开始，我们移除了对WP8的支持。
 
 
-## Features in detail
+## 细节
 
-### 3D TextureCube
+### 3D立方纹理
 
-TextureCube is useful for skybox and environment mapping. It uses 6 faces of a cube as map shape, and 6 pictures are projected onto the sides of a cube and stored as six square textures.
+立方纹理对天空盒和环境贴图非常有用，它使用6张纹理分别投影到立方体的6个面上，进行纹理采用。
 
-**TexturesCube usage**
+**立方纹理的用法**
 
 ```c++
 auto texturecube = TextureCube::create("left.jpg", "right.jpg", "top.jpg", "bottom.jpg","front.jpg", "back.jpg");
-//set texture parameters
+//设置纹理参数
 Texture2D::TexParams tRepeatParams;
 tRepeatParams.magFilter = GL_NEAREST;
 tRepeatParams.minFilter = GL_NEAREST;
@@ -154,14 +153,14 @@ tRepeatParams.wrapS = GL_MIRRORED_REPEAT;
 tRepeatParams.wrapT = GL_MIRRORED_REPEAT;
 texturecube->setTexParameters(tRepeatParams);
 
-//create a GLProgramState using custom shader
+//使用自定义着色器创建一个GLProgramState
 auto shader = GLProgram::createWithFilenames("cube_map.vert", "cube_map.frag");
 auto state = GLProgramState::create(shader);
-// pass the texture sampler to our custom shader, state is a pointer of GLProgramState, u_cubeTex is a uniform in shader
+//传递纹理采样器到我们自定义的着色器中，state是一个指向GLProgramState的指针，u_cubeTex是shader中的一个uniform变量
 state->setUniformTexture("u_cubeTex", texturecube);
 ```
 
-Then the shader cube_map.frag can be something like this,
+cube_map.frag着色器如下，
 
 ```c++
 varying vec3        v_reflect; //reflect direction
@@ -173,65 +172,64 @@ void main(void)
 }
 ```
 
-For more information please refer to cpp-tests/Sprite3DTest/Sprite3DCubeMapTest.
+更多详细信息请参考 `cpp-tests/Sprite3DTest/Sprite3DCubeMapTest`。
 
-### 3D Skybox
+### 3D天空盒
 
-Skybox is a common component in 3D game. It is based on TextureCube.
+天空盒是3D游戏的一个常用组件。它基于立方纹理实现。
 
-Usage of skybox
+**天空盒的用法**
 
 ```c++
-// create a texture cube
+// 创建一个立方纹理
 auto textureCube = TextureCube::create("left.jpg", "right.jpg","top.jpg", "bottom.jpg","front.jpg", "back.jpg");
-//create a skybox
+// 创建一个天空盒
 auto skyBox = Skybox::create();
 skyBox->retain();
-//set cube texture to the skybox
+// 将立方纹理设置给天空盒
 skyBox->setTexture(textureCube);
 addChild(_skyBox);
 ```
 
-For more information please refer to cpp-tests/Sprite3DTest/Sprite3DCubeMapTest.
+更多详细信息请参考 `cpp-tests/Sprite3DTest/Sprite3DCubeMapTest`。
 
 ![tecturecube-and-skybox](https://raw.githubusercontent.com/minggo/Pictures/master/texturecube-skybox.gif)
 
-### 3D Terrain
+### 3D地形
 
-Terrain is an important component in 3D game. A texture is used to stand for the height map. And up to 4 textures can be used to blend the details of the terrain, grass, road, and so on.
+地形是3D游戏的一个常用组件。使用一张纹理来代表地形的高度，最多可以使用4张纹理混合模拟地表的细节，比如草地，道路等等。
 
-Usage of terrain
+地形的用法
 
 ```c++
-//blended layers
+//混合层
 Terrain::DetailMap dirt("TerrainTest/dirt.jpg"), grass("TerrainTest/Grass2.jpg"), road("TerrainTest/road.jpg"), green("TerrainTest/GreenSkin.jpg");
 
-//height map, alpha map (blend weight), and blended layers
+//高度地图，透明度地图（混合权重）和混合层
 Terrain::TerrainData data("TerrainTest/heightmap16.jpg", "TerrainTest/alphamap.png", dirt, grass, road, green);
 
-//create terrain here
+//创建地形
 _terrain = Terrain::create(data,Terrain::CrackFixedType::SKIRT);
 //set lod distance
 _terrain->setLODDistance(3.2,6.4,9.6);
-//it must be less than 5
+//必须小于5
 _terrain->setMaxDetailMapAmount(4);
 addChild(_terrain);
 ```
 
-For more information please refer to cpp-tests/Sprite3DTest/TerrainTest.
+更多详细信息请参考 `cpp-tests/Sprite3DTest/TerrainTest`。
 
 ![terrian](https://raw.githubusercontent.com/minggo/Pictures/master/terrian.png)
 
-### Animate3D Quality Control
+### 3D骨骼动画质量控制
 
-In order to make Animate3D run fast, you can use low quality animation. There are three types of animation quality：
+为了让3D骨骼动画运行地更流畅，你可以使用低质量的动画。这里有3种动画质量：
 
 * Animate3DQuality::QUALITY_NONE
 * Animate3DQuality::QUALITY_LOW
 * Animate3DQuality::QUALITY_HIGH
 
-`Animate3DQuality::QUALITY_NONE` means the animation will not be updated. You can use this type on the animation that you are sure it is not visible. `Animate3DQuality::QUALITY_LOW` will use the nearest keyframe to display current frame; `Animate3DQuality::QUALITY_HIGH` will will interpolate between keyframes.
-
+`Animate3DQuality::QUALITY_NONE` 意思是动画将不会更新. 如果你可以确定3D精灵不可见，那么你可以使用这种类型。`Animate3DQuality::QUALITY_LOW` 会直接使用最近的帧。 `Animate3DQuality::QUALITY_HIGH` 则会使用临近的两帧进行插值运算出当前帧。
 
 ```c++
 std::string fileName = "Sprite3DTest/orc.c3b";
@@ -248,44 +246,43 @@ if (animation)
 }
 ```
 
-The animation quality is also configurable in config.plist, the key is cocos2d.x.3d.animate_high_quality. All created Animate3D base on this key if exist. You can modify it using the above method.
+也可以通过修改config.plist来配置默认的动画质量，对应的值是`cocos2d.x.3d.animate_high_quality`。如果这个值存在的话，所有的3D骨骼动画都会受到这个值的影响。当然你也可以通过上面的代码来修改。
 
-### Un-bottleneck your fill-rate with SpritePolygon
+### 使用SpritePolygon，让填充率不再成为你的瓶颈
 
-SpritePolygon is a 2d Node, like Sprites, it displays a 2d Image.
-But the difference is where Sprites is made of 2 triangles to form a quad, SpritePolygon is made of N number of triangles. `It is an experimental feature.`
+SpritePolygon是一个2d节点，和Sprite一样，它显示了一个2d图像。但区别在于，Sprite使用了2个三角形来组成四边形，而SpritePolygon则是由N个三角形组成的。`该特性目前还是一个实验特性。`
 
 ![sprite-polygon](https://raw.githubusercontent.com/minggo/Pictures/master/sprite-polygon.jpg)
 
-This allows the GPU to draw the same graphics with much lower pixels.
+对于绘制相同的图像，SpritePolygon会让GPU节省大量的像素填充。
 
-Because 2d games tends to not use much vertices compared to 3d games, but almost of all sprites are `none rectangular`, GPU wastes precious bandwidth drawing area that is totally transparent. Fill-rate is often the bottleneck in a graphic intense 2d game. SpritePolygon is the perfect cure for "Over-Draw".
+因为通常2d游戏的顶点数量比3d游戏少得多，而且几乎所有2d图片都不是四边形，这就导致了显卡浪费大量的带宽来绘制完全透明的区域，所以像素填充率往往是2d游戏的性能瓶颈。SpritePolygon是解决像素填充率瓶颈的有效手段。
 
-Following picture is the result of performance comparing, corresponding performance test cases are in `tests/cpp-tests/Classes/SpritePolygonTest`:
+下图是性能测试对比图，对应的测试例在`tests/cpp-tests/Classes/SpritePolygonTest`：
 
 ![spritepolygon-performance](http://discuss.cocos2d-x.org/uploads/default/_optimized/336/215/1423528cff_690x149.png)
 
-For more detail description of SpritePolygon please refer to [this thread](http://discuss.cocos2d-x.org/t/new-feature-meshsprite-polygonsprite/21153)
+更多详细信息请参考 [这个帖子](http://discuss.cocos2d-x.org/t/new-feature-meshsprite-polygonsprite/21153)
 
 ### luajit arm64 
 
-The version of the luajit is [v2.1-20150331](https://github.com/openresty/luajit2/releases). We have consulted the author of luajit, he said it was stability enough to be used. We will update to v2.1 when it is released.
+Luajit的版本是[v2.1-20150331](https://github.com/openresty/luajit2/releases)。
+我们咨询过luajit的作者，他告知这个版本已经非常稳定了，等v2.1最终版发布时我们将会进行更新。
 
-Using luajit arm64 version is that because it can improve the performance. In previous versions of cocos2d-x, it uses lua on iOS 64-bit devices. 
+使用luajit arm64是因为它可以提高性能。在之前的Cocos2d-x版本中，iOS 64位设备使用的是lua。
 
-Bytecode of luajit and luajit arm64 are not compatible, which means you can not use one version of bytecode on iOS 32-bit devices and iOS 64-bit devices.
+luajit和luajit arm64的字节码是不兼容的，这意味着你不能在iOS32位和64位设备上使用同一份字节码。
 
-As there is not mandatory requirement of having arm64 bit bin on Android, so we don't use luajit arm64 on Android as its bytecode is not compatible with luajit arm32.
+因为Android商店没有强制要求必须上传64位应用程序，所以我们没有在Android上使用luajit arm64版本，因为它的字节码和luajit arm32是不兼容的。
 
-### Button memory usage optimization
-Now the title label of Button is created on demand. A Button without title won't
-create an extra empty label.
+### Button内存使用优化
+现在Button上的title文本控件是按需创建的，如果没有title将不会创建一个额外的空文本控件。
 
-And we have also removed some redundant string variables in Button's header file.
+我们也移除了Button头文件里的一些无用字符串变量。
 
-We use Cpp-Empty-Test to verify this optimization.
+我们使用Cpp-Empty-Test来验证优化效果。
 
-Here is the test code:
+以下是代码：
 
 ```
 auto visibleSize = Director::getInstance()->getVisibleSize();
@@ -301,18 +298,18 @@ this->addChild(button);
 }
 ```
 
-And here is the result:
+以下是结果：
 
-#### On iOS platform
+####iOS平台
 
-|Num of buttons|100 | 200 | 500| 1000|
+|button数量|100 | 200 | 500| 1000|
 |-----|-----|-----|-----|-----|
-|Before optimization | 61M | 61.9M | 67.1M | 72.2M|
-|After optimization |60.7M| 61.1M | 66M | 67.9M|
+|优化前| 61M | 61.9M | 67.1M | 72.2M|
+|优化后|60.7M| 61.1M | 66M | 67.9M|
 
-#### On Mac platform
+####Mac平台
 
-|Num of buttons|100 | 200 | 500| 1000|
+|button数量|100 | 200 | 500| 1000|
 |-----|-----|-----|-----|-----|
-|Before optimization |26.8M | 27.1M| 33.2M| 35.4M|
-|After optimization |25.1M|25.9M|28M|32.4M|
+|优化前|26.8M | 27.1M| 33.2M| 35.4M|
+|优化后|25.1M|25.9M|28M|32.4M|
