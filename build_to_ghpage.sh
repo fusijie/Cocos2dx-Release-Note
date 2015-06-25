@@ -7,4 +7,4 @@ cd release
 rm -r release_temp
 git add .
 time=`time`
-git commit -m "update release note. "+time
+git commit -m "update release note. "+${time}
