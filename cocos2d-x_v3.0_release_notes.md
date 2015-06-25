@@ -1,6 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**目录**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [cocos2d-x v3.0 发布说明](#cocos2d-x-v30-%E5%8F%91%E5%B8%83%E8%AF%B4%E6%98%8E)
 - [概况](#%E6%A6%82%E5%86%B5)
