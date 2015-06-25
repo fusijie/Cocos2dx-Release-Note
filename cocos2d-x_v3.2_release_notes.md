@@ -1,3 +1,34 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [cocos2d-x v3.2 发布说明](#cocos2d-x-v32-%E5%8F%91%E5%B8%83%E8%AF%B4%E6%98%8E)
+- [概况](#%E6%A6%82%E5%86%B5)
+- [需求](#%E9%9C%80%E6%B1%82)
+  - [Runtime Requirements](#runtime-requirements)
+  - [环境需求](#%E7%8E%AF%E5%A2%83%E9%9C%80%E6%B1%82)
+  - [编译需求](#%E7%BC%96%E8%AF%91%E9%9C%80%E6%B1%82)
+  - [如何运行 TestCpp](#%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C-testcpp)
+    - [Mac OSX & iOS](#mac-osx-&-ios)
+    - [Android](#android)
+    - [Windows](#windows)
+    - [Linux](#linux)
+  - [如何开始一个新游戏](#%E5%A6%82%E4%BD%95%E5%BC%80%E5%A7%8B%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E6%88%8F)
+- [v3.2 亮点](#v32-%E4%BA%AE%E7%82%B9)
+- [文档](#%E6%96%87%E6%A1%A3)
+- [Toolchain 需求变更](#toolchain-%E9%9C%80%E6%B1%82%E5%8F%98%E6%9B%B4)
+- [安卓上的 atof 问题](#%E5%AE%89%E5%8D%93%E4%B8%8A%E7%9A%84-atof-%E9%97%AE%E9%A2%98)
+- [细节](#%E7%BB%86%E8%8A%82)
+  - [Sprite3D & Animation3D](#sprite3d-&-animation3d)
+    - [`fbx-conv` 用法](#fbx-conv-%E7%94%A8%E6%B3%95)
+  - [Game 控制器](#game-%E6%8E%A7%E5%88%B6%E5%99%A8)
+  - [Fast tilemap](#fast-tilemap)
+  - [Node::enumerateChildren](#nodeenumeratechildren)
+  - [utils::findChildren](#utilsfindchildren)
+  - [Node::setNormalizedPosition](#nodesetnormalizedposition)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # cocos2d-x v3.2 发布说明 #
 
 **目录**  *generated with [DocToc](http://doctoc.herokuapp.com/)*

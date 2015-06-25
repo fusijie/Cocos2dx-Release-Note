@@ -1,3 +1,34 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [cocos2d-x v3.1 发布说明](#cocos2d-x-v31-%E5%8F%91%E5%B8%83%E8%AF%B4%E6%98%8E)
+- [概况](#%E6%A6%82%E5%86%B5)
+- [需求](#%E9%9C%80%E6%B1%82)
+  - [环境需求](#%E7%8E%AF%E5%A2%83%E9%9C%80%E6%B1%82)
+  - [编译需求](#%E7%BC%96%E8%AF%91%E9%9C%80%E6%B1%82)
+  - [如何运行 TestCpp](#%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C-testcpp)
+    - [Mac OSX & iOS](#mac-osx-&-ios)
+    - [Android](#android)
+    - [Windows](#windows)
+    - [Linux](#linux)
+  - [如何开始一个新游戏](#%E5%A6%82%E4%BD%95%E5%BC%80%E5%A7%8B%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E6%88%8F)
+- [v3.0 亮点](#v30-%E4%BA%AE%E7%82%B9)
+- [细节](#%E7%BB%86%E8%8A%82)
+  - [Sprite3D](#sprite3d)
+  - [提升了Shader子系统](#%E6%8F%90%E5%8D%87%E4%BA%86shader%E5%AD%90%E7%B3%BB%E7%BB%9F)
+  - [新的数学库](#%E6%96%B0%E7%9A%84%E6%95%B0%E5%AD%A6%E5%BA%93)
+  - [新的UIVideoPlayer](#%E6%96%B0%E7%9A%84uivideoplayer)
+  - [UI导航](#ui%E5%AF%BC%E8%88%AA)
+    - [用法](#%E7%94%A8%E6%B3%95)
+    - [局限](#%E5%B1%80%E9%99%90)
+  - [提升目录结构设计](#%E6%8F%90%E5%8D%87%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1)
+  - [粒子系统修复](#%E7%B2%92%E5%AD%90%E7%B3%BB%E7%BB%9F%E4%BF%AE%E5%A4%8D)
+- [其他 API 变更](#%E5%85%B6%E4%BB%96-api-%E5%8F%98%E6%9B%B4)
+  - [弃用函数和全局变量](#%E5%BC%83%E7%94%A8%E5%87%BD%E6%95%B0%E5%92%8C%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # cocos2d-x v3.1 发布说明 #
 
 **目录**  *由[DocToc](http://doctoc.herokuapp.com/)生成*
