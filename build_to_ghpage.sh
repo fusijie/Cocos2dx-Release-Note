@@ -8,3 +8,4 @@ rm -r release_temp
 git add .
 time=`date`
 git commit -m "update release note at ${time}"
+git push origin gh-pages
