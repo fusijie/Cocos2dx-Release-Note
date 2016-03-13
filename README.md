@@ -1,5 +1,5 @@
 <div align="center"><h2>Cocos2d-x 版本发布说明</div>
-=========================
+
 
 <div align="center"><img src="cocos.png" alt="" border="0" title="Cocos" /><br></br></div>
 ###Cocos2d-x是什么？
