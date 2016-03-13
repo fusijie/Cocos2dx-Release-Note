@@ -1,8 +1,10 @@
 #! /bin/sh
-gitbook build 
-cp -r _book/ release/
-rm -rf _book
+mkdir release_temp
+gitbook build release_temp
+cp -r release_temp/ release/
+rm -rf release_temp
 cd release
+rm -r release_temp
 rm build_to_ghpage.sh
 git add .
 time=`date`
