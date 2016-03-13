@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Cocos2d-x v3.1 英文发布说明 | &lt;div align=&quot;center&quot;&gt;&lt;h2&gt;Cocos2d-x 版本发布说明&lt;/div&gt;</title>
+        <title>Cocos2d-x v3.10 中文发布说明 | &lt;div align=&quot;center&quot;&gt;&lt;h2&gt;Cocos2d-x 版本发布说明&lt;/div&gt;</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -41,10 +41,10 @@
         
     
     
-    <link rel="next" href="./cocos2d-x_v3.2_release_notes_en.html" />
+    <link rel="next" href="./cocos2d-x_release_notes_en.html" />
     
     
-    <link rel="prev" href="./cocos2d-x_v3.0_release_notes_en.html" />
+    <link rel="prev" href="./cocos2d-x_v3.9_release_notes.html" />
     
 
         
@@ -53,9 +53,9 @@
         
         
     <div class="book"
-        data-level="2.2"
-        data-chapter-title="Cocos2d-x v3.1 英文发布说明"
-        data-filepath="cocos2d-x_v3.1_release_notes_en.md"
+        data-level="1.11"
+        data-chapter-title="Cocos2d-x v3.10 中文发布说明"
+        data-filepath="cocos2d-x_v3.10_release_notes.md"
         data-basepath="."
         data-revision="Sun Mar 13 2016 15:45:07 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -252,7 +252,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="cocos2d-x_v3.10_release_notes.html">
+        <li class="chapter active" data-level="1.11" data-path="cocos2d-x_v3.10_release_notes.html">
             
                 
                     <a href="./cocos2d-x_v3.10_release_notes.html">
@@ -303,7 +303,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="cocos2d-x_v3.1_release_notes_en.html">
+        <li class="chapter " data-level="2.2" data-path="cocos2d-x_v3.1_release_notes_en.html">
             
                 
                     <a href="./cocos2d-x_v3.1_release_notes_en.html">
@@ -491,39 +491,45 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="cocos2dx-v31-release-notes">cocos2d-x v3.1 Release Notes</h1>
-<p><strong>Table of Contents</strong>  <em>generated with <a href="http://doctoc.herokuapp.com/" target="_blank">DocToc</a></em></p>
+                        <p>tbd</p>
+<h1 id="cocos2dx-310-&#x53D1;&#x5E03;&#x8BF4;&#x660E;">Cocos2d-x 3.10 &#x53D1;&#x5E03;&#x8BF4;&#x660E;</h1>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
 <ul>
-<li><a href="#user-content-misc-information">Misc Information</a></li>
-<li><a href="#user-content-requirements">Requirements</a><ul>
-<li><a href="#user-content-runtime-requirements">Runtime Requirements</a></li>
-<li><a href="#user-content-compiler-requirements">Compiler Requirements</a></li>
-<li><a href="#user-content-how-to-run-tests">How to run tests</a></li>
-<li><a href="#user-content-how-to-start-a-new-game">How to start a new game</a></li>
+<li><a href="#cocos2d-x-release-notes">Cocos2d-x 3.10 Release Notes</a></li>
+<li><a href="#misc-information">Misc Information</a></li>
+<li><a href="#requirements">Requirements</a><ul>
+<li><a href="#runtime-requirements">Runtime Requirements</a></li>
+<li><a href="#compiler-requirements">Compiler Requirements</a></li>
+<li><a href="#how-to-run-tests">How to run tests</a><ul>
+<li><a href="#cocos-console">Cocos Console</a></li>
+<li><a href="#mac-osx-&amp;-ios">Mac OSX &amp; iOS</a></li>
+<li><a href="#android">Android</a></li>
+<li><a href="#windows">Windows</a></li>
+<li><a href="#linux">Linux</a></li>
 </ul>
 </li>
-<li><a href="#user-content-highlights-of-v31">Highlights of v3.1</a></li>
-<li><a href="#user-content-features-in-detail">Features in detail</a><ul>
-<li><a href="#user-content-sprite3d">Sprite3D</a></li>
-<li><a href="#user-content-improved-shader-subsystem">Improved Shader Subsystem</a></li>
-<li><a href="#user-content-new-math-library">New math library</a></li>
-<li><a href="#user-content-new-uivideoplayer">New UIVideoPlayer</a></li>
-<li><a href="#user-content-ui-navigation">UI navigation</a></li>
-<li><a href="#user-content-improved-folder-structure">Improved folder structure</a></li>
-<li><a href="#user-content-particle-system-fixes">Particle System fixes</a></li>
+<li><a href="#how-to-start-a-new-game">How to start a new game</a></li>
 </ul>
 </li>
-<li><a href="#user-content-misc-api-changes">Misc API Changes</a><ul>
-<li><a href="#user-content-deprecated-functions-and--global-variables">deprecated functions and  global variables</a></li>
+<li><a href="#v310">v3.10</a><ul>
+<li><a href="#highlights-features-improvements-and-api-updates-of-v310">Highlights features, improvements and API updates of v3.10</a></li>
+<li><a href="#the-main-features-in-detail-of-cocos2d-x-v310">The main features in detail of Cocos2d-x v3.10:</a><ul>
+<li><a href="#ui-system">UI System</a></li>
+<li><a href="#audioengine">AudioEngine</a></li>
+<li><a href="#others">Others</a></li>
+</ul>
+</li>
+<li><a href="#other-changes">Other changes</a></li>
+<li><a href="#new-apis">NEW APIS</a></li>
 </ul>
 </li>
 </ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h1 id="misc-information">Misc Information</h1>
 <ul>
-<li>Download: <a href="http://cdn.cocos2d-x.org/cocos2d-x-3.1rc0.zip" target="_blank">http://cdn.cocos2d-x.org/cocos2d-x-3.1rc0.zip</a></li>
-<li>Full Changelog: <a href="https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/CHANGELOG" target="_blank">https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/CHANGELOG</a></li>
-<li><del>API Reference: <a href="http://www.cocos2d-x.org/reference/native-cpp/V3.0/index.html" target="_blank">http://www.cocos2d-x.org/reference/native-cpp/V3.0/index.html</a></del></li>
-<li>v3.0 Release Notes can be found here: <a href="https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md" target="_blank">v3.0 Release Notes</a></li>
+<li><a href="https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG" target="_blank">Full Changelog</a></li>
 </ul>
 <h1 id="requirements">Requirements</h1>
 <h2 id="runtime-requirements">Runtime Requirements</h2>
@@ -532,23 +538,40 @@
 <li>iOS 5.0 or newer</li>
 <li>OS X 10.7 or newer</li>
 <li>Windows 7 or newer</li>
-<li>Windows Phone 8 or newer</li>
-<li>Linux Ubuntu 12.04 or newer</li>
-<li><del>Browsers via Emscripten</del> N/A for the moment</li>
+<li>Windows Phone 8.1</li>
+<li>Windows 10 UWP</li>
+<li>Linux Ubuntu 14.04 or newer</li>
+<li>Mordern browsers and IE 9+ (On mobile platforms, only iOS and Android 5 activated WebGL support)</li>
 </ul>
 <h2 id="compiler-requirements">Compiler Requirements</h2>
 <ul>
-<li>Xcode 4.6 or newer for iOS or Mac</li>
-<li>gcc 4.7 or newer for Linux</li>
-<li>gcc 4.7 and ndk-r9 or newer for Android</li>
-<li>Visual Studio 2012  or newer for Windows (win32)</li>
-<li>Visual Studio 2012  or newer for Windows Phone 8</li>
+<li>Xcode 5.1 or newer for iOS or Mac</li>
+<li>gcc 4.9 or newer for Linux</li>
+<li>ndk-r10c for Android</li>
+<li>Visual Studio 2013 or newer for Windows (win32)</li>
+<li>Visual Studio 2013 update4 or newer for Windows 8.1 universal Apps</li>
+<li>Visual Studio 2015 RC or newer and Windows 10.0 (build 10074 or higher) for Windows 10.0 UWP Apps</li>
 </ul>
 <h2 id="how-to-run-tests">How to run tests</h2>
-<h3 id="mac-osx--ios">Mac OSX &amp; iOS</h3>
+<h3 id="cocos-console">Cocos Console</h3>
+<p>You can use <a href="www.cocos2d-x.org/wiki/Cocos2d-console">Cocos Console</a> command line tool to run the test cases on almost all supported platforms.</p>
+<p>In console application:</p>
+<pre><code>// Enter cpp test folder
+cd tests/cpp-tests
+// Or enter js test folder
+cd tests/js-tests
+// Or enter lua test folder
+cd tests/lua-tests
+
+// Compile or run test case
+cocos compile -p ios|mac|android|win32|win8_1|metro|web -m debug|release
+cocos run -p ios|mac|android|win32|win8_1|metro|web -m debug|release
+</code></pre><p>For example, if you want to run cpp test in release mode on Android, you can use the following command:</p>
+<pre><code>cocos run -p android -m release
+</code></pre><h3 id="mac-osx--ios">Mac OSX &amp; iOS</h3>
 <ul>
 <li>Enter <code>cocos2d-x/build</code> folder, open <code>cocos2d_test.xcodeproj</code></li>
-<li>Select <code>iOS</code> or <code>OS X</code> target in scheme toolbar</li>
+<li>Select <code>cpp-tests</code>, <code>lua-tests</code>, <code>js-tests</code> for <code>iOS</code> or <code>OS X</code> target in scheme toolbar</li>
 <li>Click <code>run</code> button</li>
 </ul>
 <h3 id="android">Android</h3>
@@ -573,8 +596,10 @@ $ ./android-build.py cpp-empty-test -p 10
 </ul>
 <h3 id="windows">Windows</h3>
 <ul>
-<li>Enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win32.vs2012.sln</code></li>
-<li>Select <code>cpp-empty-test</code> as running target</li>
+<li>For win32 project, enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win32.sln</code></li>
+<li>For win 8.1 project, enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win8.1-universal.sln</code></li>
+<li>For win 10 project, enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win10.sln</code></li>
+<li>Select running target</li>
 <li>Click run button</li>
 </ul>
 <h3 id="linux">Linux</h3>
@@ -590,185 +615,188 @@ $ make -j4
 <pre><code>$ cd bin/cpp-empty-test
 $ ./cpp-empty-test
 </code></pre><h2 id="how-to-start-a-new-game">How to start a new game</h2>
-<p>Please refer to this document: <a href="../README.md">ReadMe</a></p>
-<h1 id="highlights-of-v31">Highlights of v3.1</h1>
-<ul>
-<li><code>Sprite3D</code>, a new node to render 3D models</li>
-<li>Improved Shader subsystem</li>
-<li>New, unified, math library</li>
-<li><code>ui::VideoPlayer</code>, a new node to play videos</li>
+<p>Use Cocos Console to create a new game:</p>
+<pre><code>cocos new -l cpp|js|lua MyNewGame
+</code></pre><h1 id="v310">v3.10</h1>
+<h2 id="highlights-features-improvements-and-api-updates-of-v310">Highlights features, improvements and API updates of v3.10</h2>
+<p>We are happy to announce the release of Cocos2d-x v3.10. Following are the highlighted features, improvements and API updates in this version. </p>
+<ol>
+<li>Provides a unified setup for both Cocos2d-x and Cocos. This allows you to stay up to date with the latest Cocos2d-x releases. This includes using precompiled binaries and source code, in a single place. As always the source code is available from <a href="https://github.com/cocos2d/cocos2d-x" target="_blank">GitHub</a> but, there is no longer a <code>.zip</code> file available containing the source code. </li>
+<li>New <strong>Cocos Launcher</strong> tool! <strong>Cocos Launcher</strong> allows:<ul>
+<li>One step to create a new project with the engine, by using precompiled libraries or source code.</li>
+<li>Easy integration with SDKBOX for 3rd party services: Facebook, IAP and many more.</li>
+<li>Developers to provide feedback and get support, directly within <strong>Cocos Launcher</strong>, making it simple to contact the engine team for help.&#x3000;</li>
 </ul>
-<h1 id="features-in-detail">Features in detail</h1>
-<h2 id="sprite3d">Sprite3D</h2>
-<p>cocos2d-x v3.0 replaced <code>Node</code>&apos;s 2x3 transform matrix with a 4x4 one. This feature allows you to transform any node in a 3d space.</p>
-<p><code>Sprite3D</code> allows users to render a 3d model inside cocos2d. And since cocos2d-x already has 4x4 transform matrix, it is possible to move scale and rotate the <code>Sprite3D</code> in the x, y, and z axis.</p>
-<p>The API is like <code>Sprite</code>:</p>
-<pre><code class="lang-c++"><span class="hljs-comment">// v3.1 only supports the Wavefront file format</span>
-<span class="hljs-keyword">auto</span> sprite3d = Sprite3D::create(<span class="hljs-string">&quot;mymodel.obj&quot;</span>);
-
-<span class="hljs-comment">// if the material is not specified in .obj, you can override it with:</span>
-<span class="hljs-keyword">auto</span> sprite3d = Sprite3D::create(<span class="hljs-string">&quot;mymodel.obj&quot;</span>, <span class="hljs-string">&quot;texture.png&quot;</span>);
-
-<span class="hljs-comment">// Since Sprite3D is a regular node, you can add it into the scene like any other node</span>
-scene-&gt;addChild(sprite3d);
-sprite3d-&gt;setRotation3D(Vec3(x,y,z));
-</code></pre>
-<h2 id="improved-shader-subsystem">Improved Shader Subsystem</h2>
-<p>In order to support <code>Sprite3D</code>, we refactored our shader subsystem. The result is that we have an easier to use, yet more powerful shader system that can be used both for 2D and 3D.</p>
-<p>In v3.0, the class <code>GLProgram</code> was used both for holdin the <em>OpenGL program</em> (shader), and also the shader state (uniforms and attributes).</p>
-<p>That design had one big constraint: In order to add or remove an attribute or uniform, you had to subclass <code>GLProgram</code>.</p>
-<p>In v3.1, we decoupled the shader state from the shader. We added the <code>GLProgramState</code> class which holds the attributes and uniforms.</p>
-<p>The API is the following:</p>
-<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> glprogram = GLProgram::create(...);
-
-<span class="hljs-comment">// it will automatically parse all the attributes and uniforms</span>
-<span class="hljs-comment">// used by glprogram, and it will populate the glprogramstate dictionary</span>
-<span class="hljs-comment">// with them</span>
-<span class="hljs-keyword">auto</span> glprogramstate = GLProgramState::create( glprogram );
-
-<span class="hljs-comment">// How to set a uniform for Vec2 (Int, Texture, Vec3, Vec4, Mat4, are all supported)</span>
-glprogramstate-&gt;setUniformVec2(<span class="hljs-string">&quot;u_my_uniform&quot;</span>, Vec2(x,y));
-<span class="hljs-comment">// or how to set it using a callback</span>
-glprogramstate-&gt;setUniformCallback(<span class="hljs-string">&quot;u_my_uniform&quot;</span>, [](Uniform*uniform){
-    <span class="hljs-comment">// do something</span>
-});
-
-<span class="hljs-comment">// How to set an attribute</span>
-glprogramstate-&gt;setVertexAttribPointer(<span class="hljs-string">&quot;a_my_attrib&quot;</span>, <span class="hljs-number">4</span>, GL_FLOAT, GL_FALSE, <span class="hljs-number">0</span>, vertex);
-<span class="hljs-comment">// or how to set it using a callback</span>
-glprogramstate-&gt;setVertexAttribCallback(<span class="hljs-string">&quot;a_my_attrib&quot;</span>, [](VertexAttrib*attrib){
-    <span class="hljs-comment">// do something</span>
- });
-</code></pre>
-<p>By using this API it is possible to change the effect on a <code>Sprite3D</code> (or even an <code>Sprite</code>) without subclassing any cocos2d class!</p>
-<p>Possible examples:</p>
-<ul>
-<li>Outline / Shadow / Glow effects</li>
-<li>Multi-texturing effects</li>
-<li>Sepia, Grey or other color effects</li>
-<li>and more</li>
+</li>
+<li>UI System:<ul>
+<li>Reimplemented <code>Scale9Sprite</code> to improve performance and reduce memory consumption.</li>
+<li>Changed <code>PageView</code> to derive from <code>ListView</code>. <code>PageView</code> can add any widget as a child.</li>
+<li>Added three new <em>overflow types</em> to <code>Label</code>: <strong>CLAMP</strong>&#xFF0C;<strong>SHRINK</strong>, <strong>RESIZE_HEIGHT</strong>.</li>
+<li>Fixed a bug in <code>ClippingNode</code> that corrects its behavior when being set as a child.</li>
 </ul>
-<p>For a complete example, please see the <a href="https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/tests/cpp-tests/Classes/ShaderTest/ShaderTest2.cpp" target="_blank">Shader - Sprite</a> and <a href="https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/tests/cpp-tests/Classes/ShaderTest/ShaderTest.cpp" target="_blank">Shader - Basic</a> examples.</p>
-<h2 id="new-math-library">New math library</h2>
-<p>cocos2d-x v1.0 only supported 2D features. So it made sense to use a 2x3 Transform matrix for the operations.</p>
-<p>In cocos2d-x v2.0 we added OpenGL ES 2.0 support (no more built-in OpenGL matrix operations) so it made sense to use <a href="https://github.com/Kazade/kazmath" target="_blank">Kazmath</a>, a math library that replaced the OpenGL ES 1.0 functionality. Kazmath was used internally, and most of the users never used the Kazmath API at all.</p>
-<p>In cocos2d-x v3.0 we refactored the renderer and we exposed a bit more the Kazmath API to the users.</p>
-<p>And in v3.1, with <code>Sprite3D</code> we needed to expose even more the the Kazmath API. And it no longer made sense to have multiple math libraries inside cocos2d-x.</p>
-<p>The problems were:</p>
-<ul>
-<li>Part of the code was using the old 2D math library</li>
-<li>Part of the code was using Kazmath</li>
-<li>Part of the code was using ad-hoc math code</li>
-</ul>
-<p>The goal was to use only one math library for cocos2d-x, with the following requirements:</p>
-<ul>
-<li>Easy to use, easy to mantain</li>
-<li>Proven</li>
-<li>In C++ if possible</li>
-</ul>
-<p>So we took the <a href="http://gameplay3d.org/" target="_blank">GamePlay3D</a> math library, we did some minor changes, and the cocos2d-x math code with it.</p>
-<p>How to use it:</p>
-<pre><code class="lang-c++"><span class="hljs-comment">// vector2</span>
-<span class="hljs-function">Vec2 <span class="hljs-title">vec2</span><span class="hljs-params">(<span class="hljs-number">10</span>,<span class="hljs-number">20</span>)</span></span>;
-<span class="hljs-function">Vec2 <span class="hljs-title">other2</span><span class="hljs-params">(<span class="hljs-number">30</span>,<span class="hljs-number">40</span>)</span></span>;
-<span class="hljs-keyword">auto</span> ret = vec2.cross(other2);
-<span class="hljs-keyword">auto</span> ret2 = vec2 + other2;
-<span class="hljs-keyword">auto</span> ret3 = vec3 * scalar;
+</li>
+<li>Improved <strong>JavaScript Bindings</strong>: follows <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/GC_Rooting_Guide" target="_blank">SpiderMonkey GC best practices</a> making it more robust.</li>
+</ol>
+<h2 id="the-main-features-in-detail-of-cocos2dx-v310">The main features in detail of Cocos2d-x v3.10:</h2>
+<h3 id="ui-system">UI System</h3>
+<ol>
+<li><p>Reimplemented <code>Scale9Sprite</code> and improve the scale9sprite performance and reduce memory consumption.</p>
+<p> Reimplemented ui::Scale9Sprite, now the Slice sprite uses 16 vertices and 54 indices instead of the old 9 sprites way, The memory consumption is much lower than the previous implementation, and it is also more efficient.</p>
+<p> In SIMPLE mode, the 4 borders are all 0 and the whole sprite will scale horizontally and vertically. In this mode only 1 quad is used for rendering, for example:</p>
+<pre><code> auto blocks = ui::Scale9Sprite::createWithSpriteFrameName(&quot;blocks9c.png&quot;);
+ //When setting to SIMPLE, only 4 vertexes is used to rendering.
+ blocks-&gt;setRenderingType(Scale9Sprite::RenderingType::SIMPLE);
+</code></pre><p> In SLICE mode, it will use 18 triangles to rendering the slice 9 sprite. If the 4 borders are 0, there still be 18 triangles computed. So choose your RenderingType wisely, for example:</p>
+<pre><code> auto sprite = ui::Scale9Sprite::createWithSpriteFrameName(&quot;blocks9c.png&quot;);
+ //When setting to SLICE, 16 vertexes will be used to rendering.
+ sprite-&gt;setRenderingType(Scale9Sprite::RenderingType::SLICE);
+</code></pre></li>
+<li><p>Changed <code>PageView</code> to derived from ListView, PageView can add any type of widget as child.</p>
+<p> PageView was derived from Layout and it implemented the features of scrolling and item arrangement from scratch. But the features are already there in ListView. So remove those duplicated implementations from PageView and make it inherit from ListView.</p>
+<p> By consequence, PageView becomes simpler and easier to maintain because it considers only paging implementation. for example:</p>
+<pre><code> // Create the page view
+ Size size(240, 130);
+ PageView* pageView = PageView::create();
+ pageView-&gt;setDirection(PageView::Direction::HORIZONTAL);
+ pageView-&gt;setContentSize(size);
+ Size backgroundSize = background-&gt;getContentSize();
+ //&quot;removeAllPages&quot; is changed to &quot;removeAllItems&quot;
+ pageView-&gt;removeAllItems();
+ pageView-&gt;setIndicatorEnabled(true);
 
-node-&gt;setPosition(vec2);
+ int pageCount = 4;
+ for (int i = 0; i &lt; pageCount; ++i)
+ {
+     Layout* layout = Layout::create();
+     layout-&gt;setContentSize(size);
 
-<span class="hljs-comment">// vector3</span>
-<span class="hljs-function">Vec3 <span class="hljs-title">vec3</span><span class="hljs-params">(<span class="hljs-number">30</span>,<span class="hljs-number">40</span>,<span class="hljs-number">50</span>)</span></span>;
-node-&gt;setPosition3D(vec3);
+     ImageView* imageView = ImageView::create(&quot;cocosui/scrollviewbg.png&quot;);
+     imageView-&gt;setScale9Enabled(true);
+     imageView-&gt;setContentSize(size);
+     imageView-&gt;setPosition(Vec2(layout-&gt;getContentSize().width / 2.0f, layout-&gt;getContentSize().height / 2.0f));
+     layout-&gt;addChild(imageView);
 
-<span class="hljs-comment">// vector4</span>
-Vec4 vec4 = Vec4::ZERO;
-
-<span class="hljs-comment">// Matrix 4x4</span>
-<span class="hljs-keyword">auto</span> identity = Mat4::IDENTITY;
-node-&gt;setNodeToParentTransform(identity);
-</code></pre>
-<p>The good news is that the old API still works since we <code>typedef</code> the old classes and structs to the new math classes.</p>
-<h2 id="new-uivideoplayer">New UIVideoPlayer</h2>
-<p>v3.1 has a new <code>Node</code> to play videos. The API is:</p>
-<pre><code class="lang-c++"><span class="hljs-comment">// VideoPlayer is under the &quot;experimental&quot; namespace since</span>
-<span class="hljs-comment">// it only works for iOS and Android, and we might change its </span>
-<span class="hljs-comment">// API in the future</span>
-<span class="hljs-keyword">auto</span> videoPlayer = cocos2d::experimental::ui::VideoPlayer::create();
-videoPlayer-&gt;setContentSize(Size(x,y));
-videoPlayer-&gt;setURL(<span class="hljs-string">&quot;http://example.com/video.mp4&quot;</span>);  
-<span class="hljs-comment">//you could also play a local video file as follows:</span>
-<span class="hljs-comment">//videoPlayer-&gt;setFileName(&quot;filepath/video.mp4&quot;);</span>
-videoPlayer-&gt;play();
-</code></pre>
-<h2 id="ui-navigation">UI navigation</h2>
-<p>3.1 supports focus navigation of UI widget which is very useful for OTT manufacturer.</p>
-<h3 id="usage">Usage</h3>
-<p>Suppose that your screen has 3 widgets layout horizontally. We could define it like this:</p>
-<pre><code class="lang-c++">HBox(widget1, widget2, widget3)
-</code></pre>
-<p>If you want the <code>widget1</code> to get focused, you could call</p>
-<pre><code class="lang-c++">widget1-&gt;setfocused(<span class="hljs-literal">true</span>)
-</code></pre>
-<p>If you want to move the focus to the next widget, you could just call</p>
-<pre><code class="lang-c++">widget1-&gt;findNextFocusedWidget(Widget::FocusDirection::RIGHT, _firstFocusedWidget);
-</code></pre>
-<p>When the focus goes to <code>widget3</code>, if you call </p>
-<pre><code class="lang-c++">widget3-&gt;findNextFocusedWidget(Widget::FocusDirection::RIGHT, _firstFocusedWidget);
-</code></pre>
-<p>, the focus will stay there only when you call <code>HBox-&gt;setLoopFocus()</code> then the focus will move to <code>widget1</code> again.</p>
-<p><strong>Note:</strong></p>
-<p>The HBox and VBox could be nested in any ways and all the widgets should be added into the HBox/VBox if you want them to be focused later.</p>
-<p>When a focus moves from one widget to another, it will trigger a <em>focus event</em>. You could add the following code to handle these event:</p>
-<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> eventListener = EventListenerFocus::create();
-eventListener-&gt;onFocusChanged = CC_CALLBACK_2(UIFocusTestBase::onFocusChanged, <span class="hljs-keyword">this</span>);
-eventDispatcher-&gt;addEventListenerWithFixedPriority(_eventListener, <span class="hljs-number">1</span>);
-</code></pre>
-<p>The onFocusChanged callback, when the widget lose focus, we change its color to white, when the widget get focus, we change its color to red. You could add more complex animations to them when focus change happens.</p>
-<pre><code class="lang-c++"><span class="hljs-keyword">void</span> UIFocusTestBase::onFocusChanged(cocos2d::ui::Widget *widgetLostFocus, cocos2d::ui::Widget *widgetGetFocus)
-{
-    Layout *getLayout = <span class="hljs-keyword">dynamic_cast</span>&lt;Layout*&gt;(widgetGetFocus);
-    <span class="hljs-keyword">if</span> (!getLayout &amp;&amp; widgetGetFocus &amp;&amp; widgetGetFocus-&gt;isFocusEnabled()) {
-        widgetGetFocus-&gt;setColor(Color3B::RED);
-    }
-    Layout *loseLayout = <span class="hljs-keyword">dynamic_cast</span>&lt;Layout*&gt;(widgetLostFocus);
-    <span class="hljs-keyword">if</span> (!loseLayout &amp;&amp; widgetLostFocus &amp;&amp; widgetLostFocus-&gt;isFocusEnabled()) {
-        widgetLostFocus-&gt;setColor(Color3B::WHITE);
-    }
-}
-</code></pre>
-<p>For more usage information, please refer to <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/tests/cpp-tests/Classes/UITest/CocoStudioGUITest/UIFocusTest/UIFocusTest.cpp" target="_blank">this file</a> for more information.</p>
-<h3 id="limitations">Limitations</h3>
-<p>Only Layout type <code>HORIZONTAL</code> and <code>VERTICAL</code> is supported which means we could not treat Scrollview and PageView as a base layout.</p>
-<p>The following layouts:</p>
-<pre><code class="lang-c++">HBox(VBox, ScrollView(HBox(VBox, VBox, VBox)))
-VBox(HBox, PageView(VBox(HBox,HBox))))
-</code></pre>
-<p> are not supported yet, we will implement it in cocos2d-x v3.2.</p>
-<p> If you want to achieve the focus movement in scrollview, you could use a normal VBox or HBox to layout elements and call <code>setFocusEnabled(true/false)</code> manually to skip the unwanted widgets.</p>
-<h2 id="improved-folder-structure">Improved folder structure</h2>
-<p>In v3.0 we started a folder re-organization for cocos2d-x. Unfortunately we didn&apos;t have the time to finish it on time.</p>
-<p>In v3.1 we finished the folder re-organization, and it looks like this:</p>
-<pre><code>cocos/: includes cocos2d.cpp and other build files
-cocos/2d/: includes base nodes, 2d nodes and related objects like Node, Scene, Sprite, etc.
-cocos/3d/: includes 3d nodes and related objects like Sprite3D
-cocos/audio/: sound and music related objects
-cocos/math/: math related objects
-cocos/platform/: platform specific objects
-cocos/renderer/: GPU related objects like Renderer, Texture2D, Render Commands, etc.
-cocos/physcis/: physics related objects
-cocos/network/: network retlated objects
-cocos/editor-support/: 3rd party editors file format
-</code></pre><h2 id="particle-system-fixes">Particle System fixes</h2>
-<p>cocos2d-x v3.0 and earlier versions had a bug in <code>ParticleSystem</code> where the the Y-flipped parameter was not calculated correctly.</p>
-<p>We fixed that bug in v3.1. The problem is that fixing this bug breaks backward compatiblility in particles that were relying on the broken behavior.</p>
-<p>In order to try to make the transition easier to v3.1, we created a tool that fixes the broken particle system files. How to use it:</p>
-<pre><code># Will convert broken .plist files into fixed ones.
-# Will generate a backup file of the converted files
-$ cocos/tools/particle/convert_YCoordFlipped.py *.plist
-</code></pre><h1 id="misc-api-changes">Misc API Changes</h1>
-<h2 id="deprecated-functions-and--global-variables">deprecated functions and  global variables</h2>
-<p>TODO: The old Math API</p>
+     Text* label = Text::create(StringUtils::format(&quot;page %d&quot;,(i+1)), &quot;fonts/Marker Felt.ttf&quot;, 30);
+     label-&gt;setColor(Color3B(192, 192, 192));
+     label-&gt;setPosition(Vec2(layout-&gt;getContentSize().width / 2.0f, layout-&gt;getContentSize().height / 2.0f));
+     layout-&gt;addChild(label);
+     //&quot;insertPage&quot; is changed to &quot;insertCustomItem&quot;
+     pageView-&gt;insertCustomItem(layout, i);
+ }
+ //&quot;removePageAtIndex&quot; is changed to &quot;removeItem&quot;
+ pageView-&gt;removeItem(0);
+ //&quot;scrollToPage&quot; is changed to &quot;scrollToItem&quot;
+ pageView-&gt;scrollToItem(pageCount - 2);
+</code></pre><p>  More detail usage please refer to: tests/cpp-tests/Classes/UITest/CocoStudioGUITest/UIPageViewTest/UIPageViewTest.cpp.</p>
+</li>
+</ol>
+<ol>
+<li><p>Added three overflow type to new label: CLAMP, SHRINK, RESIZE_HEIGHT.</p>
+<p>  Overflow type is used to control label overflow result, In SHRINK mode, the font size will change dynamically to adapt the content size. In CLAMP mode, when label content goes out of the bounding box, it will be clipped, In RESIZE_HEIGHT mode, you can only change the width of label and the height is changed automatically. For example:</p>
+<pre><code> //Change the label&apos;s Overflow type
+ label-&gt;setOverflow(Label::Overflow::RESIZE_HEIGHT);
+</code></pre><p>  More detail usage please refer to: tests/cpp-tests/Classes/LabelTest/LabelTestNew.cpp.</p>
+<p>  Limitations:</p>
+</li>
+</ol>
+<pre><code> currently only TTF and BMFont support all the valid Overflow type. Char Map font supports all the Overflow type except for SHRINK, because we can&apos;t measure its font size. System font only support Overflow::Normal and Overflow::RESIZE_HEIGHT.
+</code></pre><h2 id="other-changes">Other changes</h2>
+<p>[NEW]           RichText supported new line element.</p>
+<p>[NEW]           UIText::clone supports clone the text effect.</p>
+<p>[NEW]           UI: Added methods to query label effect state.</p>
+<p>[REFINE]        IOS: Added virtual keyword for some render related function.</p>
+<p>[REFINE]        UI: Fixed boring deprecated warning in HttpRequest.</p>
+<p>[REFINE]        Network: Fixed Downloader bug on iOS &amp; Android platform.</p>
+<p>[REFINE]        Studio: Fixed deprecation warning in SkeletonRenderer.</p>
+<p>[REFINE]        JS: Added js test case for fix, improve template.</p>
+<p>[REFINE]        Network: Permit http access to cocos2d-x.org in test projects on iOS.</p>
+<p>[REFINE]        Network: Crash when removing a remotely downloaded image from texture 
+cache in js-binding.</p>
+<p>[REFINE]        Win10: WinRT project update version to v3.10.</p>
+<p>[REFINE]        Console: Added quiet option for Cocos Toolkit.</p>
+<p>[REFINE]        JS: New GC model for js-binding.</p>
+<p>[REFINE]        Doc: Fixed typos in documentation and comments.</p>
+<p>[REFINE]        UI: Updated controlButton size calculate with new Scale9Sprite logic.</p>
+<p>[REFINE]        Win10: Added missing _USRJSSTATIC preprocessor define for ARM builds.</p>
+<p>[REFINE]        JS: Added ccvector_to / ccmap_to converted to new js-binding API.</p>
+<p>[REFINE]        UI: Slider misprint fix.</p>
+<p>[FIX]           Core: Fixed premultiplyAlpha for mipmaps and compressed textures.</p>
+<p>[FIX]           UI: Fixed Scale9sprite rendering error when content size smaller than the sum of leftInset and rightInset.</p>
+<p>[FIX]           Win32: Fixed EditBox crash when removing an EditBox in a scheduler.</p>
+<p>[FIX]           Android: Fixed cannot add view to mFrameLayout when extends Cocos2dxActivity.</p>
+<p>[FIX]           2D: Fixed actionNode set at wrong position bug.</p>
+<p>[FIX]           3D: Fixed the movement of PUParticle lags one frame.</p>
+<p>[FIX]           UI: Fixed the wront argument of setPlaceholderFontName in EditBox.</p>
+<p>[FIX]           UI: Fixed EditBox editBoxEditingDidEnd may use the original text after change the text of EditBox in user script.</p>
+<p>[FIX]           Audio: Fixed <code>FinishCallback</code> never be called in Windows.</p>
+<p>[FIX]           UI: Fixed Layout stencil clipping nested with Clipping Node rendering issue.</p>
+<p>[FIX]           UI: Keyboard doesn&apos;t hide when click the screen outside of EditBox on iOS platform.</p>
+<p>[FIX]           UI: Fixed a fatal bug in EditBox implement on Windows platform.</p>
+<p>[FIX]           UI: Fixed edit box setPlaceholderFontName and scale font size issue.</p>
+<p>[FIX]           Core: Fixed memory leak when initWithImage() failed.</p>
+<p>[FIX]           Network: CCDownloader on iOS is broken in v3.9 js-binding.</p>
+<p>[FIX]           JS: Bindings fixes for Menu, Sprite and Label.</p>
+<p>[FIX]           Studio: Removed weak reference in ActionNode.</p>
+<p>[FIX]           UI: shouldStartLoading method should return value to js in js-binding.</p>
+<p>[FIX]           UI: Fixed scrollview render error.</p>
+<p>[FIX]           JS: Fixed win32 js project crash issue.</p>
+<p>[FIX]           UI: Button touch doesn&apos;t work with scale9 enabled.</p>
+<p>[FIX]           JS: Fixed evalString doesn&apos;t return result issue.</p>
+<p>[FIX]           JS: Fixed ComponentJS proxy management issue in JSB.</p>
+<p>[FIX]           Android: Fixed include in cocos network module.</p>
+<p>[FIX]           Network: Fixed web socket crash.</p>
+<p>[FIX]           UI: Fixed TextField missing default password style text setting.</p>
+<p>[TEST]          S9SpriteTest: Scale9Sprite fade actions with cascade opacity.</p>
+<p>[TEST]          Web: Removed default focus block from UIFocusTestVertical.</p>
+<p>[TEST]          Lua: Fixed pageViewTest Horizontal scroll won&apos;t work in Lua-test.</p>
+<p>You can also take a look at the <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG" target="_blank">full changelog</a>.</p>
+<h2 id="new-apis">NEW APIS</h2>
+<ol>
+<li><p>RichText</p>
+<p> Added RichElementNewLine class to create new RichText Element.</p>
+<p> For more information: <a href="https://github.com/cocos2d/cocos2d-x/pull/14033" title="https://github.com/cocos2d/cocos2d-x/pull/14033" target="_blank">https://github.com/cocos2d/cocos2d-x/pull/14033</a></p>
+</li>
+<li><p>PageViewIndicator</p>
+<p> Added PageViewIndicator class to create PageViewIndicator.</p>
+<p> For more information: <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/cocos/ui/UIPageViewIndicator.h" title="https://github.com/cocos2d/cocos2d-x/blob/v3/cocos/ui/UIPageViewIndicator.h" target="_blank">https://github.com/cocos2d/cocos2d-x/blob/v3/cocos/ui/UIPageViewIndicator.h</a></p>
+</li>
+<li><p>PageView </p>
+<p> Changed PageView to derived from ListView.
+ For more information: <a href="https://github.com/cocos2d/cocos2d-x/pull/14252" title="https://github.com/cocos2d/cocos2d-x/pull/14252" target="_blank">https://github.com/cocos2d/cocos2d-x/pull/14252</a></p>
+</li>
+<li><p>ApplicationProtocol</p>
+<p> Added the API getVersion.</p>
+</li>
+</ol>
+<ol>
+<li><p>PolygonInfo</p>
+<p> Added the API setTriangles.</p>
+</li>
+<li><p>Scale9Sprite</p>
+<p> Added setRenderingType, getRenderingType.</p>
+</li>
+<li><p>FontFNT</p>
+<p> Added setFontSize, getOriginalFontSize.</p>
+</li>
+<li><p>Label</p>
+<p>Added setBMFontSize, getBMFontSize, enableWrap, isWrapEnabled, setOverflow, getOverflow, initWithTTF, isShadowEnabled, getShadowOffset, getShadowBlurRadius, getShadowColor, getOutlineSize, getLabelEffectType, getEffectColor.</p>
+</li>
+<li><p>AudioEngineImpl</p>
+<p>Added AudioEngineImpl to implement FMOD.</p>
+</li>
+<li><p>Lua Module</p>
+<p>Added luaval_to_node, node_to_luaval.</p>
+</li>
+<li><p>JS Module</p>
+<p>Added js_cocos2dx_ComponentJS_create</p>
+</li>
+<li><p>ui::Text</p>
+<p>Added isShadowEnabled, getShadowOffset, getShadowBlurRadius, getShadowColor,  getOutlineSize, getLabelEffectType, getEffectColor.</p>
+</li>
+<li><p>UITextTest_Clone </p>
+<p>Added UITextTest_Clone class.</p>
+</li>
+</ol>
 
                     
                     </section>
@@ -779,10 +807,10 @@ $ cocos/tools/particle/convert_YCoordFlipped.py *.plist
         </div>
 
         
-        <a href="./cocos2d-x_v3.0_release_notes_en.html" class="navigation navigation-prev " aria-label="Previous page: Cocos2d-x v3.0 英文发布说明"><i class="fa fa-angle-left"></i></a>
+        <a href="./cocos2d-x_v3.9_release_notes.html" class="navigation navigation-prev " aria-label="Previous page: Cocos2d-x v3.9 中文发布说明"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./cocos2d-x_v3.2_release_notes_en.html" class="navigation navigation-next " aria-label="Next page: Cocos2d-x v3.2 英文发布说明"><i class="fa fa-angle-right"></i></a>
+        <a href="./cocos2d-x_release_notes_en.html" class="navigation navigation-next " aria-label="Next page: Cocos2d-x 英文发布说明"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

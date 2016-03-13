@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Cocos2d-x v3.1 英文发布说明 | &lt;div align=&quot;center&quot;&gt;&lt;h2&gt;Cocos2d-x 版本发布说明&lt;/div&gt;</title>
+        <title>Cocos2d-x v3.7 英文发布说明 | &lt;div align=&quot;center&quot;&gt;&lt;h2&gt;Cocos2d-x 版本发布说明&lt;/div&gt;</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -41,10 +41,10 @@
         
     
     
-    <link rel="next" href="./cocos2d-x_v3.2_release_notes_en.html" />
+    <link rel="next" href="./cocos2d-x_v3.8_release_notes_en.html" />
     
     
-    <link rel="prev" href="./cocos2d-x_v3.0_release_notes_en.html" />
+    <link rel="prev" href="./cocos2d-x_v3.6_release_notes_en.html" />
     
 
         
@@ -53,9 +53,9 @@
         
         
     <div class="book"
-        data-level="2.2"
-        data-chapter-title="Cocos2d-x v3.1 英文发布说明"
-        data-filepath="cocos2d-x_v3.1_release_notes_en.md"
+        data-level="2.8"
+        data-chapter-title="Cocos2d-x v3.7 英文发布说明"
+        data-filepath="cocos2d-x_v3.7_release_notes_en.md"
         data-basepath="."
         data-revision="Sun Mar 13 2016 15:45:07 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -303,7 +303,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="cocos2d-x_v3.1_release_notes_en.html">
+        <li class="chapter " data-level="2.2" data-path="cocos2d-x_v3.1_release_notes_en.html">
             
                 
                     <a href="./cocos2d-x_v3.1_release_notes_en.html">
@@ -393,7 +393,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="cocos2d-x_v3.7_release_notes_en.html">
+        <li class="chapter active" data-level="2.8" data-path="cocos2d-x_v3.7_release_notes_en.html">
             
                 
                     <a href="./cocos2d-x_v3.7_release_notes_en.html">
@@ -491,39 +491,50 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="cocos2dx-v31-release-notes">cocos2d-x v3.1 Release Notes</h1>
-<p><strong>Table of Contents</strong>  <em>generated with <a href="http://doctoc.herokuapp.com/" target="_blank">DocToc</a></em></p>
+                        <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h1 id="cocos2dx-v37-release-notes">Cocos2d-x v3.7 Release Notes</h1>
+<p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
 <ul>
-<li><a href="#user-content-misc-information">Misc Information</a></li>
-<li><a href="#user-content-requirements">Requirements</a><ul>
-<li><a href="#user-content-runtime-requirements">Runtime Requirements</a></li>
-<li><a href="#user-content-compiler-requirements">Compiler Requirements</a></li>
-<li><a href="#user-content-how-to-run-tests">How to run tests</a></li>
-<li><a href="#user-content-how-to-start-a-new-game">How to start a new game</a></li>
+<li><a href="#misc-information">Misc Information</a></li>
+<li><a href="#requirements">Requirements</a><ul>
+<li><a href="#runtime-requirements">Runtime Requirements</a></li>
+<li><a href="#compiler-requirements">Compiler Requirements</a></li>
+<li><a href="#how-to-run-tests">How to run tests</a><ul>
+<li><a href="#cocos-console">Cocos Console</a></li>
+<li><a href="#mac-osx-&amp;-ios">Mac OSX &amp; iOS</a></li>
+<li><a href="#android">Android</a></li>
+<li><a href="#windows">Windows</a></li>
+<li><a href="#linux">Linux</a></li>
 </ul>
 </li>
-<li><a href="#user-content-highlights-of-v31">Highlights of v3.1</a></li>
-<li><a href="#user-content-features-in-detail">Features in detail</a><ul>
-<li><a href="#user-content-sprite3d">Sprite3D</a></li>
-<li><a href="#user-content-improved-shader-subsystem">Improved Shader Subsystem</a></li>
-<li><a href="#user-content-new-math-library">New math library</a></li>
-<li><a href="#user-content-new-uivideoplayer">New UIVideoPlayer</a></li>
-<li><a href="#user-content-ui-navigation">UI navigation</a></li>
-<li><a href="#user-content-improved-folder-structure">Improved folder structure</a></li>
-<li><a href="#user-content-particle-system-fixes">Particle System fixes</a></li>
+<li><a href="#how-to-start-a-new-game">How to start a new game</a></li>
 </ul>
 </li>
-<li><a href="#user-content-misc-api-changes">Misc API Changes</a><ul>
-<li><a href="#user-content-deprecated-functions-and--global-variables">deprecated functions and  global variables</a></li>
+<li><a href="#v37">v3.7</a><ul>
+<li><a href="#highlights-of-v37">Highlights of v3.7</a></li>
+<li><a href="#download">Download</a></li>
+<li><a href="#the-main-features-in-detail">The main features in detail:</a><ul>
+<li><a href="#3d-physics">3D Physics</a></li>
+<li><a href="#3d-navigation-mesh">3D Navigation mesh</a></li>
+<li><a href="#material-system">Material system</a></li>
+<li><a href="#all-in-one-cocos2d-x">All in one Cocos2d-x</a></li>
+<li><a href="#enhanced-polygon-sprite">Enhanced Polygon Sprite</a></li>
+<li><a href="#webview-and-videoplayer-in-js-native-and-web">WebView and VideoPlayer in JS (native and web)</a></li>
+<li><a href="#nine-patch-format-support">Nine Patch format support</a></li>
+<li><a href="#android-studio-support">Android Studio support</a></li>
+<li><a href="#samsung-enhanced-api-support">Samsung Enhanced API support</a></li>
+<li><a href="#sdkbox">SDKBOX</a></li>
+</ul>
+</li>
+<li><a href="#the-next-step">The Next Step</a></li>
 </ul>
 </li>
 </ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h1 id="misc-information">Misc Information</h1>
 <ul>
-<li>Download: <a href="http://cdn.cocos2d-x.org/cocos2d-x-3.1rc0.zip" target="_blank">http://cdn.cocos2d-x.org/cocos2d-x-3.1rc0.zip</a></li>
-<li>Full Changelog: <a href="https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/CHANGELOG" target="_blank">https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/CHANGELOG</a></li>
-<li><del>API Reference: <a href="http://www.cocos2d-x.org/reference/native-cpp/V3.0/index.html" target="_blank">http://www.cocos2d-x.org/reference/native-cpp/V3.0/index.html</a></del></li>
-<li>v3.0 Release Notes can be found here: <a href="https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md" target="_blank">v3.0 Release Notes</a></li>
+<li><a href="https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG" target="_blank">Full Changelog</a></li>
 </ul>
 <h1 id="requirements">Requirements</h1>
 <h2 id="runtime-requirements">Runtime Requirements</h2>
@@ -532,22 +543,37 @@
 <li>iOS 5.0 or newer</li>
 <li>OS X 10.7 or newer</li>
 <li>Windows 7 or newer</li>
-<li>Windows Phone 8 or newer</li>
-<li>Linux Ubuntu 12.04 or newer</li>
-<li><del>Browsers via Emscripten</del> N/A for the moment</li>
+<li>Windows Phone 8.1</li>
+<li>Linux Ubuntu 14.04 or newer</li>
+<li>Mordern browsers and IE 9+ (On mobile platforms, only iOS and Android 5 activated WebGL support)</li>
 </ul>
 <h2 id="compiler-requirements">Compiler Requirements</h2>
 <ul>
-<li>Xcode 4.6 or newer for iOS or Mac</li>
-<li>gcc 4.7 or newer for Linux</li>
-<li>gcc 4.7 and ndk-r9 or newer for Android</li>
-<li>Visual Studio 2012  or newer for Windows (win32)</li>
-<li>Visual Studio 2012  or newer for Windows Phone 8</li>
+<li>Xcode 5.1 or newer for iOS or Mac</li>
+<li>gcc 4.9 or newer for Linux</li>
+<li>ndk-r10c for Android</li>
+<li>Visual Studio 2013 or newer for Windows (win32)</li>
+<li>Visual Studio 2013 update4 or newer for Windows Phone 8</li>
 </ul>
 <h2 id="how-to-run-tests">How to run tests</h2>
-<h3 id="mac-osx--ios">Mac OSX &amp; iOS</h3>
+<h3 id="cocos-console">Cocos Console</h3>
+<p>You can use <a href="www.cocos2d-x.org/wiki/Cocos2d-console">Cocos Console</a> command line tool to run the test cases on almost all supported platforms.</p>
+<p>In console application:</p>
+<pre><code>// Enter cpp test folder
+cd tests/cpp-tests
+// Or enter js test folder
+cd tests/js-tests
+// Or enter lua test folder
+cd tests/lua-tests
+
+// Compile or run test case
+cocos compile -p ios|mac|android|win32|win8_1|metro|web -m debug|release
+cocos run -p ios|mac|android|win32|win8_1|metro|web -m debug|release
+</code></pre><p>For example, if you want to run cpp test in release mode on Android, you can use the following command:</p>
+<pre><code>cocos run -p android -m release
+</code></pre><h3 id="mac-osx--ios">Mac OSX &amp; iOS</h3>
 <ul>
-<li>Enter <code>cocos2d-x/build</code> folder, open <code>cocos2d_test.xcodeproj</code></li>
+<li>Enter <code>cocos2d-x/build</code> folder, open <code>cocos2d_test.xcodeproj</code> or <code>cocos2d_js_tests.xcodeproj</code> (For JS test, we will merge these two project in v3.8)</li>
 <li>Select <code>iOS</code> or <code>OS X</code> target in scheme toolbar</li>
 <li>Click <code>run</code> button</li>
 </ul>
@@ -573,8 +599,9 @@ $ ./android-build.py cpp-empty-test -p 10
 </ul>
 <h3 id="windows">Windows</h3>
 <ul>
-<li>Enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win32.vs2012.sln</code></li>
-<li>Select <code>cpp-empty-test</code> as running target</li>
+<li>For win32 project, enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win32.sln</code> or <code>cocos2d-js-win32.sln</code></li>
+<li>For win 8.1 project, enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win8.1-universal.sln</code> or <code>cocos2d-js-win8.1-universal.sln</code></li>
+<li>Select running target</li>
 <li>Click run button</li>
 </ul>
 <h3 id="linux">Linux</h3>
@@ -590,185 +617,79 @@ $ make -j4
 <pre><code>$ cd bin/cpp-empty-test
 $ ./cpp-empty-test
 </code></pre><h2 id="how-to-start-a-new-game">How to start a new game</h2>
-<p>Please refer to this document: <a href="../README.md">ReadMe</a></p>
-<h1 id="highlights-of-v31">Highlights of v3.1</h1>
+<p>Use Cocos Console to create a new game:</p>
+<pre><code>cocos new -l cpp|js|lua MyGame
+</code></pre><h1 id="v37">v3.7</h1>
+<h2 id="highlights-of-v37">Highlights of v3.7</h2>
+<ol>
+<li><p>Cocos2d-x will only publish the final versions publicly in the future, all alpha, beta, rc versions will be exclusively published in the community. By that I mean in the English and Chinese forum, in developers QQ groups, by the github tags. The final versions will be published with the all in one Cocos.</p>
+</li>
+<li><p>Cocos2d-JS is merged into Cocos2d-x in v3.7, from now on, developers won&apos;t get confused about which product they should use. With Cocos2d-x, you can work with C++/Lua/JS and publish to Windows/WP8.1/Android/Mac/iOS/Linux and Web if you use JS. For a smooth transition, we will still announce two products in v3.7, Cocos2d-x v3.7 and Cocos2d-JS v3.7, but they share exactly the same package. In the future versions, there will be only one package. For reference, this have been discussed in <a href="http://discuss.cocos2d-x.org/t/discuss-the-next-step-of-cocos2d-x/21182/" target="_blank">another thread</a></p>
+</li>
+<li><p>3d: Added Physics3d support (JS/Lua ready)</p>
+</li>
+<li>3d: Added NavMesh support (JS/Lua ready)</li>
+<li>core: Added Material system (JS/Lua ready)</li>
+<li>sprite: Supportted polygon sprite with AutoPolygon generator (JS/Lua ready)</li>
+<li>Scale9Sprite: Added Android 9-patch image support (JS/Lua ready)</li>
+<li>platform: Added Windows 10.0 Universal App(UWP) support</li>
+<li>platform: Add Samsung Enhanced API on Android for cocos</li>
+<li>C++: Added Android Studio support</li>
+<li>JS: Merged JSB and web engine into Cocos2d-x for a All-in-one engine</li>
+<li>JS: Added <code>ccui.VideoPlayer</code> and <code>ccui.WebView</code> for iOS/Android/Web</li>
+<li>console: Supported build &amp; run Android Studio project with cocos console</li>
+<li>SDKBOX: super EASY way to integrate 3rd party SDKs into cocos2d-x</li>
+</ol>
+<h2 id="download">Download</h2>
+<p><a href="http://www.cocos2d-x.org/filedown/cocos2d-x-3.7.zip" target="_blank">Cocos2d-x v3.7</a> including : C++, Lua &amp; JS</p>
+<h2 id="the-main-features-in-detail">The main features in detail:</h2>
+<h3 id="3d-physics">3D Physics</h3>
+<p>It&apos;s the physics engine we provided for providing 3D physics game capability, it works great with our current 3D modules, like 3D sprites, 3D Terrain, etc. We used <a href="http://bulletphysics.org/wordpress/" target="_blank">bullet</a> library as base of 3D physics, encapsulate it into our Cocos 3D physics APIs. You can refer to Physics3DTest test case for its API and usage, we will add documentation into <a href="http://cocos2d-x.org/programmersguide" target="_blank">programmers guide</a> lately.</p>
+<p><img src="http://cdn.cocimg.com/bbs/attachment/Fid_41/41_300874_348f31ee628da2b.png" alt=""></p>
+<h3 id="3d-navigation-mesh">3D Navigation mesh</h3>
+<p>The navigation mesh system provides simple to use API to find path in a complexe 3D world, you can add mesh with a triangles list, add obstacles. Then you will add agents which can perform a path finding task and move your 3D sprites to a certain place following the path. You can refer to NavmeshTest test case for its API and usage, we will add documentation into <a href="http://cocos2d-x.org/programmersguide" target="_blank">programmers guide</a> lately.</p>
+<p><img src="http://cdn.cocimg.com/bbs/attachment/Fid_41/41_300874_6589cbf376a639b.png" alt=""></p>
+<h3 id="material-system">Material system</h3>
+<p>Material system is an advanced system which defines all visual informations (it may contain aural or physical informations in the future) of an object. Instead of just plain an simple texture, you can have more than one texture, and much more features like multi-pass rendering. Refer to <a href="https://github.com/chukong/programmers-guide/blob/v3.7/chapters/14.md#shaders-and-materials" target="_blank">the documentation</a> for more details.</p>
+<p><img src="http://cdn.cocimg.com/bbs/attachment/Fid_41/41_300874_a94a91aeeaf401d.png" alt=""></p>
+<h3 id="all-in-one-cocos2dx">All in one Cocos2d-x</h3>
+<p>After merged Cocos2d-JS into Cocos2d-x, nothing have changed for C++ and Lua developers, but the engine structure may look very strange to JS developers. Don&apos;t worry, the upgrade is still very simple, because the project structure remains the same as before. Refer to <a href="http://discuss.cocos2d-x.org/t/cocos2d-js-v3-6-1-hot-fix-for-remote-debugger/21524/2" target="_blank">this discussion</a> for more informations.</p>
+<h3 id="enhanced-polygon-sprite">Enhanced Polygon Sprite</h3>
+<p>As it&apos;s not very easy to used in the previous version, we have refactored the API for Polygon Sprite. It&apos;s now becoming a internal feature of 2d Sprite, you can use AutoPolygon to generate polygons for a sprite, then use it to create the sprite directly, very simple to use.</p>
+<pre><code>auto pinfo = AutoPolygon::generatePolygon(&quot;filename.png&quot;);
+auto spp = Sprite::create(pinfo);
+</code></pre><p>Although it do takes time to generate the polygons information, you can cache and reuse it, we also plan to support the polygons information generation in the editor in the future.</p>
+<p><img src="http://cdn.cocimg.com/bbs/attachment/Fid_41/41_300874_7b5ef9b52f054f3.png" alt=""></p>
+<h3 id="webview-and-videoplayer-in-js-native-and-web">WebView and VideoPlayer in JS (native and web)</h3>
+<p>The WebView and VideoPlayer have finally been ported to JS, and it supports iOS, Android and Web browsers. You can refer to its usage in the test case: <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/tests/js-tests/src/GUITest/UIWebViewTest/UIWebViewTest.js" target="_blank">WebViewTest</a> and <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/tests/js-tests/src/GUITest/UIVideoPlayerTest/UIVideoPlayerTest.js" target="_blank">VideoPlayerTest</a>.</p>
+<h3 id="nine-patch-format-support">Nine Patch format support</h3>
+<p>The Nine Patch image is a stretchable bitmap image which can be used as the texture of Scale9Sprite. Now Cocos2d-x support creating the Scale9Sprite node directly with a Nine Patch file. More informations about the <a href="http://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch" target="_blank">Nine Patch format</a> and <a href="http://developer.android.com/tools/help/draw9patch.html" target="_blank">its tool</a>. You can also refer to our test case for its usage: <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/tests/cpp-tests/Classes/UITest/CocoStudioGUITest/UIScale9SpriteTest.cpp#L857" target="_blank">C++</a>, <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/tests/lua-tests/src/CocoStudioTest/CocoStudioGUITest/CocoStudioGUITest.lua#L4020" target="_blank">Lua</a>, <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/tests/js-tests/src/GUITest/UIS9NinePatchTest/UIS9NinePatchTest.js" target="_blank">JS</a></p>
+<h3 id="android-studio-support">Android Studio support</h3>
+<p>Cocos console now supports compilation and package with Android Studio 1.2, use it with a <code>--android-studio</code> flag</p>
+<pre><code>cocos run/compile -p android --android-studio
+</code></pre><h3 id="samsung-enhanced-api-support">Samsung Enhanced API support</h3>
+<p>Samsung have provided a series of Enhanced API to optimize Cocos2d-x games for Samsung products with Android 5.0+ system. It include some very cool features like: Boost Up API, Power Saving Mode API, Dynamic FPS API, etc. The current API can be found in <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/cocos/platform/android/CCEnhanceAPI-android.h" target="_blank">this header file</a>, we will provide a detailed documentation later.</p>
+<h3 id="win32-platform-resource-name-become-case-sensitive">Win32 platform resource name become case sensitive</h3>
+<p>In the previous versions, the resources file name&apos;s case is ignored on win32 platform, but not ignored in other platforms. This will lead to some unexpected issues, especially when user develop with win32 platform and pulish to other platforms like Android. In win32, the file name may be found without matching the case, but on other platforms it won&apos;t be found. So we decided to make win32 platform&apos;s resources case sensitive. Please make sure you are using the correct file name for your resources.</p>
+<h3 id="sdkbox">SDKBOX</h3>
+<p>SDKBOX is a project that&apos;s built by part of the cocos2d-x team, in order to makes integrating 3rd party SDKs super EASY.
+With SDKBOX you can integrate services like In App Purchase with one command</p>
+<pre><code>sdkbox import -b iap
+</code></pre><p>Currently supported service including</p>
 <ul>
-<li><code>Sprite3D</code>, a new node to render 3D models</li>
-<li>Improved Shader subsystem</li>
-<li>New, unified, math library</li>
-<li><code>ui::VideoPlayer</code>, a new node to play videos</li>
+<li><a href="http://cocos2d-x.org/sdkbox/tune" target="_blank">Tune</a></li>
+<li><a href="http://cocos2d-x.org/sdkbox/iap" target="_blank">In App Purchase</a></li>
+<li><a href="http://cocos2d-x.org/sdkbox/adcolony" target="_blank">AdColony</a></li>
+<li><a href="http://cocos2d-x.org/sdkbox/vungle" target="_blank">Vungle</a></li>
+<li><a href="http://cocos2d-x.org/sdkbox/chartboost" target="_blank">Chartboost</a></li>
+<li><a href="http://cocos2d-x.org/sdkbox/kochava" target="_blank">Kochava</a></li>
+<li><a href="http://cocos2d-x.org/sdkbox/googleanalytics" target="_blank">Google Analytics</a></li>
+<li><a href="http://cocos2d-x.org/sdkbox/flurryanalytics" target="_blank">Flurry Analytics</a></li>
 </ul>
-<h1 id="features-in-detail">Features in detail</h1>
-<h2 id="sprite3d">Sprite3D</h2>
-<p>cocos2d-x v3.0 replaced <code>Node</code>&apos;s 2x3 transform matrix with a 4x4 one. This feature allows you to transform any node in a 3d space.</p>
-<p><code>Sprite3D</code> allows users to render a 3d model inside cocos2d. And since cocos2d-x already has 4x4 transform matrix, it is possible to move scale and rotate the <code>Sprite3D</code> in the x, y, and z axis.</p>
-<p>The API is like <code>Sprite</code>:</p>
-<pre><code class="lang-c++"><span class="hljs-comment">// v3.1 only supports the Wavefront file format</span>
-<span class="hljs-keyword">auto</span> sprite3d = Sprite3D::create(<span class="hljs-string">&quot;mymodel.obj&quot;</span>);
-
-<span class="hljs-comment">// if the material is not specified in .obj, you can override it with:</span>
-<span class="hljs-keyword">auto</span> sprite3d = Sprite3D::create(<span class="hljs-string">&quot;mymodel.obj&quot;</span>, <span class="hljs-string">&quot;texture.png&quot;</span>);
-
-<span class="hljs-comment">// Since Sprite3D is a regular node, you can add it into the scene like any other node</span>
-scene-&gt;addChild(sprite3d);
-sprite3d-&gt;setRotation3D(Vec3(x,y,z));
-</code></pre>
-<h2 id="improved-shader-subsystem">Improved Shader Subsystem</h2>
-<p>In order to support <code>Sprite3D</code>, we refactored our shader subsystem. The result is that we have an easier to use, yet more powerful shader system that can be used both for 2D and 3D.</p>
-<p>In v3.0, the class <code>GLProgram</code> was used both for holdin the <em>OpenGL program</em> (shader), and also the shader state (uniforms and attributes).</p>
-<p>That design had one big constraint: In order to add or remove an attribute or uniform, you had to subclass <code>GLProgram</code>.</p>
-<p>In v3.1, we decoupled the shader state from the shader. We added the <code>GLProgramState</code> class which holds the attributes and uniforms.</p>
-<p>The API is the following:</p>
-<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> glprogram = GLProgram::create(...);
-
-<span class="hljs-comment">// it will automatically parse all the attributes and uniforms</span>
-<span class="hljs-comment">// used by glprogram, and it will populate the glprogramstate dictionary</span>
-<span class="hljs-comment">// with them</span>
-<span class="hljs-keyword">auto</span> glprogramstate = GLProgramState::create( glprogram );
-
-<span class="hljs-comment">// How to set a uniform for Vec2 (Int, Texture, Vec3, Vec4, Mat4, are all supported)</span>
-glprogramstate-&gt;setUniformVec2(<span class="hljs-string">&quot;u_my_uniform&quot;</span>, Vec2(x,y));
-<span class="hljs-comment">// or how to set it using a callback</span>
-glprogramstate-&gt;setUniformCallback(<span class="hljs-string">&quot;u_my_uniform&quot;</span>, [](Uniform*uniform){
-    <span class="hljs-comment">// do something</span>
-});
-
-<span class="hljs-comment">// How to set an attribute</span>
-glprogramstate-&gt;setVertexAttribPointer(<span class="hljs-string">&quot;a_my_attrib&quot;</span>, <span class="hljs-number">4</span>, GL_FLOAT, GL_FALSE, <span class="hljs-number">0</span>, vertex);
-<span class="hljs-comment">// or how to set it using a callback</span>
-glprogramstate-&gt;setVertexAttribCallback(<span class="hljs-string">&quot;a_my_attrib&quot;</span>, [](VertexAttrib*attrib){
-    <span class="hljs-comment">// do something</span>
- });
-</code></pre>
-<p>By using this API it is possible to change the effect on a <code>Sprite3D</code> (or even an <code>Sprite</code>) without subclassing any cocos2d class!</p>
-<p>Possible examples:</p>
-<ul>
-<li>Outline / Shadow / Glow effects</li>
-<li>Multi-texturing effects</li>
-<li>Sepia, Grey or other color effects</li>
-<li>and more</li>
-</ul>
-<p>For a complete example, please see the <a href="https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/tests/cpp-tests/Classes/ShaderTest/ShaderTest2.cpp" target="_blank">Shader - Sprite</a> and <a href="https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.1rc0/tests/cpp-tests/Classes/ShaderTest/ShaderTest.cpp" target="_blank">Shader - Basic</a> examples.</p>
-<h2 id="new-math-library">New math library</h2>
-<p>cocos2d-x v1.0 only supported 2D features. So it made sense to use a 2x3 Transform matrix for the operations.</p>
-<p>In cocos2d-x v2.0 we added OpenGL ES 2.0 support (no more built-in OpenGL matrix operations) so it made sense to use <a href="https://github.com/Kazade/kazmath" target="_blank">Kazmath</a>, a math library that replaced the OpenGL ES 1.0 functionality. Kazmath was used internally, and most of the users never used the Kazmath API at all.</p>
-<p>In cocos2d-x v3.0 we refactored the renderer and we exposed a bit more the Kazmath API to the users.</p>
-<p>And in v3.1, with <code>Sprite3D</code> we needed to expose even more the the Kazmath API. And it no longer made sense to have multiple math libraries inside cocos2d-x.</p>
-<p>The problems were:</p>
-<ul>
-<li>Part of the code was using the old 2D math library</li>
-<li>Part of the code was using Kazmath</li>
-<li>Part of the code was using ad-hoc math code</li>
-</ul>
-<p>The goal was to use only one math library for cocos2d-x, with the following requirements:</p>
-<ul>
-<li>Easy to use, easy to mantain</li>
-<li>Proven</li>
-<li>In C++ if possible</li>
-</ul>
-<p>So we took the <a href="http://gameplay3d.org/" target="_blank">GamePlay3D</a> math library, we did some minor changes, and the cocos2d-x math code with it.</p>
-<p>How to use it:</p>
-<pre><code class="lang-c++"><span class="hljs-comment">// vector2</span>
-<span class="hljs-function">Vec2 <span class="hljs-title">vec2</span><span class="hljs-params">(<span class="hljs-number">10</span>,<span class="hljs-number">20</span>)</span></span>;
-<span class="hljs-function">Vec2 <span class="hljs-title">other2</span><span class="hljs-params">(<span class="hljs-number">30</span>,<span class="hljs-number">40</span>)</span></span>;
-<span class="hljs-keyword">auto</span> ret = vec2.cross(other2);
-<span class="hljs-keyword">auto</span> ret2 = vec2 + other2;
-<span class="hljs-keyword">auto</span> ret3 = vec3 * scalar;
-
-node-&gt;setPosition(vec2);
-
-<span class="hljs-comment">// vector3</span>
-<span class="hljs-function">Vec3 <span class="hljs-title">vec3</span><span class="hljs-params">(<span class="hljs-number">30</span>,<span class="hljs-number">40</span>,<span class="hljs-number">50</span>)</span></span>;
-node-&gt;setPosition3D(vec3);
-
-<span class="hljs-comment">// vector4</span>
-Vec4 vec4 = Vec4::ZERO;
-
-<span class="hljs-comment">// Matrix 4x4</span>
-<span class="hljs-keyword">auto</span> identity = Mat4::IDENTITY;
-node-&gt;setNodeToParentTransform(identity);
-</code></pre>
-<p>The good news is that the old API still works since we <code>typedef</code> the old classes and structs to the new math classes.</p>
-<h2 id="new-uivideoplayer">New UIVideoPlayer</h2>
-<p>v3.1 has a new <code>Node</code> to play videos. The API is:</p>
-<pre><code class="lang-c++"><span class="hljs-comment">// VideoPlayer is under the &quot;experimental&quot; namespace since</span>
-<span class="hljs-comment">// it only works for iOS and Android, and we might change its </span>
-<span class="hljs-comment">// API in the future</span>
-<span class="hljs-keyword">auto</span> videoPlayer = cocos2d::experimental::ui::VideoPlayer::create();
-videoPlayer-&gt;setContentSize(Size(x,y));
-videoPlayer-&gt;setURL(<span class="hljs-string">&quot;http://example.com/video.mp4&quot;</span>);  
-<span class="hljs-comment">//you could also play a local video file as follows:</span>
-<span class="hljs-comment">//videoPlayer-&gt;setFileName(&quot;filepath/video.mp4&quot;);</span>
-videoPlayer-&gt;play();
-</code></pre>
-<h2 id="ui-navigation">UI navigation</h2>
-<p>3.1 supports focus navigation of UI widget which is very useful for OTT manufacturer.</p>
-<h3 id="usage">Usage</h3>
-<p>Suppose that your screen has 3 widgets layout horizontally. We could define it like this:</p>
-<pre><code class="lang-c++">HBox(widget1, widget2, widget3)
-</code></pre>
-<p>If you want the <code>widget1</code> to get focused, you could call</p>
-<pre><code class="lang-c++">widget1-&gt;setfocused(<span class="hljs-literal">true</span>)
-</code></pre>
-<p>If you want to move the focus to the next widget, you could just call</p>
-<pre><code class="lang-c++">widget1-&gt;findNextFocusedWidget(Widget::FocusDirection::RIGHT, _firstFocusedWidget);
-</code></pre>
-<p>When the focus goes to <code>widget3</code>, if you call </p>
-<pre><code class="lang-c++">widget3-&gt;findNextFocusedWidget(Widget::FocusDirection::RIGHT, _firstFocusedWidget);
-</code></pre>
-<p>, the focus will stay there only when you call <code>HBox-&gt;setLoopFocus()</code> then the focus will move to <code>widget1</code> again.</p>
-<p><strong>Note:</strong></p>
-<p>The HBox and VBox could be nested in any ways and all the widgets should be added into the HBox/VBox if you want them to be focused later.</p>
-<p>When a focus moves from one widget to another, it will trigger a <em>focus event</em>. You could add the following code to handle these event:</p>
-<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> eventListener = EventListenerFocus::create();
-eventListener-&gt;onFocusChanged = CC_CALLBACK_2(UIFocusTestBase::onFocusChanged, <span class="hljs-keyword">this</span>);
-eventDispatcher-&gt;addEventListenerWithFixedPriority(_eventListener, <span class="hljs-number">1</span>);
-</code></pre>
-<p>The onFocusChanged callback, when the widget lose focus, we change its color to white, when the widget get focus, we change its color to red. You could add more complex animations to them when focus change happens.</p>
-<pre><code class="lang-c++"><span class="hljs-keyword">void</span> UIFocusTestBase::onFocusChanged(cocos2d::ui::Widget *widgetLostFocus, cocos2d::ui::Widget *widgetGetFocus)
-{
-    Layout *getLayout = <span class="hljs-keyword">dynamic_cast</span>&lt;Layout*&gt;(widgetGetFocus);
-    <span class="hljs-keyword">if</span> (!getLayout &amp;&amp; widgetGetFocus &amp;&amp; widgetGetFocus-&gt;isFocusEnabled()) {
-        widgetGetFocus-&gt;setColor(Color3B::RED);
-    }
-    Layout *loseLayout = <span class="hljs-keyword">dynamic_cast</span>&lt;Layout*&gt;(widgetLostFocus);
-    <span class="hljs-keyword">if</span> (!loseLayout &amp;&amp; widgetLostFocus &amp;&amp; widgetLostFocus-&gt;isFocusEnabled()) {
-        widgetLostFocus-&gt;setColor(Color3B::WHITE);
-    }
-}
-</code></pre>
-<p>For more usage information, please refer to <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/tests/cpp-tests/Classes/UITest/CocoStudioGUITest/UIFocusTest/UIFocusTest.cpp" target="_blank">this file</a> for more information.</p>
-<h3 id="limitations">Limitations</h3>
-<p>Only Layout type <code>HORIZONTAL</code> and <code>VERTICAL</code> is supported which means we could not treat Scrollview and PageView as a base layout.</p>
-<p>The following layouts:</p>
-<pre><code class="lang-c++">HBox(VBox, ScrollView(HBox(VBox, VBox, VBox)))
-VBox(HBox, PageView(VBox(HBox,HBox))))
-</code></pre>
-<p> are not supported yet, we will implement it in cocos2d-x v3.2.</p>
-<p> If you want to achieve the focus movement in scrollview, you could use a normal VBox or HBox to layout elements and call <code>setFocusEnabled(true/false)</code> manually to skip the unwanted widgets.</p>
-<h2 id="improved-folder-structure">Improved folder structure</h2>
-<p>In v3.0 we started a folder re-organization for cocos2d-x. Unfortunately we didn&apos;t have the time to finish it on time.</p>
-<p>In v3.1 we finished the folder re-organization, and it looks like this:</p>
-<pre><code>cocos/: includes cocos2d.cpp and other build files
-cocos/2d/: includes base nodes, 2d nodes and related objects like Node, Scene, Sprite, etc.
-cocos/3d/: includes 3d nodes and related objects like Sprite3D
-cocos/audio/: sound and music related objects
-cocos/math/: math related objects
-cocos/platform/: platform specific objects
-cocos/renderer/: GPU related objects like Renderer, Texture2D, Render Commands, etc.
-cocos/physcis/: physics related objects
-cocos/network/: network retlated objects
-cocos/editor-support/: 3rd party editors file format
-</code></pre><h2 id="particle-system-fixes">Particle System fixes</h2>
-<p>cocos2d-x v3.0 and earlier versions had a bug in <code>ParticleSystem</code> where the the Y-flipped parameter was not calculated correctly.</p>
-<p>We fixed that bug in v3.1. The problem is that fixing this bug breaks backward compatiblility in particles that were relying on the broken behavior.</p>
-<p>In order to try to make the transition easier to v3.1, we created a tool that fixes the broken particle system files. How to use it:</p>
-<pre><code># Will convert broken .plist files into fixed ones.
-# Will generate a backup file of the converted files
-$ cocos/tools/particle/convert_YCoordFlipped.py *.plist
-</code></pre><h1 id="misc-api-changes">Misc API Changes</h1>
-<h2 id="deprecated-functions-and--global-variables">deprecated functions and  global variables</h2>
-<p>TODO: The old Math API</p>
+<h2 id="the-next-step">The Next Step</h2>
+<p>As you can see, in v3.7, we have enhanced our 2d rendering with material system and integrated polygon sprite. More importantly, our 3d features become more and more complete, 3d Physics and Navigation Mesh with the previous Camera, 3d Sprite, 3d Particle System, 3d Light, 3d Terrain, Skybox, now you can really start to use Cocos to make a 3d game.</p>
+<p>In v3.8, we won&apos;t do much more features, but we&apos;d like to slow down and refine our current 3D and 2D modules.</p>
+<p><a href="https://github.com/cocos2d/cocos2d-x/milestones/v3.8" target="_blank">The v3.8 milestone tasks</a></p>
 
                     
                     </section>
@@ -779,10 +700,10 @@ $ cocos/tools/particle/convert_YCoordFlipped.py *.plist
         </div>
 
         
-        <a href="./cocos2d-x_v3.0_release_notes_en.html" class="navigation navigation-prev " aria-label="Previous page: Cocos2d-x v3.0 英文发布说明"><i class="fa fa-angle-left"></i></a>
+        <a href="./cocos2d-x_v3.6_release_notes_en.html" class="navigation navigation-prev " aria-label="Previous page: Cocos2d-x v3.6 英文发布说明"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./cocos2d-x_v3.2_release_notes_en.html" class="navigation navigation-next " aria-label="Next page: Cocos2d-x v3.2 英文发布说明"><i class="fa fa-angle-right"></i></a>
+        <a href="./cocos2d-x_v3.8_release_notes_en.html" class="navigation navigation-next " aria-label="Next page: Cocos2d-x v3.8 英文发布说明"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

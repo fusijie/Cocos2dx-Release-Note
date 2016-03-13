@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Cocos2d-x v3.4 英文发布说明 | &lt;div align=&quot;center&quot;&gt;&lt;h2&gt;Cocos2d-x 版本发布说明&lt;/div&gt;</title>
+        <title>Cocos2d-x v3.9 英文发布说明 | &lt;div align=&quot;center&quot;&gt;&lt;h2&gt;Cocos2d-x 版本发布说明&lt;/div&gt;</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -41,10 +41,10 @@
         
     
     
-    <link rel="next" href="./cocos2d-x_v3.5_release_notes_en.html" />
+    <link rel="next" href="./cocos2d-x_v3.10_release_notes_en.html" />
     
     
-    <link rel="prev" href="./cocos2d-x_v3.3_release_notes_en.html" />
+    <link rel="prev" href="./cocos2d-x_v3.8_release_notes_en.html" />
     
 
         
@@ -53,9 +53,9 @@
         
         
     <div class="book"
-        data-level="2.5"
-        data-chapter-title="Cocos2d-x v3.4 英文发布说明"
-        data-filepath="cocos2d-x_v3.4_release_notes_en.md"
+        data-level="2.10"
+        data-chapter-title="Cocos2d-x v3.9 英文发布说明"
+        data-filepath="cocos2d-x_v3.9_release_notes_en.md"
         data-basepath="."
         data-revision="Sun Mar 13 2016 15:45:07 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -348,7 +348,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.5" data-path="cocos2d-x_v3.4_release_notes_en.html">
+        <li class="chapter " data-level="2.5" data-path="cocos2d-x_v3.4_release_notes_en.html">
             
                 
                     <a href="./cocos2d-x_v3.4_release_notes_en.html">
@@ -423,7 +423,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.10" data-path="cocos2d-x_v3.9_release_notes_en.html">
+        <li class="chapter active" data-level="2.10" data-path="cocos2d-x_v3.9_release_notes_en.html">
             
                 
                     <a href="./cocos2d-x_v3.9_release_notes_en.html">
@@ -491,16 +491,18 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="cocos2dx-v34-release-notes">cocos2d-x v3.4 Release Notes</h1>
+                        <h1 id="cocos2dx-39-release-notes">Cocos2d-x 3.9 Release Notes</h1>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
 <ul>
+<li><a href="#cocos2d-x-39-release-notes">Cocos2d-x 3.9 Release Notes</a></li>
 <li><a href="#misc-information">Misc Information</a></li>
 <li><a href="#requirements">Requirements</a><ul>
 <li><a href="#runtime-requirements">Runtime Requirements</a></li>
 <li><a href="#compiler-requirements">Compiler Requirements</a></li>
 <li><a href="#how-to-run-tests">How to run tests</a><ul>
+<li><a href="#cocos-console">Cocos Console</a></li>
 <li><a href="#mac-osx-&amp;-ios">Mac OSX &amp; iOS</a></li>
 <li><a href="#android">Android</a></li>
 <li><a href="#windows">Windows</a></li>
@@ -510,49 +512,23 @@
 <li><a href="#how-to-start-a-new-game">How to start a new game</a></li>
 </ul>
 </li>
-<li><a href="#v34">v3.4</a><ul>
-<li><a href="#bugs-fixed-in-v34">Bugs fixed in v3.4</a></li>
+<li><a href="#v39">v3.9</a><ul>
+<li><a href="#highlights-features-improvements-and-api-updates-of-v39">Highlights features, improvements and API updates of v3.9</a></li>
+<li><a href="#the-main-features-in-detail-of-cocos2d-x-v39">The main features in detail of Cocos2d-x v3.9:</a><ul>
+<li><a href="#3d-module">3D Module</a></li>
+<li><a href="#2d-module">2D Module</a></li>
+<li><a href="#others">Others</a></li>
 </ul>
 </li>
-<li><a href="#v34rc1">v3.4rc1</a><ul>
-<li><a href="#highlights-of-v34rc1">Highlights of v3.4rc1</a></li>
-<li><a href="#features-in-detail">Features in detail</a><ul>
-<li><a href="#3d-rendering-support-for-2d-objects">3D rendering support for 2D objects</a></li>
-<li><a href="#culling-is-now-an-options-by-cc_use_culling-macro">Culling is now an options by CC_USE_CULLING macro</a></li>
-</ul>
-</li>
-<li><a href="#bugs-fixed-in-v34rc1">Bugs fixed in v3.4rc1</a></li>
-</ul>
-</li>
-<li><a href="#v34rc0">v3.4rc0</a><ul>
-<li><a href="#bugs-fixed-in-v34rc0">Bugs fixed in v3.4rc0</a></li>
-</ul>
-</li>
-<li><a href="#v34beta0">v3.4beta0</a><ul>
-<li><a href="#highlights-of-v34beta0">Highlights of v3.4beta0</a></li>
-<li><a href="#features-in-detail-1">Features in detail</a><ul>
-<li><a href="#create-sprite3d-asynchronously">Create Sprite3D asynchronously</a></li>
-<li><a href="#frustum-culling">Frustum culling</a></li>
-<li><a href="#use-less-resources-to-create--uicheckbox-and-uislider">Use less resources to create  ui::CheckBox and ui::Slider</a></li>
-<li><a href="#custom-allocators">Custom Allocators</a><ul>
-<li><a href="#default-allocator">Default Allocator</a></li>
-<li><a href="#general-allocator">General Allocator</a></li>
-<li><a href="#fixed-block-allocator">Fixed Block Allocator</a></li>
-<li><a href="#pool-allocator">Pool Allocator</a></li>
-</ul>
-</li>
-<li><a href="#implementing-custom-allocators-for-objects">Implementing Custom Allocators for Objects</a></li>
-<li><a href="#console-allocator-command-tags-counts-etc">Console (allocator command, tags, counts etc)</a></li>
-</ul>
-</li>
+<li><a href="#other-changes">Other changes</a></li>
+<li><a href="#new-apis">NEW APIS</a></li>
 </ul>
 </li>
 </ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 <h1 id="misc-information">Misc Information</h1>
 <ul>
-<li><a href="https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.4/CHANGELOG" target="_blank">Full Changelog</a></li>
-<li>v3.0 Release Notes can be found here: <a href="https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md" target="_blank">v3.0 Release Notes</a></li>
+<li><a href="https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG" target="_blank">Full Changelog</a></li>
 </ul>
 <h1 id="requirements">Requirements</h1>
 <h2 id="runtime-requirements">Runtime Requirements</h2>
@@ -561,22 +537,40 @@
 <li>iOS 5.0 or newer</li>
 <li>OS X 10.7 or newer</li>
 <li>Windows 7 or newer</li>
-<li>Windows Phone 8 or newer</li>
+<li>Windows Phone 8.1</li>
+<li>Windows 10 UWP</li>
 <li>Linux Ubuntu 14.04 or newer</li>
+<li>Mordern browsers and IE 9+ (On mobile platforms, only iOS and Android 5 activated WebGL support)</li>
 </ul>
 <h2 id="compiler-requirements">Compiler Requirements</h2>
 <ul>
 <li>Xcode 5.1 or newer for iOS or Mac</li>
 <li>gcc 4.9 or newer for Linux</li>
 <li>ndk-r10c for Android</li>
-<li>Visual Studio 2012  or newer for Windows (win32)</li>
-<li>Visual Studio 2012  or newer for Windows Phone 8</li>
+<li>Visual Studio 2013 or newer for Windows (win32)</li>
+<li>Visual Studio 2013 update4 or newer for Windows 8.1 universal Apps</li>
+<li>Visual Studio 2015 RC or newer and Windows 10.0 (build 10074 or higher) for Windows 10.0 UWP Apps</li>
 </ul>
 <h2 id="how-to-run-tests">How to run tests</h2>
-<h3 id="mac-osx--ios">Mac OSX &amp; iOS</h3>
+<h3 id="cocos-console">Cocos Console</h3>
+<p>You can use <a href="www.cocos2d-x.org/wiki/Cocos2d-console">Cocos Console</a> command line tool to run the test cases on almost all supported platforms.</p>
+<p>In console application:</p>
+<pre><code>// Enter cpp test folder
+cd tests/cpp-tests
+// Or enter js test folder
+cd tests/js-tests
+// Or enter lua test folder
+cd tests/lua-tests
+
+// Compile or run test case
+cocos compile -p ios|mac|android|win32|win8_1|metro|web -m debug|release
+cocos run -p ios|mac|android|win32|win8_1|metro|web -m debug|release
+</code></pre><p>For example, if you want to run cpp test in release mode on Android, you can use the following command:</p>
+<pre><code>cocos run -p android -m release
+</code></pre><h3 id="mac-osx--ios">Mac OSX &amp; iOS</h3>
 <ul>
 <li>Enter <code>cocos2d-x/build</code> folder, open <code>cocos2d_test.xcodeproj</code></li>
-<li>Select <code>iOS</code> or <code>OS X</code> target in scheme toolbar</li>
+<li>Select <code>cpp-tests</code>, <code>lua-tests</code>, <code>js-tests</code> for <code>iOS</code> or <code>OS X</code> target in scheme toolbar</li>
 <li>Click <code>run</code> button</li>
 </ul>
 <h3 id="android">Android</h3>
@@ -601,8 +595,10 @@ $ ./android-build.py cpp-empty-test -p 10
 </ul>
 <h3 id="windows">Windows</h3>
 <ul>
-<li>Enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win32.vs2012.sln</code></li>
-<li>Select <code>cpp-empty-test</code> as running target</li>
+<li>For win32 project, enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win32.sln</code></li>
+<li>For win 8.1 project, enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win8.1-universal.sln</code></li>
+<li>For win 10 project, enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win10.sln</code></li>
+<li>Select running target</li>
 <li>Click run button</li>
 </ul>
 <h3 id="linux">Linux</h3>
@@ -618,127 +614,222 @@ $ make -j4
 <pre><code>$ cd bin/cpp-empty-test
 $ ./cpp-empty-test
 </code></pre><h2 id="how-to-start-a-new-game">How to start a new game</h2>
-<p>Please refer to this document: <a href="../README.md">ReadMe</a></p>
-<h1 id="v34">v3.4</h1>
-<h2 id="bugs-fixed-in-v34">Bugs fixed in v3.4</h2>
-<ul>
-<li>C++: crash on armeabi-v7a arch device which do not support NEON instructions</li>
-<li>GLProgram: crash on low end device with no more than 8 attributes support</li>
-<li>New audio: game freeze if audio played two many times on android</li>
-<li>Node: anchor point has no effects on rotation</li>
-<li>More bugs fixed</li>
+<p>Use Cocos Console to create a new game:</p>
+<pre><code>cocos new -l cpp|js|lua MyNewGame
+</code></pre><h1 id="v39">v3.9</h1>
+<h2 id="highlights-features-improvements-and-api-updates-of-v39">Highlights features, improvements and API updates of v3.9</h2>
+<p>We are happy to announce the release of Cocos2d-x v3.9. Following are the highlighted features, improvements and API updates in this version. </p>
+<ol>
+<li>3D Module: <ul>
+<li>Added 3D MotionStreak to support streak effect. </li>
+<li>Refined Sprite3D to support material system. </li>
 </ul>
-<h1 id="v34rc1">v3.4rc1</h1>
-<h2 id="highlights-of-v34rc1">Highlights of v3.4rc1</h2>
-<ul>
-<li>C++: added CC_USE_CULLING macro to control if enable auto culling or not</li>
-<li>FileUtils::fullPathForFilename will return empty string when file can not be found</li>
-<li>VertexBuffer&amp;IndexBuffer: allow setting usage(GL_STATIC_DRAW or GL_DYNAMIC_DRAW) in create method</li>
-<li>Renderer: 3D rendering support for 2d objects</li>
+</li>
+<li>2D Module:<ul>
+<li>Added frame callback function and animation callback function. </li>
+<li>Added script component system. </li>
+<li>Reconstruction of 2D physics with Component. </li>
+<li>Improved EditBox implemention on iOS and Win32 platform.</li>
+<li>Removed dependence of libcurl on AssetsManager, AssetsManagerEx and Downloader (iOS &amp; Android).</li>
+<li>Improved particle performance. </li>
 </ul>
-<h2 id="features-in-detail">Features in detail</h2>
-<h3 id="3d-rendering-support-for-2d-objects">3D rendering support for 2D objects</h3>
-<p>This feature enables Sprite, Label, Particle to be rendered in 3D space by adding them as children of Sprite3D or Billboard. You can achieve effects like blob shadow, 3D particle, Visual damage number popups</p>
-<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> billboard = Billboard::create();
-<span class="hljs-keyword">auto</span> label = Label::create();
-label-&gt;setString(<span class="hljs-string">&quot;+100&quot;</span>);
-billboard-&gt;addChild(label);
-</code></pre>
-<h3 id="culling-is-now-an-options-by-ccuseculling-macro">Culling is now an options by CC_USE_CULLING macro</h3>
-<p>Culling is an important features in cocos2d-x v3.x, but some developer may not want to use culling when all of the scene exist in one screen. A macro <code>CC_USE_CULLING</code> in <code>CCConfig.h</code> can be used to enable or disable culling.</p>
-<h2 id="bugs-fixed-in-v34rc1">Bugs fixed in v3.4rc1</h2>
-<ul>
-<li>DrawNode: fix random crash because of init opengl buffer wrongly</li>
-<li>DrawNode: drawPoints() can not set ponit size</li>
-<li>EventDispatcher: crash if adding/removing event listeners and dispatching event in event callback function</li>
-<li>GLProgramState: may cause GL_INVALID_VALUE error at start up on Android</li>
-<li>LUA: 0x80000000 can not be converted by lua_tonumber correctly on some devices</li>
-<li>PhysicsBody: can&apos;t get correct position in the same frame of adding PhysicsBody to PhysicsWorld</li>
-<li>UI: fix crash when navigation controller is null</li>
+</li>
+<li>Others: <ul>
+<li>Supported Action inheritance, update function overwriting in JSB. </li>
+<li>Improved ScrollView performance in Web engine. </li>
+<li>Improved Scale9Sprite performance in Web engine. </li>
+<li>Decoupled Sprite&apos;s setTexture and updateColor in Web engine.</li>
+<li>Added support for debugging and release on real devices with Xcode7 and iOS9.</li>
 </ul>
-<h1 id="v34rc0">v3.4rc0</h1>
-<h2 id="bugs-fixed-in-v34rc0">Bugs fixed in v3.4rc0</h2>
-<ul>
-<li>FileUtils::GetData() can not get data on windows</li>
-<li>FileUtils::GetData() memory leaks when file size is 0 on windows</li>
-<li>Crash if GLProgram log compile or link error info on windows</li>
-<li>Assert error exist because of outdated uniforms and attributes in GLProgramState when app come to foreground on android</li>
-<li>GL_INVALID_OPERATION error because VAO and VBO is not reset when app come to foreground on android</li>
-<li>Update Luajit to v2.0.3, it fix some crash problems on windows</li>
-<li>Update libcurl to new version v7.39.0</li>
-<li>More bugs fixed</li>
-</ul>
-<h1 id="v34beta0">v3.4beta0</h1>
-<h2 id="highlights-of-v34beta0">Highlights of v3.4beta0</h2>
-<h2 id="features-in-detail">Features in detail</h2>
-<h3 id="create-sprite3d-asynchronously">Create Sprite3D asynchronously</h3>
-<p>It allows to load Sprite3D in another thread so that you can process more logic in the main thread. And it notifies you using a custom callback after creating is finished.</p>
-<p><code>modelPath</code> is the file to be loaded, <code>AsyncLoadSprite3DTest::asyncLoad_Callback</code> is the user&apos;s callback function, <code>userParam</code> is the parameter that the callback function is wanted.</p>
-<pre><code class="lang-c++">Sprite3D::createAsync(modelPath, CC_CALLBACK_2(AsyncLoadSprite3DTest::asyncLoad_Callback, <span class="hljs-keyword">this</span>), (<span class="hljs-keyword">void</span>*)userParam);
-</code></pre>
-<p>The callback function is called after loading Sprite3D, the callback function can be something like this,</p>
-<pre><code class="lang-c++"><span class="hljs-keyword">void</span> AsyncLoadSprite3DTest::asyncLoad_Callback(Sprite3D* sprite, <span class="hljs-keyword">void</span>* param)
-{
-    <span class="hljs-comment">//sprite is the loaded sprite</span>
-    sprite-&gt;setPosition(point);
-    addChild(sprite);
-}
-</code></pre>
-<h3 id="frustum-culling">Frustum culling</h3>
-<p>Frustum culling means only the stuff that is inside the frustum is sent to the graphics hardware. To find out more information, please visit <a href="http://en.wikipedia.org/wiki/Frustum" target="_blank">Wikipedia</a>. It can potentially improve the performance of the application since only the vertices that are part of the visible part of the 3D world are kept on the graphics card memory.</p>
-<p>Frustum culling is a property of camera, it is enabled by default. And you can use the following to enable or disable the frustum culling,</p>
-<pre><code class="lang-c++"><span class="hljs-comment">//the first parameter is enable frustum culling or not, the second means that frustum culling using near and far plan or not.</span>
-camera-&gt;enableFrustumCulling(<span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>);
-</code></pre>
-<p>Note that when you can make sure that all the stuff is inside the frustum you can turn off the frustum culling.</p>
-<p>For more infomation please reffer to the cpptests/CameraTest</p>
-<h3 id="use-less-resources-to-create--uicheckbox-and-uislider">Use less resources to create  ui::CheckBox and ui::Slider</h3>
-<p>Now we could use less resources to create  ui::CheckBox and ui::Slider.</p>
-<p>To create an ui::CheckBox, we could simply pass the normal state box and active texture.</p>
-<pre><code class="lang-cpp">CheckBox* checkBox2 = CheckBox::create(<span class="hljs-string">&quot;cocosui/check_box_normal.png&quot;</span>,
-                                              <span class="hljs-string">&quot;cocosui/check_box_active.png&quot;</span>);
-</code></pre>
-<p>To create an ui::Slider, we could only pass the slider bar texture and normal ball texture.</p>
-<pre><code class="lang-cpp">Slider* sliderScale9 = Slider::create(<span class="hljs-string">&quot;cocosui/slidbar.png&quot;</span>, <span class="hljs-string">&quot;cocosui/sliderballnormal.png&quot;</span>);
-</code></pre>
-<p>If the selected state texture is missing, when user press the widget, the normal texture will scale.</p>
-<p>If the disable state texture is missing, when the widget is in disable state, we use gray shader to turn the normal state texture to gray.</p>
-<p>The original ui::Button also support the gray shader enhancement.</p>
-<h3 id="custom-allocators">Custom Allocators</h3>
-<p>in ccConfig.h you can control the custom allocator system with the following defines.</p>
-<pre><code class="lang-c++"><span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> CC_ENABLE_ALLOCATOR <span class="hljs-number">1</span></span>
-<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> CC_ENABLE_ALLOCATOR_DIAGNOSTICS CC_ENABLE_ALLOCATOR</span>
-<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> CC_ENABLE_ALLOCATOR_GLOBAL_NEW_DELETE <span class="hljs-number">0</span></span>
+</li>
+</ol>
+<h2 id="the-main-features-in-detail-of-cocos2dx-v39">The main features in detail of Cocos2d-x v3.9:</h2>
+<h3 id="3d-module">3D Module</h3>
+<ol>
+<li><p>3D MotionStreak</p>
+<p> In this version, 3D MotionStreak is added to support streak effect. Check the testcase: <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/tests/cpp-tests/Classes/Sprite3DTest/Sprite3DTest.cpp#L2472" target="_blank">Sprite3DTest</a> to see how to use it.</p>
+</li>
+<li><p>Sprite3D</p>
+<p> Added Sprite3D material class. It will be easy and convenient to create internal material. </p>
+</li>
+</ol>
+<h3 id="2d-module">2D Module</h3>
+<ol>
+<li><p>Frame callback function and animation callback function</p>
+<p> Three interfaces are added in ActionTimelineData class, which are addFrameEndCallFunc, removeFrameEndCall and clearFrameEndCalls. It will be easy to add or remove specific frame event. </p>
+</li>
+<li><p>Script Component </p>
+<p> Script component is used to extend c++ Nodes. You can add a script component to a Node, then the script component will receive onEnter,onExit and update events. For example:</p>
+<pre><code class="lang-c++"> <span class="hljs-comment">// create a sprite and add a lua component auto player =</span>
+ Sprite::create(<span class="hljs-string">&quot;player.png&quot;</span>);
 
-<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> CC_ALLOCATOR_GLOBAL cocos2d::allocator::AllocatorStrategyDefault</span>
-<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> CC_ALLOCATOR_GLOBAL_NEW_DELETE cocos2d::allocator::AllocatorStrategyGlobalSmallBlock</span>
+ <span class="hljs-keyword">auto</span> luaComponent = ComponentLua::create(<span class="hljs-string">&quot;player.lua&quot;</span>);
+ player-&gt;addComponent(luaComponent);
 </code></pre>
-<p><strong>CC_ENABLE_ALLOCATOR</strong> turns everything on or off. When set to 0, everything should still build, but all custom allocator code is disabled or removed. This is handled mainly through macros, but if you implement new allocator strategies, you should be aware of, and respect this preprocessor directive.</p>
-<p><strong>CC_ENABLE_ALLOCATOR_DIAGNOSTICS</strong> defaults to the same value as <strong>CC_ENABLE_ALLOCATOR</strong>, but setting this to 0 will disable allocator diagnostics via the control panel. Diagnostics have significant overhead, so you definitely want to disable them for production builds.</p>
-<p><strong>CC_ENABLE_ALLOCATOR_GLOBAL_NEW_DELETE</strong> enables overriding of the global <strong>new</strong> and <strong>delete</strong> operators. The allocator strategy used can be selected by setting the <strong>CC_ALLOCATOR_GLOBAL_NEW_DELETE</strong> define.</p>
-<p><strong>CC_ALLOCATOR_GLOBAL</strong> defines the allocator strategy to use for global allocations. All memory needed by other allocators will use this global allocator, as well as the macros <strong>CC_MALLOC</strong>, <strong>CC_FREE</strong> etc.</p>
-<p>Third party libraries that use malloc/free will continue to use the original malloc/free so their memory usage will not be tracked.</p>
-<p>Calls to new/delete from shared libraries should work ok provided the library is loaded after the allocator has initialized, which should be the case, unless you load a shared library from a static variable initialization.</p>
-<h4 id="default-allocator">Default Allocator</h4>
-<p>The default allocator wraps malloc and free and provides an allocator interface that anyone can use to allocate blocks of memory. Tracking is not currently enabled here, but can be added in the future.</p>
-<h4 id="general-allocator">General Allocator</h4>
-<p>The general allocator provides a series of fixed sized allocators from the smallest allocation size of 4 bytes up to some threshold which currently defaults to 8 Kbytes. Anything larger than this threshold will fallback to the default allocator. See fixed allocators for more details.</p>
-<h4 id="fixed-block-allocator">Fixed Block Allocator</h4>
-<p>Fixed block allocators provide a memory pool of blocks of fixed size. They are extremely fast since no searching for best fit is required, they can simply pop the first block off a list and return that. Similarly, freeing memory is also extremely fast since they just push the block on the front of the list. Memory is not actually freed, it is kept allocated and track on a free list. It will be possible to reduce the allocated memory by freeing up unused pages of memory from the list.</p>
-<h4 id="pool-allocator">Pool Allocator</h4>
-<p>Implements a custom fixed block allocator for a specific type. You can override local new/delete for types that are classes or structs using <strong>CC_USE_ALLOCATOR_POOL(pool)</strong>. Additionally, these allocators are configurable in terms of the initial size.</p>
-<h3 id="implementing-custom-allocators-for-objects">Implementing Custom Allocators for Objects</h3>
-<p>Simply add a static instance of the pool allocator to your class, and use the <strong>CC_USE_ALLOCATOR_POOL</strong> macro to implement operators <strong>new</strong> and <strong>delete</strong> for your class.</p>
-<pre><code class="lang-c++">    <span class="hljs-keyword">class</span> SomeClass
-    {
-    <span class="hljs-keyword">public</span>:
+<pre><code class="lang-lua"> // player.lua
+ <span class="hljs-keyword">local</span> player = { 
+     onEnter = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(self)</span></span>
+     <span class="hljs-comment">-- do some things in onEnter </span>
+     <span class="hljs-keyword">end</span>
 
-        cocos2d::allocator::AllocatorStrategyPool&lt;SomeClass&gt; _allocator;
-        CC_USE_ALLOCATOR_POOL(SomeClass, _allocator);
-    };
+     onExit = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(slef)</span></span> 
+     <span class="hljs-comment">-- do some things in onExit </span>
+     <span class="hljs-keyword">end</span>
+
+     update = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(self)</span></span>
+     <span class="hljs-comment">-- do some things every frame </span>
+     <span class="hljs-keyword">end</span>
+ }
+
+ <span class="hljs-comment">-- it is needed to return player to let c++ nodes know it </span>
+ <span class="hljs-keyword">return</span> player
 </code></pre>
-<h3 id="console-allocator-command-tags-counts-etc">Console (allocator command, tags, counts etc)</h3>
-<p>You can connect to the running app using the console. I.e. <strong>telnet localhost 5678</strong> and issue the <strong>allocator</strong> command to dump out all allocator diagnostic information. One of the useful pieces of information is the highest count for pool allocators. You can plug this value back into the initial size for the allocator to preallocate this number of objects when starting, improving startup speed significantly.</p>
+<p> Javascript can work as the same way, just use ComponentJS instead of ComponentLua. </p>
+<p> There are some differences between lua component and Javascript component:</p>
+<p> Should return the object in lua component, in Javascript, you only have to extend cc.ComponentJS, and ensure the result of the last statement is the class of Component.</p>
+<p> Lua component can only be used in lua projects, Javascript component can only be used in Javascript projects.</p>
+<p> More detail usage please refer to: <code>tests/lua-tests/src/ComponentTest</code> and <code>tests/js-tests/src/ComponentTest</code></p>
+</li>
+</ol>
+<ol>
+<li><p>2D Physics</p>
+<p> Before v3.9, there are many physics related codes in Node, such as Node::setPhysicsBody(). Since v3.9, we move these codes into physics component.</p>
+<p> After using physics component, the way to use physics is changed. Before v3.9, you can use physics like this:</p>
+<pre><code> auto node = Node::create(); 
+ node-&gt;setPhysicsBody(PhysicsBody::createEdgeBox(...));
+</code></pre><p> Since v3.9 you should use like this:</p>
+<pre><code> auto node = Node::create();
+ node-&gt;addComponent(PhysicsBody::createEdgeBox(...));
+</code></pre></li>
+<li><p>EditBox implemention on iOS and Win32 platform</p>
+<ul>
+<li>Specify the maximum number of characters in the dialog box. </li>
+<li>Support password input. </li>
+<li>Games will continue when the dialogue box pops up. </li>
+<li>Sync the content in dialogue box. </li>
+</ul>
+</li>
+<li><p>Remove dependence of curl on AssetsManager, AssetsManagerEx and Downloader (iOS &amp; Android)</p>
+<p> From v3.9, iOS and Android version will not depend on libcurl, which make
+ the game package smaller and solve some bugs caused by libcurl. Stability has
+ been improved with the updated iOS and Android system. </p>
+</li>
+<li><p>Improved particle performance. </p>
+</li>
+</ol>
+<h3 id="others">Others</h3>
+<ol>
+<li><p>Supported Action inheritance, update function overwriting in JSB</p>
+<p> In previous version of JSB, developers cannot inherit Action class in JS script, such as Action / ActionInterval / ActionInstant, for their update function will not be called. In v3.9, developers can create subclass of Action and make extensions. More detail usage please refer to the textcase in ActionTest / ActionCustomTest.</p>
+</li>
+<li><p>ScrollView performance on Web engine</p>
+<p> ScrollView and ListView are the popular UI controls in Web engine. Their
+ performance is not perfect in previous versions, especially when there are multiple sub-controls. In v3.9, we have improved its rendering performance. They only act on the contents displayed on the current screen. Test
+ date shows that, comparing with v3.8, rendering efficiency of v3.9 have been improved for twice to four times in different devices and browsers. </p>
+</li>
+<li><p>Scale9Sprite performance on Web engine</p>
+<p> In this version, we have changed the way to construct 9-slice sprite. The engine uses 9 rendering commands instead of the 9 nodes in previous versions. This helps to reduce memory usage and improve rendering performance. </p>
+</li>
+<li><p>Decoupled Sprite&apos;s setTexture and updateColor in Web engine.</p>
+<ul>
+<li>Organized the rendering logic in Sprite. UpdateColor is accomplished by texture instead of the Sprite. </li>
+<li>Fixed a bug about image with alpha channel that when the image is set to black, there is color difference between previous and current version. </li>
+<li>Improved texture update logic to reduce texture updates when changing colors.</li>
+<li>Improved the logic about the rendering function in SpriteCanvasRenderCmd.</li>
+<li>Removed some duplicate codes about updateColor.</li>
+</ul>
+</li>
+<li><p>Support for debugging and release on real devices with Xcode7 and iOS9</p>
+<p> In v3.8.1, we have made it possible to debug on Xcode7. However, there was a bug with iOS9 real device debuging, and in v3.9, we have fixed the bug.</p>
+</li>
+</ol>
+<h2 id="other-changes">Other changes</h2>
+<p>[NEW]           Label: Added line spacing/leading feature to Label.</p>
+<p>[NEW]           ListView: Added APIs to scroll to specific item in list.</p>
+<p>[NEW]           ListView: Added APIs to get an item in specific position like center, leftmost, rightmost, topmost and bottommost.</p>
+<p>[NEW]           ListView: Added a feature for magnetic scrolling.</p>
+<p>[NEW]           Animate: Added ActionTimeline::setAnimationEndCallBack and ActionTimeline::addFrameEndCallFunc.</p>
+<p>[NEW]           Animate: Added CSLoader::createNodeWithVisibleSize, CSLoader::createNodeWithVisibleSize and moved &quot;ui::Helper::DoLayout&quot; into them.</p>
+<p>[NEW]           Stuio: Added support for Cocos Studio Light3D.</p>
+<p>[NEW]           Platform: Added the missing CURL support to the Windows 10 UWP version.</p>
+<p>[NEW]           Platform: Added UIEditBox support on linux platform.</p>
+<p>[REFINE]        3D: Added non-null checks in PUScriptCompiler::visit before dereferencing.</p>
+<p>[REFINE]        3D: Refined SkyboxBrush by making the shader parameter take effect at once.</p>
+<p>[REFINE]        Label: Changed label font size type to float to support high precision when font size is small.</p>
+<p>[REFINE]        ListView: Fixed an issue that list view&apos;s Magnetic::CENTER is not working well when non-bounceable.</p>
+<p>[REFINE]        ListView: Added feature of jumping to a specific item in list view.</p>
+<p>[REFINE]        Sprite: Added a &quot;unsupport image format!&quot; log when creating a sprite in CCImage.cpp.</p>
+<p>[REFINE]        ScrollView: Merge logics of Scroll View for scroll by inertia and auto scroll into one.</p>
+<p>[REFINE]        Animate: Moved initialization of image to an appropriate location, because it always called twice in 
+SpriteFrameCache::addSpriteFramesWithFile().</p>
+<p>[REFINE]        Simulator: Changed the size of startFlag to 13.</p>
+<p>[REFINE]        Simulator: Show Node and Skeleton in the middle of the simulator.</p>
+<p>[REFINE]        Simulator: Removed screen direction check in simulator to avoid render error.</p>
+<p>[REFINE]        Pysics: Refined components to improve physics performance.</p>
+<p>[REFINE]        UI: Refined ComponentContainer to improve performance.</p>
+<p>[REFINE]        UI: EventListenerMouse will dispatch EventMouse events.</p>
+<p>[REFINE]        OpenGL: Added check for glfwCreateWindow.</p>
+<p>[REFINE]        Platform: Fixed a crash on xiaomi2 if Cocos2d-x is built as a dynamic library.</p>
+<p>[REFINE]        Platform: Updated libcococs2d name to v3.9 on WinRT platforms.</p>
+<p>[REFINE]        Platform: Added some support for mouse on WinRT. Include: Show/Hide mouse cursor; Mouse event 
+implemented similar Desktop version; Left button send mouse event and touch; Support other mouse button and scroll 
+wheel.</p>
+<p>[REFINE]        Platform: Correct the convertion between unicode and utf8 on WinRT.</p>
+<p>[REFINE]        Platform: Improved EditBox implement on Win32 platform.</p>
+<p>[REFINE]        JS: Add jsb.fileUtils.writeDataToFile().</p>
+<p>[REFINE]        JS: Set js templates Mac target platform from null to 10.7.</p>
+<p>[REFINE]        JS: Removed the static define of variable in headfile of ScriptingCore.</p>
+<p>[REFINE]        Lua: Added AssetsManagerEx constants UPDATE_FAILED and ERROR_DECOMPRESS in Lua.</p>
+<p>[REFINE]        Lua / JS: Refined lua/js binding tool.</p>
+<p>[REFINE]        I/O: Refined AssetsManagerEx unzipping by using async.</p>
+<p>[REFINE]        Web: Improved logic of jsb_boot.js to sync with the web engine behavior.</p>
+<p>[REFINE]        Web: Sync with CCBoot for web.</p>
+<p>[REFINE]        Build: Fixed various compiler warnings on Xcode 7.</p>
+<p>[REFINE]        Build: Fixed Wformat-security warning on Xcode.</p>
+<p>[REFINE]        Build: Fixed a compile error in __LayerRGBA.</p>
+<p>[REFINE]        Tool: Added tools for generating documents automatically.</p>
+<p>[REFINE]        Doc: Clean up the code of setRect() function.</p>
+<p>[REFINE]        Doc: Fixed a minor typo and renamed INTIAL_CAPS_ALL_CHARACTERS to INITIAL_CAPS_ALL_CHARACTERS 
+in UIEditBox.</p>
+<p>You can also take a look at the <a href="https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG" target="_blank">full changelog</a>.</p>
+<h2 id="new-apis">NEW APIS</h2>
+<ol>
+<li><p>JSB Module</p>
+<p> Added jsb.fileUtils.writeDataToFile</p>
+</li>
+<li><p>Sprite3D</p>
+<p> Added Sprite3Dmaterial class to make it easy to create innate material. </p>
+</li>
+<li><p>ActionTimelineData </p>
+<p> Three interfaces are added in ActionTimelineData class, which are addFrameEndCallFunc, removeFrameEndCall and clearFrameEndCalls.</p>
+</li>
+<li><p>ActionTimeline::removeFrameEndCallFunc </p>
+</li>
+<li><p>Improvements for ListView</p>
+<ul>
+<li>Add APIs to scroll to specific item in list.</li>
+<li>Add APIs to get an item in specific position like center, leftmost, rightmost, topmost and bottommost.</li>
+<li><p>Add a feature for magnetic scrolling.</p>
+<p>For more information: <a href="https://github.com/cocos2d/cocos2d-x/pull/13723" target="_blank">https://github.com/cocos2d/cocos2d-x/pull/13723</a></p>
+</li>
+</ul>
+</li>
+<li><p>Node</p>
+<p> Added the missing API getChildByTag</p>
+</li>
+<li><p>Label</p>
+<p> Added setLineSpacing, getLineSpacing</p>
+</li>
+<li><p>CSLoader</p>
+<p> Added createNodeWithVisibleSize, createNodeWithVisibleSize</p>
+</li>
+<li><p>ComponentContainer</p>
+<p> Removed isEmpty</p>
+</li>
+<li><p>Sprite</p>
+<p>Removed debugDraw(bool on)</p>
+</li>
+</ol>
 
                     
                     </section>
@@ -749,10 +840,10 @@ camera-&gt;enableFrustumCulling(<span class="hljs-literal">true</span>, <span cl
         </div>
 
         
-        <a href="./cocos2d-x_v3.3_release_notes_en.html" class="navigation navigation-prev " aria-label="Previous page: Cocos2d-x v3.3 英文发布说明"><i class="fa fa-angle-left"></i></a>
+        <a href="./cocos2d-x_v3.8_release_notes_en.html" class="navigation navigation-prev " aria-label="Previous page: Cocos2d-x v3.8 英文发布说明"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./cocos2d-x_v3.5_release_notes_en.html" class="navigation navigation-next " aria-label="Next page: Cocos2d-x v3.5 英文发布说明"><i class="fa fa-angle-right"></i></a>
+        <a href="./cocos2d-x_v3.10_release_notes_en.html" class="navigation navigation-next " aria-label="Next page: Cocos2d-x v3.10 英文发布说明"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
