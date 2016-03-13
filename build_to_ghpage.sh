@@ -1,12 +1,13 @@
 #! /bin/sh
-mkdir release_temp
-gitbook build release_temp
-cp -r release_temp/ release/
-rm -rf release_temp
-cd release
-rm -r release_temp
-rm build_to_ghpage.sh
+mkdir release
+gitbook build
+cp -r _book/ release/
+rm -rf _book
+rm release/build_to_ghpage.sh
+g checkout gh-pages
+cp release/ .
 git add .
 time=`date`
 git commit -m "update release note at ${time}"
 git push origin gh-pages
+git checkout master
