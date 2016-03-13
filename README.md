@@ -10,7 +10,7 @@
 
 * 官方仓库：[https://github.com/cocos2d/cocos2d-x](https://github.com/cocos2d/cocos2d-x)
 
-* 开发指南：[http://www.cocos2d-x.org/programmersguide/](http://www.cocos2d-x.org/programmersguide/)
+* 开发指南：[http://www.cocos2d-x.org/docs/](http://www.cocos2d-x.org/docs/)
 
 * 官方英文论坛：[http://discuss.cocos2d-x.org/](http://discuss.cocos2d-x.org/)
 
