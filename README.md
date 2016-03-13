@@ -16,6 +16,8 @@
 
 * 官方中文论坛：[http://www.cocoachina.com/bbs/thread.php?fid-41.html](http://www.cocoachina.com/bbs/thread.php?fid-41.html)
 
+* 资料大全（全版本）：[https://github.com/fusijie/Cocos2dx-Resource](https://github.com/fusijie/Cocos2dx-Resource)
+
 ###版本发布说明
 
 * 本书包含中文和英文两个版本的Cocos2d-x发布说明。
