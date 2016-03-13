@@ -1,4 +1,4 @@
-Cocos2d-x 版本发布说明
+<div align="center"><h2>Cocos2d-x 版本发布说明</div>
 =========================
 
 <div align="center"><img src="cocos.png" alt="" border="0" title="Cocos" /><br></br></div>
@@ -26,7 +26,7 @@ Cocos2d-x 版本发布说明
 
 ###本书地址
 
-* GitBook地址：[http://fusijie.gitbooks.io/cocos2d-x-release-note](http://fusijie.gitbooks.io/cocos2d-x-release-note)
+* GitBook地址：[http://fusijie.github.io/Cocos2dx-Release-Note](http://fusijie.github.io/Cocos2dx-Release-Note)
 
 * Github地址：[https://github.com/fusijie/Cocos2dx-Release-Note](https://github.com/fusijie/Cocos2dx-Release-Note)
 
@@ -36,10 +36,4 @@ Cocos2d-x 版本发布说明
 
 * QQ: 754505629
 
- 
-
-
-
-
-
-
+* Blog: [http://fusijie.github.io/](http://fusijie.github.io/)
