@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Cocos2d-x v3.5 英文发布说明 | Cocos2d-x是什么？</title>
+        <title>Cocos2d-x v3.11 中文发布说明 | Cocos2d-x是什么？</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -41,10 +41,10 @@
         
     
     
-    <link rel="next" href="./cocos2d-x_v3.6_release_notes_en.html" />
+    <link rel="next" href="./cocos2d-x_release_notes_en.html" />
     
     
-    <link rel="prev" href="./cocos2d-x_v3.4_release_notes_en.html" />
+    <link rel="prev" href="./cocos2d-x_v3.10_release_notes.html" />
     
 
         
@@ -53,9 +53,9 @@
         
         
     <div class="book"
-        data-level="2.6"
-        data-chapter-title="Cocos2d-x v3.5 英文发布说明"
-        data-filepath="cocos2d-x_v3.5_release_notes_en.md"
+        data-level="1.12"
+        data-chapter-title="Cocos2d-x v3.11 中文发布说明"
+        data-filepath="cocos2d-x_v3.11_release_notes.md"
         data-basepath="."
         data-revision="Sun May 15 2016 15:51:11 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -267,7 +267,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12" data-path="cocos2d-x_v3.11_release_notes.html">
+        <li class="chapter active" data-level="1.12" data-path="cocos2d-x_v3.11_release_notes.html">
             
                 
                     <a href="./cocos2d-x_v3.11_release_notes.html">
@@ -378,7 +378,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.6" data-path="cocos2d-x_v3.5_release_notes_en.html">
+        <li class="chapter " data-level="2.6" data-path="cocos2d-x_v3.5_release_notes_en.html">
             
                 
                     <a href="./cocos2d-x_v3.5_release_notes_en.html">
@@ -521,172 +521,190 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="cocos2dx-v35-release-notes">cocos2d-x v3.5 Release Notes</h1>
+                        <h1 id="cocos2dx-311-&#x53D1;&#x5E03;&#x8BF4;&#x660E;">Cocos2d-x 3.11 &#x53D1;&#x5E03;&#x8BF4;&#x660E;</h1>
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <p><strong>Table of Contents</strong>  <em>generated with <a href="https://github.com/thlorenz/doctoc" target="_blank">DocToc</a></em></p>
 <ul>
-<li><a href="#misc-information">Misc Information</a></li>
-<li><a href="#requirements">Requirements</a><ul>
-<li><a href="#runtime-requirements">Runtime Requirements</a></li>
-<li><a href="#compiler-requirements">Compiler Requirements</a></li>
-<li><a href="#how-to-run-tests">How to run tests</a><ul>
+<li><a href="#%E6%A6%82%E5%86%B5">&#x6982;&#x51B5;</a></li>
+<li><a href="#%E9%9C%80%E6%B1%82">&#x9700;&#x6C42;</a><ul>
+<li><a href="#%E7%8E%AF%E5%A2%83%E9%9C%80%E6%B1%82">&#x73AF;&#x5883;&#x9700;&#x6C42;</a></li>
+<li><a href="#%E7%BC%96%E8%AF%91%E9%9C%80%E6%B1%82">&#x7F16;&#x8BD1;&#x9700;&#x6C42;</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95%E4%BE%8B">&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x4F8B;</a><ul>
+<li><a href="#cocos-console">Cocos Console</a></li>
 <li><a href="#mac-osx-&amp;-ios">Mac OSX &amp; iOS</a></li>
 <li><a href="#android">Android</a></li>
 <li><a href="#windows">Windows</a></li>
 <li><a href="#linux">Linux</a></li>
 </ul>
 </li>
-<li><a href="#how-to-start-a-new-game">How to start a new game</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%BC%80%E5%A7%8B%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E6%88%8F">&#x5982;&#x4F55;&#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x65B0;&#x6E38;&#x620F;</a></li>
 </ul>
 </li>
-<li><a href="#v35">v3.5</a></li>
-<li><a href="#v35rc0">v3.5rc0</a><ul>
-<li><a href="#highlights-of-v35rc0">Highlights of v3.5rc0</a></li>
-<li><a href="#features-in-detail">Features in detail</a><ul>
-<li><a href="#more-3d-particle-features-of-pu-supported">More 3D particle features of (PU) supported</a></li>
+<li><a href="#v311">v3.11</a><ul>
+<li><a href="#%E6%96%B0%E7%89%B9%E6%80%A7">&#x65B0;&#x7279;&#x6027;</a></li>
+<li><a href="#%E4%B8%BB%E8%A6%81%E7%89%B9%E6%80%A7%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D">&#x4E3B;&#x8981;&#x7279;&#x6027;&#x7684;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</a><ul>
+<li><a href="#jsb%E7%9A%84%E6%96%B0%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B">JSB&#x7684;&#x65B0;&#x5185;&#x5B58;&#x6A21;&#x578B;</a></li>
+<li><a href="#openssl">OpenSSL</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#v35beta0">v3.5beta0</a><ul>
-<li><a href="#highlights-of-v35beta0">Highlights of v3.5beta0</a></li>
-<li><a href="#features-in-detail-1">Features in detail</a><ul>
-<li><a href="#3d-particles">3D Particles</a><ul>
-<li><a href="#supported-pu-features">Supported PU features</a></li>
-<li><a href="#particle-usage">Particle usage</a></li>
-</ul>
-</li>
+<li><a href="#"></a><ul>
+<li><a href="#cocos2d-x-jsb%E7%A8%8B%E5%BA%8F%E8%B0%83%E8%AF%95">Cocos2d-x JSB&#x7A0B;&#x5E8F;&#x8C03;&#x8BD5;</a></li>
+<li><a href="#%E5%85%A8%E9%9D%A2%E5%8D%87%E7%BA%A7-webgl-%E6%B8%B2%E6%9F%93%E5%99%A8">&#x5168;&#x9762;&#x5347;&#x7EA7; WebGL &#x6E32;&#x67D3;&#x5668;</a><ul>
+<li><a href="#%E5%85%B6%E4%BB%96%E6%94%B9%E5%8A%A8">&#x5176;&#x4ED6;&#x6539;&#x52A8;</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h1 id="misc-information">Misc Information</h1>
+<h1 id="&#x6982;&#x51B5;">&#x6982;&#x51B5;</h1>
 <ul>
-<li><a href="https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG" target="_blank">Full Changelog</a></li>
-<li>v3.0 Release Notes can be found here: <a href="https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.0/docs/RELEASE_NOTES.md" target="_blank">v3.0 Release Notes</a></li>
+<li><a href="https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG" target="_blank">&#x5B8C;&#x6574;&#x66F4;&#x65B0;&#x65E5;&#x8BB0;</a></li>
 </ul>
-<h1 id="requirements">Requirements</h1>
-<h2 id="runtime-requirements">Runtime Requirements</h2>
+<h1 id="&#x9700;&#x6C42;">&#x9700;&#x6C42;</h1>
+<h2 id="&#x73AF;&#x5883;&#x9700;&#x6C42;">&#x73AF;&#x5883;&#x9700;&#x6C42;</h2>
 <ul>
-<li>Android 2.3 or newer</li>
-<li>iOS 5.0 or newer</li>
-<li>OS X 10.7 or newer</li>
-<li>Windows 7 or newer</li>
-<li>Windows Phone 8 or newer</li>
-<li>Linux Ubuntu 14.04 or newer</li>
+<li>Android 2.3 &#x53CA;&#x4EE5;&#x4E0A;</li>
+<li>iOS 5.0 &#x53CA;&#x4EE5;&#x4E0A;</li>
+<li>OS X 10.7 &#x53CA;&#x4EE5;&#x4E0A;</li>
+<li>Windows 7 &#x53CA;&#x4EE5;&#x4E0A;</li>
+<li>Windows Phone 8.1</li>
+<li>Windows 10 UWP</li>
+<li>Linux Ubuntu 14.04 &#x53CA;&#x4EE5;&#x4E0A;</li>
+<li>&#x73B0;&#x4EE3;&#x6D4F;&#x89C8;&#x5668;&#x548C; IE 9+ &#xFF08;&#x79FB;&#x52A8;&#x5E73;&#x53F0;&#x53EA;&#x6709; iOS &#x548C; Andorid 5.0 &#x652F;&#x6301; WebGL&#xFF09;</li>
 </ul>
-<h2 id="compiler-requirements">Compiler Requirements</h2>
+<h2 id="&#x7F16;&#x8BD1;&#x9700;&#x6C42;">&#x7F16;&#x8BD1;&#x9700;&#x6C42;</h2>
 <ul>
-<li>Xcode 5.1 or newer for iOS or Mac</li>
-<li>gcc 4.9 or newer for Linux</li>
-<li>ndk-r10c for Android</li>
-<li>Visual Studio 2012  or newer for Windows (win32)</li>
-<li>Visual Studio 2012  or newer for Windows Phone 8</li>
+<li>Xcode 5.1 &#x53CA;&#x4EE5;&#x4E0A; (for iOS or Mac)</li>
+<li>gcc 4.9 &#x53CA;&#x4EE5;&#x4E0A; (for Linux)</li>
+<li>ndk-r10c (for Android)</li>
+<li>Visual Studio 2013 &#x53CA;&#x4EE5;&#x4E0A; (for Windows (win32))</li>
+<li>Visual Studio 2013 update4 &#x53CA;&#x4EE5;&#xFF08;for Windows 8.1 universal Apps&#xFF09;</li>
+<li>Visual Studio 2015 &#x53CA;&#x4EE5;&#x4E0A;&#x548C; Windows 10.0 (build 10074 &#x53CA;&#x4EE5;&#x4E0A;)&#xFF08; for Windows 10.0 UWP Apps&#xFF09;</li>
 </ul>
-<h2 id="how-to-run-tests">How to run tests</h2>
-<h3 id="mac-osx--ios">Mac OSX &amp; iOS</h3>
+<h2 id="&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x4F8B;">&#x5982;&#x4F55;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x4F8B;</h2>
+<h3 id="cocos-console">Cocos Console</h3>
+<p>&#x5728;&#x5927;&#x90E8;&#x5206;&#x5E73;&#x53F0;&#x4E0A;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <a href="www.cocos2d-x.org/wiki/Cocos2d-console">Cocos Console</a> &#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x6765;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x4F8B;&#x3002;</p>
+<p>&#x5728;&#x63A7;&#x5236;&#x53F0;&#x91CC;&#xFF1A;</p>
+<pre><code>// &#x8FDB;&#x5165; cpp test &#x6587;&#x4EF6;&#x5939;
+cd tests/cpp-tests
+// &#x6216;&#x8005;&#x8FDB;&#x5165; js test &#x6587;&#x4EF6;&#x5939;
+cd tests/js-tests
+// &#x6216;&#x8005;&#x8FDB;&#x5165; lua test &#x6587;&#x4EF6;&#x5939;
+cd tests/lua-tests
+
+// &#x7F16;&#x8BD1;&#x6216;&#x8005;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x4F8B;
+cocos compile -p ios|mac|android|win32|win8_1|metro|web -m debug|release
+cocos run -p ios|mac|android|win32|win8_1|metro|web -m debug|release
+</code></pre><p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x5728; Android &#x5E73;&#x53F0;&#x4E0A;&#x4EE5;&#x53D1;&#x5E03;&#x6A21;&#x5F0F;&#x8FD0;&#x884C; cpp test&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>cocos run -p android -m release
+</code></pre><h3 id="mac-osx--ios">Mac OSX &amp; iOS</h3>
 <ul>
-<li>Enter <code>cocos2d-x/build</code> folder, open <code>cocos2d_test.xcodeproj</code></li>
-<li>Select <code>iOS</code> or <code>OS X</code> target in scheme toolbar</li>
-<li>Click <code>run</code> button</li>
+<li>&#x8FDB;&#x5165; <code>cocos2d-x/build</code> &#x6587;&#x4EF6;&#x5939;, &#x6253;&#x5F00; <code>cocos2d_test.xcodeproj</code> &#x6216;&#x8005; <code>cocos2d_js_tests.xcodeproj</code> (JS &#x6D4B;&#x8BD5;&#x4F8B;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4F1A;&#x5728;v3.8&#x5408;&#x5E76;&#x8FD9;&#x4E24;&#x4E2A;&#x9879;&#x76EE;)</li>
+<li>&#x5728; Xcode &#x7684; scheme toolbar &#x9009;&#x62E9; <code>iOS</code> &#x6216;&#x8005; <code>OS X</code> &#x5E73;&#x53F0;</li>
+<li>&#x70B9;&#x51FB; <code>run</code> &#x6309;&#x94AE;</li>
 </ul>
 <h3 id="android">Android</h3>
-<p>You can run the samples...</p>
-<p><strong>Using command line:</strong></p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x4E00;&#x4E0B;&#x793A;&#x4F8B;...</p>
+<p><strong>&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#xFF1A;</strong></p>
 <pre><code>$ cd cocos2d-x
 $ ./setup.py
 $ cd build
 $ ./android-build.py cpp-empty-test -p 10
 $ adb install cocos2d-x/tests/cpp-empty-test/proj.android/bin/CppEmptyTest-debug.apk
-</code></pre><p>Then click item on Android device to run tests. Available value of <code>-p</code> is the API level, cocos2d-x supports from level 10.</p>
-<p><strong>Using Eclipse:</strong></p>
+</code></pre><p>&#x7136;&#x540E;&#x70B9;&#x51FB;&#x5B89;&#x5353;&#x8BBE;&#x5907;&#x4E0A;&#x7684;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x4F8B;&#xFF0C;<code>-p</code> &#x6307;&#x5B9A;&#x4E86; Android API &#x7B49;&#x7EA7;&#xFF0C;cocos2d-x &#x652F;&#x6301; level10 &#x4EE5;&#x4E0A;&#x3002;</p>
+<p><strong>&#x4F7F;&#x7528; Eclipse:</strong></p>
 <pre><code>$ cd cocos2d-x
 $ ./setup.py
 $ cd build
 $ ./android-build.py cpp-empty-test -p 10
-</code></pre><p>Then</p>
+</code></pre><p>&#x7136;&#x540E;</p>
 <ul>
-<li>Import cocos2d-x Android project into Eclipse, the path used to import is <code>cocos/2d/platform/android</code></li>
-<li>Import <code>cpp-empty-test</code> Android project into Eclipse, the path used to import is <code>tests/cpp-empty-test/proj.android</code></li>
-<li>Build <code>cpp-empty-test</code> Android project and run</li>
+<li>&#x628A; cocos2d-x Android &#x9879;&#x76EE;&#x5BFC;&#x5165; Eclipse &#x4E2D;&#xFF0C;&#x5BFC;&#x5165;&#x7684;&#x8DEF;&#x5F84;&#x662F; <code>cocos/platform/android</code></li>
+<li>&#x628A; <code>cpp-empty-test</code> Android &#x9879;&#x76EE;&#x5BFC;&#x5165; Eclipse &#x4E2D;&#xFF0C;&#x5BFC;&#x5165;&#x7684;&#x8DEF;&#x5F84;&#x662F; <code>tests/cpp-empty-test/proj.android</code></li>
+<li>&#x7F16;&#x8BD1; <code>cpp-empty-test</code> Android &#x9879;&#x76EE;&#xFF0C;&#x7136;&#x540E;&#x8FD0;&#x884C;&#x5373;&#x53EF;</li>
 </ul>
 <h3 id="windows">Windows</h3>
 <ul>
-<li>Enter <code>cocos2d-x/build</code>, and open <code>cocos2d-win32.vs2012.sln</code></li>
-<li>Select <code>cpp-empty-test</code> as running target</li>
-<li>Click run button</li>
+<li>&#x5BF9; win32 &#x9879;&#x76EE;, &#x8FDB;&#x5165; <code>cocos2d-x/build</code> &#x76EE;&#x5F55;, &#x7136;&#x540E;&#x6253;&#x5F00; <code>cocos2d-win32.sln</code> &#x6216;&#x8005; <code>cocos2d-js-win32.sln</code></li>
+<li>&#x5BF9; win8.1 &#x9879;&#x76EE;&#xFF0C; &#x8FDB;&#x5165; <code>cocos2d-x/build</code> &#x76EE;&#x5F55;, &#x7136;&#x540E;&#x6253;&#x5F00; <code>cocos2d-win8.1-universal.sln</code> &#x6216;&#x8005; <code>cocos2d-js-win8.1-universal.sln</code></li>
+<li>&#x9009;&#x62E9;&#x8FD0;&#x884C;&#x76EE;&#x6807;</li>
+<li>&#x70B9;&#x51FB;&#x8FD0;&#x884C;&#x6309;&#x94AE;</li>
 </ul>
 <h3 id="linux">Linux</h3>
 <pre><code>$ cd cocos2d-x/build
 $ ./install-deps-linux.sh
 $ cd ../..
-</code></pre><p>Then</p>
+</code></pre><p>&#x7136;&#x540E;</p>
 <pre><code>$ mkdir build
 $ cd build
 $ cmake ../cocos2d-x
 $ make -j4
-</code></pre><p>Run</p>
+</code></pre><p>&#x8FD0;&#x884C;</p>
 <pre><code>$ cd bin/cpp-empty-test
 $ ./cpp-empty-test
-</code></pre><h2 id="how-to-start-a-new-game">How to start a new game</h2>
-<p>Please refer to this document: <a href="../README.md">ReadMe</a></p>
-<h1 id="v35">v3.5</h1>
-<p>There are only some minor changes and bug fixes in this verison.</p>
+</code></pre><h2 id="&#x5982;&#x4F55;&#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x65B0;&#x6E38;&#x620F;">&#x5982;&#x4F55;&#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x65B0;&#x6E38;&#x620F;</h2>
+<p>&#x4F7F;&#x7528; Cocos Console &#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6E38;&#x620F;&#xFF1A;</p>
+<pre><code>cocos new -l cpp|js|lua MyGame
+</code></pre><h1 id="v311">v3.11</h1>
+<h2 id="&#x65B0;&#x7279;&#x6027;">&#x65B0;&#x7279;&#x6027;</h2>
 <ul>
-<li>EditBox: Color4B font color is supported</li>
-<li>Fix memory leak in AutoReleasePool</li>
-<li>Fix FileUtils:getWritablePath() return wrong path on Mac&amp;Windows</li>
+<li>Chipmunk&#x5347;&#x7EA7;&#x5230;v7.0.1</li>
+<li>JSB&#x4F7F;&#x7528;&#x65B0;&#x7684;&#x5185;&#x5B58;&#x6A21;&#x578B;&#xFF0C;&#x5728;JS&#x811A;&#x672C;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x5FC3;&#x5BF9;&#x8C61;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x8BE5;&#x7279;&#x6027;&#x9ED8;&#x8BA4;&#x5173;&#x95ED;</li>
+<li>CURL&#x5347;&#x7EA7;&#x5230;v7.48</li>
+<li>OpenSSL&#x5347;&#x7EA7;&#x5230;v1.0.2g</li>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;VSCode&#x6216;&#x8005;&#x65B0;&#x7248;&#x672C;&#x7684;Firefox&#x8C03;&#x8BD5;JSB&#x7A0B;&#x5E8F;</li>
+<li>&#x5168;&#x9762;&#x5347;&#x7EA7; WebGL &#x6E32;&#x67D3;&#x5668;</li>
 </ul>
-<h1 id="v35rc0">v3.5rc0</h1>
-<h2 id="highlights-of-v35rc0">Highlights of v3.5rc0</h2>
-<ul>
-<li>More features of Particle(PU) is supported</li>
-<li>Disable reverse of MoveTo</li>
-<li>CsLoader: add callback when loading a CSB file</li>
-<li>Fix transparent Billboard and Sprite3D rendering error</li>
-<li>Fix Motionstreak does not work with MoveTo and MoveBy</li>
-<li>More bugs fixed</li>
-</ul>
-<h2 id="features-in-detail">Features in detail</h2>
-<h3 id="more-3d-particle-features-of-pu-supported">More 3D particle features of (PU) supported</h3>
-<ul>
-<li><p>Observer: On Count Observer, On Emission Observer, On Expire Observer, On Position observer, On Clear Observer, On Time Observer, On Quota Observer, On Velocity Observer, On Collision Observer, On Event Flag Observer, On Random Observer.</p>
-</li>
-<li><p>Event Handler: Do Enable Component Event Handler, Do Expire Event Handler, Do Placement Particle Event Handler, Do Stop System Event Handler, Do Affector Event Handler, Do Freeze Event Handler, Do Scale Event Handler.</p>
-</li>
-<li><p>Behavior: Slave Behavior</p>
-</li>
-</ul>
-<p>Observer and Event Handler allow you to listen to the particle system and trigger some events. The Event handler can do something when the event happens. For example, there is a observer on the particle system, and it listens to the particle number when the number is greater than 100, it tirggers an event to stop the particle system. This allows you to create more complex particles. For more details, please refer to the Particle Universe User&apos;s Guide.</p>
-<h1 id="v35beta0">v3.5beta0</h1>
-<h2 id="highlights-of-v35beta0">Highlights of v3.5beta0</h2>
-<h2 id="features-in-detail">Features in detail</h2>
-<h3 id="3d-particles">3D Particles</h3>
-<h4 id="supported-pu-features">Supported PU features</h4>
-<ul>
-<li><p>Render: Billboard Renderer, Box Renderer, Sphere Renderer, Entity Renderer, Ribbon Trail Renderer.</p>
-</li>
-<li><p>Emitter: Point Emitter, Box Emitter, Sphere Surface Emitter, Line Emitter, Circle Emitter, Position Emitter, Slave Emitter.</p>
-</li>
-<li><p>Affector: Gravity Affector, Linear Force Affector, Scale Affector, Sine Force Affector, Color Affector, Randomiser, Line Affector, Align Affector, Jet Affector, Vortex Affector, Geometry Rotator, Texture Rotator, Texture Animator, Particle Follower, Sphere Collider, Plane Collider, box Collider, Path Follower, Flock Centering Affector, Velocity Matching Affector.</p>
-</li>
-</ul>
-<h4 id="particle-usage">Particle usage</h4>
-<p>It allows to import particles from Particle Universe (<a href="http://www.fxpression.com" target="_blank">http://www.fxpression.com</a>). The usage of particles is as follow,</p>
-<p>Option 1, create 3D particle with particle (.pu) file and material file</p>
-<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> rootps = PUParticleSystem3D::create(<span class="hljs-string">&quot;lineStreak.pu&quot;</span>, <span class="hljs-string">&quot;pu_mediapack_01.material&quot;</span>);
-addChild(rootps);
-rootps-&gt;startParticleSystem();
+<h2 id="&#x4E3B;&#x8981;&#x7279;&#x6027;&#x7684;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;">&#x4E3B;&#x8981;&#x7279;&#x6027;&#x7684;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</h2>
+<h3 id="jsb&#x7684;&#x65B0;&#x5185;&#x5B58;&#x6A21;&#x578B;">JSB&#x7684;&#x65B0;&#x5185;&#x5B58;&#x6A21;&#x578B;</h3>
+<p>&#x4F7F;&#x7528;&#x65B0;&#x7684;&#x5185;&#x5B58;&#x6A21;&#x578B;&#x540E;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x5FC3;&#x5BF9;&#x8C61;&#x7684;&#x58F0;&#x660E;&#x5468;&#x671F;&#x3002;&#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740;&#x4E0D;&#x9700;&#x8981;&#x5728;JS&#x4EE3;&#x7801;&#x91CC;&#x624B;&#x52A8;&#x8C03;&#x7528;<code>retain/release</code>&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#x8BE5;&#x5185;&#x5B58;&#x6A21;&#x578B;&#x9ED8;&#x8BA4;&#x662F;&#x5173;&#x95ED;&#x7684;&#x3002;&#x867D;&#x7136;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x505A;&#x4E86;&#x5F88;&#x591A;&#x7684;&#x6D4B;&#x8BD5;&#xFF0C;&#x76EE;&#x524D;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x4FDD;&#x9669;&#x8D77;&#x89C1;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5F00;&#x542F;&#x8BE5;&#x529F;&#x80FD;&#xFF0C;&#x5F00;&#x542F;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x5728;<code>base/ccConfig.h</code>&#x91CC;&#x628A;<code>CC_ENABLE_GC_FOR_NATIVE</code>&#x7684;&#x503C;&#x6539;&#x4E3A;1&#xFF1A;</p>
+<pre><code class="lang-c++"><span class="hljs-preprocessor">#<span class="hljs-keyword">ifdef</span> CC_ENABLE_SCRIPT_BINDING</span>
+  <span class="hljs-preprocessor">#<span class="hljs-keyword">ifndef</span> CC_ENABLE_GC_FOR_NATIVE_OBJECTS</span>
+  <span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> CC_ENABLE_GC_FOR_NATIVE_OBJECTS <span class="hljs-number">1</span> <span class="hljs-comment">// change to 1</span></span>
+  <span class="hljs-preprocessor">#<span class="hljs-keyword">endif</span></span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">endif</span></span>
 </code></pre>
-<p>Option 2, you can also create 3d particle with particle (.pu) file only, it will load all the material files in the material path</p>
-<pre><code class="lang-c++"><span class="hljs-keyword">auto</span> rootps = PUParticleSystem3D::create(<span class="hljs-string">&quot;advancedLodSystem.pu&quot;</span>);
-addChild(rootps);
-rootps-&gt;startParticleSystem();
+<h3 id="openssl">OpenSSL</h3>
+<p>Cocos2d-x&#x5DF2;&#x7ECF;&#x628A;<strong>OpenSSL</strong>&#x5347;&#x7EA7;&#x5230;<strong>1.0.2.g</strong>&#x3002;</p>
+<p>&#x4ECE;<strong>2016&#x5E74;7&#x6708;11</strong>&#x65E5;&#x5F00;&#x59CB;&#xFF0C;Google Play&#x5C06;&#x4E0D;&#x518D;&#x63A5;&#x53D7;&#x4F7F;&#x7528;&#x4F4E;&#x7248;&#x672C;&#x7684;<strong>OpenSSL</strong>&#x7684;&#x65B0;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6216;&#x8005;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x66F4;&#x65B0;&#x3002;&#x66F4;&#x65B0;&#x7A0B;&#x5E8F;&#x4E2D;&#x4F7F;&#x7528;&#x7684;<strong>OpenSSL</strong>&#x7248;&#x672C;&#x53D8;&#x5F97;&#x5341;&#x5206;&#x91CD;&#x8981;&#x3002;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="http://discuss.cocos2d-x.org/t/openssl-problem-again/28270" target="_blank">&#x8FD9;&#x4E2A;&#x5E16;&#x5B50;</a>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x7684;&#x662F;v2.x&#x6216;&#x8005;&#x4F4E;&#x7248;&#x672C;&#x7684;v3.x&#x5F15;&#x64CE;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x53EA;&#x66F4;&#x65B0;<strong>CURL</strong>&#x548C;<strong>OpenSSL</strong>&#xFF0C;&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x4FEE;&#x6539;<strong>Cocos2d-x root/external/config.json</strong>&#x6587;&#x4EF6;&#x4E2D;&#x7684;<code>version</code>&#x5B57;&#x6BB5;&#x3002;&#x5982;&#x679C;&#x662F;v3.x&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;<code>version</code>&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x6539;&#x4E3A;<code>v3-dpes-92</code>&#xFF0C;&#x5982;&#x679C;&#x662F;v2.x&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x503C;&#x662F;<code>v2-deps-5</code></li>
+<li>&#x5728;Cocos2d-x&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;<strong>download-deps.py</strong>&#x811A;&#x672C;</li>
+</ul>
+<pre><code class="lang-sh">(jtsm @ <span class="hljs-number">15</span> ~) $ <span class="hljs-built_in">cd</span> cocos2d-x
+
+(jtsm @ <span class="hljs-number">15</span> ~/cocos2d-x) $ ./download-deps.py
+
+=======================================================
+==&gt; Prepare to download external libraries!
+==&gt; Ready to download <span class="hljs-string">&apos;v3-deps-92.zip&apos;</span> from <span class="hljs-string">&apos;https://github.com/cocos2d/cocos2d-x-3rd-party-libs-bin/archive/v3-deps-92.zip&apos;</span>
+==&gt; WARNING: Couldnt grab the file size from remote, use <span class="hljs-string">&apos;zip_file_size&apos;</span> section <span class="hljs-keyword">in</span> <span class="hljs-string">&apos;/Users/jtsm/Chukong-Inc/cocos2d-x/external/config.json&apos;</span>
+==&gt; Start to download, please <span class="hljs-built_in">wait</span> ...
+==&gt; Downloading finished!
+==&gt; Extracting files, please <span class="hljs-built_in">wait</span> ...
+==&gt; Extraction <span class="hljs-keyword">done</span>! ==&gt; Copying files...
+==&gt; Cleaning...
 </code></pre>
-<p>For more information, please refer to <code>cpp-tests/Particle3DTest</code></p>
+<p>&#x6709;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#x53EF;&#x4EE5;&#x5728;&#x5F15;&#x64CE;&#x7684;<a href="http://forum.cocos.com/" target="_blank">&#x4E2D;&#x6587;&#x8BBA;&#x575B;</a>&#x4E0A;&#x53D1;&#x5E16;&#x53CD;&#x9988;&#x3002;</p>
+<h3 id="cocos2dx-jsb&#x7A0B;&#x5E8F;&#x8C03;&#x8BD5;">Cocos2d-x JSB&#x7A0B;&#x5E8F;&#x8C03;&#x8BD5;</h3>
+<p>v3.11&#x7248;&#x672C;&#x4E4B;&#x524D;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;Firefox 30+&#x7248;&#x672C;&#x6765;&#x8C03;&#x8BD5;cocos2d-x JSB&#x7A0B;&#x5E8F;&#x3002;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x4FEE;&#x590D;&#x4E86;&#x8BE5;&#x95EE;&#x9898;&#xFF0C;&#x540C;&#x65F6;&#x652F;&#x6301;&#x4E86;web console&#x529F;&#x80FD;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x4F7F;&#x7528;Firefox&#x8C03;&#x8BD5;cocos2d-x JSB&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="http://www.cocos2d-x.org/wiki/Javascript_Remote_Debugging" target="_blank">&#x8FD9;&#x7BC7;&#x6587;&#x6863;</a>&#x3002;</p>
+<p>&#x5F53;&#x7136;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="https://code.visualstudio.com/" target="_blank">VSCode</a>&#x6765;&#x8C03;&#x8BD5;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x53C2;&#x8003;<a href="http://discuss.cocos2d-x.org/t/use-vscode-to-debug-cocos2d-x-jsb-programs/27588" target="_blank">&#x8FD9;&#x7BC7;&#x6587;&#x6863;</a>&#x3002;</p>
+<h3 id="&#x5168;&#x9762;&#x5347;&#x7EA7;-webgl-&#x6E32;&#x67D3;&#x5668;">&#x5168;&#x9762;&#x5347;&#x7EA7; WebGL &#x6E32;&#x67D3;&#x5668;</h3>
+<p>&#x5728;v3.11&#x4E2D;&#xFF0C;&#x4E3A;&#x4E86;&#x63D0;&#x5347;&#x6027;&#x80FD;&#xFF0C;&#x6211;&#x4EEC;&#x91CD;&#x6784;&#x4E86;WebGL&#x6E32;&#x67D3;&#x5668;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x51E0;&#x9879;&#x91CD;&#x8981;&#x7684;&#x6539;&#x8FDB;&#xFF1A;</p>
+<ol>
+<li>&#x5728; Android &#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x9ED8;&#x8BA4;&#x5F00;&#x542F; WebGL&#xFF08;&#x652F;&#x6301;&#x7684;&#x8BDD;&#xFF09;</li>
+<li>WebGL &#x6A21;&#x5F0F;&#x4E0B;&#x81EA;&#x52A8;&#x6279;&#x5904;&#x7406; Sprite</li>
+<li>Sprite &#x5171;&#x4EAB;&#x5168;&#x5C40;&#x7684;&#x6E32;&#x67D3;&#x6570;&#x636E;&#x7F13;&#x5B58;&#xFF0C;&#x5E76;&#x51CF;&#x5C11; GL &#x51FD;&#x6570;&#x8C03;&#x7528;</li>
+</ol>
+<p>&#x5728;&#x8FD9;&#x4E9B;&#x4F18;&#x5316;&#x540E;&#xFF0C;&#x4E0E;&#x65E7;&#x7248;&#x672C;&#x76F8;&#x6BD4;&#xFF0C;&#x5408;&#x5E76;&#x8D34;&#x56FE;&#x540E;&#x7684;&#x6E38;&#x620F;&#x4E2D;draw call&#x6570;&#x91CF;&#x5C06;&#x5F97;&#x5230;&#x663E;&#x8457;&#x7684;&#x964D;&#x4F4E;&#x3002;&#x4E0D;&#x4EC5;&#x5982;&#x6B64;&#xFF0C;v3.11&#x4E2D;&#x7684;CPU&#x4F7F;&#x7528;&#x7387;&#x548C;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x4E5F;&#x90FD;&#x5F97;&#x5230;&#x4E86;&#x964D;&#x4F4E;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x7684;bunnymark&#x6D4B;&#x8BD5;&#x4E2D;&#xFF0C;v3.11&#x76F8;&#x6BD4;&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#x6709;4&#x500D;&#x4EE5;&#x4E0A;&#x7684;&#x6E32;&#x67D3;&#x6027;&#x80FD;&#x63D0;&#x5347;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x5BF9;WebGL&#x6E32;&#x67D3;&#x5668;&#x505A;&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#x5347;&#x7EA7;&#xFF0C;&#x5728;&#x540E;&#x7EED;&#x7248;&#x672C;&#x4E2D;&#xFF0C;WebGL&#x6E32;&#x67D3;&#x5668;&#x8FD8;&#x5C06;&#x5F97;&#x5230;&#x6301;&#x7EED;&#x4F18;&#x5316;&#x3002;</p>
+<h2 id="&#x5176;&#x4ED6;&#x6539;&#x52A8;">&#x5176;&#x4ED6;&#x6539;&#x52A8;</h2>
+<p>&#x66F4;&#x5B8C;&#x6574;&#x7684;&#x6539;&#x52A8;&#x5217;&#x8868;&#x53EF;&#x4EE5;&#x9605;&#x8BFB;<a href="https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG" target="_blank">&#x5B8C;&#x6574;&#x4FEE;&#x6539;&#x65E5;&#x5FD7;</a>&#x3002;</p>
 
                     
                     </section>
@@ -697,10 +715,10 @@ rootps-&gt;startParticleSystem();
         </div>
 
         
-        <a href="./cocos2d-x_v3.4_release_notes_en.html" class="navigation navigation-prev " aria-label="Previous page: Cocos2d-x v3.4 英文发布说明"><i class="fa fa-angle-left"></i></a>
+        <a href="./cocos2d-x_v3.10_release_notes.html" class="navigation navigation-prev " aria-label="Previous page: Cocos2d-x v3.10 中文发布说明"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./cocos2d-x_v3.6_release_notes_en.html" class="navigation navigation-next " aria-label="Next page: Cocos2d-x v3.6 英文发布说明"><i class="fa fa-angle-right"></i></a>
+        <a href="./cocos2d-x_release_notes_en.html" class="navigation navigation-next " aria-label="Next page: Cocos2d-x 英文发布说明"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
