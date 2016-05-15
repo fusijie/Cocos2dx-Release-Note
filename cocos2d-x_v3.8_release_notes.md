@@ -1,33 +1,31 @@
-tbd
 # cocos2d-x v3.8 发布说明 #
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Cocos2d-x v3.8 Release Notes](#cocos2d-x-v38-release-notes)
-- [Misc Information](#misc-information)
-- [Requirements](#requirements)
-  - [Runtime Requirements](#runtime-requirements)
-  - [Compiler Requirements](#compiler-requirements)
-  - [How to run tests](#how-to-run-tests)
+- [概况](#%E6%A6%82%E5%86%B5)
+- [需求](#%E9%9C%80%E6%B1%82)
+  - [环境需求](#%E7%8E%AF%E5%A2%83%E9%9C%80%E6%B1%82)
+  - [编译需求](#%E7%BC%96%E8%AF%91%E9%9C%80%E6%B1%82)
+  - [如何运行测试例](#%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95%E4%BE%8B)
     - [Cocos Console](#cocos-console)
     - [Mac OSX & iOS](#mac-osx-&-ios)
     - [Android](#android)
     - [Windows](#windows)
     - [Linux](#linux)
-  - [How to start a new game](#how-to-start-a-new-game)
+  - [如何开始一个新游戏](#%E5%A6%82%E4%BD%95%E5%BC%80%E5%A7%8B%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E6%88%8F)
 - [v3.8](#v38)
-  - [Highlights and API changes of v3.8](#highlights-and-api-changes-of-v38)
-  - [Download](#download)
-  - [The main features in detail:](#the-main-features-in-detail)
-    - [3D Module](#3d-module)
-    - [UI System](#ui-system)
-    - [AudioEngine](#audioengine)
+  - [v3.8亮点及 API 变更](#v38%E4%BA%AE%E7%82%B9%E5%8F%8A-api-%E5%8F%98%E6%9B%B4)
+  - [下载](#%E4%B8%8B%E8%BD%BD)
+  - [细节:](#%E7%BB%86%E8%8A%82)
+    - [3D 模块](#3d-%E6%A8%A1%E5%9D%97)
+    - [UI 系统](#ui-%E7%B3%BB%E7%BB%9F)
+    - [声音引擎](#%E5%A3%B0%E9%9F%B3%E5%BC%95%E6%93%8E)
     - [FileUtils](#fileutils)
-    - [Others](#others)
-  - [Other changes](#other-changes)
-  - [New APIs](#new-apis)
-- [The Next Step](#the-next-step)
+    - [其他](#%E5%85%B6%E4%BB%96)
+  - [其他变更](#%E5%85%B6%E4%BB%96%E5%8F%98%E6%9B%B4)
+  - [新的 APIs](#%E6%96%B0%E7%9A%84-apis)
+- [下一步计划](#%E4%B8%8B%E4%B8%80%E6%AD%A5%E8%AE%A1%E5%88%92)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -63,6 +61,7 @@ tbd
 在大部分平台上，你可以使用 [Cocos Console](www.cocos2d-x.org/wiki/Cocos2d-console) 命令行工具来运行测试例。
 
 在控制台里：
+
 ```
 // 进入 cpp test 文件夹
 cd tests/cpp-tests
@@ -155,42 +154,42 @@ cocos new -l cpp|js|lua MyGame
 
 如之前承诺的，Cocos2d-x v3.8 极大地提高了稳定性和 API 的友好性。一方面，我们持续地提升了3D功能，增加了 3D 物理碰撞，天空盒背景刷和 Animate3D 帧回调。另一方面，我们优化了多个内核模块，包括 UI 系统，声音引擎，文件模块，绑定生成器等等。
 
-Here is some highlighted improvments and API changes:
+这里是一些优化的亮点和 API 变更：
 
-1. 3D Module
-    - Added 3D physics collider
-    - Supported setting camera background brushes with color/depth/skybox 
-    - Added key frame event Callback in Animate3D
-    - Added light map support in Terrain
-2. UI System
-    - Reimplemented and enhanced EditBox on Android
-    - Added ScrollViewBar for displaying a scroll bar at the side of ScrollView (JSB/Lua ready)
-    - Added RadioButton widget (JSB/Lua ready)
-    - Added HANYI FullType font support
-3. AudioEngine
-    - AudioEngine supported audio preloading
-    - Bound new AudioEngine in JSB
+1. 3D 模块
+    - 添加 3D 物理碰撞器
+    - 支持使用颜色/深度/天空盒设置照相机的背景刷
+    - 添加 Animate3D 的帧回调事件
+    - 支持地形的光照纹理
+2. UI 系统
+    - 重新实现并增强了 Android 上的 EditBox
+    - 支持 ScrollView 滚动条（JSB/Lua 完成）
+    - 添加 RadioButton 控件（JSB/Lua 完成）
+    - 支持汉仪 fulltype 字体
+3. 声音引擎
+    - AudioEngine 支持声音预加载
+    - 绑定 AudioEngine 到 JSB
 4. FileUtils
-    - Added a set of file writing APIs: writeStringToFile, writeDataToFile, writeValueMapToFile, writeValueVectorToFile
-5. Others
-    - Improved Bindings Generator tool
-    - Merged JSB test project into cocos2d test project
-    - framework: Support generate prebuilt libs of engine with debug mode
-    - console: Supported new portrait projects from templates
+    - 添加一系列文件写入接口：writeStringToFile, writeDataToFile, writeValueMapToFile, writeValueVectorToFile
+5. 其他
+    - 优化绑定生成工具
+    - 合并 JSB 测试项目到 cocos2d 测试项目
+    - 框架：支持生成 debug 模式下的引擎预编译库
+    - console：支持从模板中创建竖屏项目
 
-## Download
+## 下载
 
-[Cocos2d-x v3.8](http://www.cocos2d-x.org/filedown/cocos2d-x-3.8.zip) including : C++, Lua & JS
+[Cocos2d-x v3.8](http://www.cocos2d-x.org/filedown/cocos2d-x-3.8.zip) 包含 : C++, Lua & JS
 
-## The main features in detail:
+## 细节:
 
-### 3D Module
+### 3D 模块
 
-1. 3D physics collider
+1. 3D 物理碰撞器
 
-    3D physics collider is a new type of physics object. It can be used as both trigger and collider. 
+    3D 物理碰撞器是一种新的物理对象。它同时为触发器和碰撞器所用。
 
-    Trigger is a region defined by physics shapes and  can get callback when other physics objects enter or leave. Its usage is described in the following code:
+    触发器是一块由物理形状定义的区域，当其他物理对象进入或者离开的时候会被回调。使用方法如下：
     
     ```cpp
     //create a collider using colliderDes
@@ -211,11 +210,11 @@ Here is some highlighted improvments and API changes:
     }; 
     ```
 
-    Collider is similar to rigid body, it can give force to the rigid body that collides with it. However, it is static and has better performance than rigid body. It is proper to represent a static scene or objects using collider and dynamic part using rigid body. You can set colliderDes.isTrigger to false when you want to make it collider.
+    碰撞器和刚体很像，它可以对和它碰撞的刚体产生力的作用。但是它是静态的，而且比起刚体有更好的性能。所以对于静态的场景或者物体可以使用碰撞器，动态的物体可以使用刚体。当你想要让它碰撞的时候可以把 colliderDes.isTrigger 设置成 false。
 
-2. Camera background brushes
+2. 照相机背景刷
 
-    Different with previous versions, in v3.8, developers can choose to erase the camera’s background with 4 types of brush: none, color, depth, skybox. None brush means do nothing; Color brush erases background using given color and depth; depth brush erases background using given depth; skybox brush erases background using given skybox with 6 texture faces. The default brush is depth brush. The usage of brushes is showing below:
+    和之前的版本不同，在 v3.8 版本中，开发者可以选择四种类型的背景刷来擦掉照相机的背景：无，颜色，深度，天空盒。无代表什么都不用；颜色刷使用给定的颜色和深度擦除背景；深度刷使用给定深度擦除背景；天空盒使用给定 6 个面的纹理天空盒擦除背景。默认的背景刷是深度背景刷。使用方式如下：
 
     ```cpp
     // Using none brush
@@ -228,9 +227,9 @@ Here is some highlighted improvments and API changes:
     _camera->setBackgroundBrush(CameraBackgroundBrush::createSkyboxBrush("Sprite3DTest/skybox/left.jpg", "Sprite3DTest/skybox/right.jpg","Sprite3DTest/skybox/top.jpg", "Sprite3DTest/skybox/bottom.jpg","Sprite3DTest/skybox/front.jpg", "Sprite3DTest/skybox/back.jpg"));
     ```
 
-3. Animate3D key frame event callback
+3. Animate3D 帧回调事件
 
-    Similar to 2d AnimationFrame callback, frame event callback is supported in Animated3D now. It allows developer to set a callback to be invoked when specific frame is played. Sample code:
+    和 2d 帧动画回调类似，现在 Animate3D 也支持帧回调了。它允许开发者在某一帧设置回调事件，当播放到那一帧的时候事件被调用。使用如下：
 
     ```cpp
     auto animation = Animation3D::create(“XX.c3b”);
@@ -249,9 +248,9 @@ Here is some highlighted improvments and API changes:
     Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority(listener, -1);
     ```
 
-4. Light map support in Terrain
+4. 地形支持光照纹理
 
-    Terrain with light map is supported in v3.8, which means you can add a light map texture baked from other tools to the terrain. The light map texture contains light info, so that the terrain seems to be lighted with several lights. Terrain with light map can be created like this,
+    v3.8 版本开始支持地形光照纹理。也就是说你可以从其他工具中导出烘焙光照纹理添加到地形上。光照纹理包含光照信息，地形可以有多个光照。使用方式如下：
 
     ```cpp
     //create a normal terrain as before
@@ -265,22 +264,22 @@ Here is some highlighted improvments and API changes:
     _terrain->setLightMap(“TerrainTest/Lightmap.png”);
     ```
 
-### UI System
+### UI 系统
 
-1. Reimplemented EditBox
+1. EditBox 重新实现
 
-    The usage of EditBox is the same as before, but we have reimplemented it for Android platform. The use experience is highly improved, important improvements are: 
+    EditBox 的使用方式和之前一样，但是 Android 平台的 EditBox 已经被重新实现过。使用体验大大提高了。主要的优化如下：
 
-    - Display cursor in EditBox
-    - Support copy, cut, paste and select actions in EditBox
-    - Support multi-line input, you should set InputMode to `ANY` to enable multi-line input
-    - EditBox won't be masked by the keyboard UI anymore
+    - 支持光标
+    - 支持拷贝，剪切，黏贴，选择操作
+    - 支持多行输入，可以通过设置输入模式 `ANY` 开启多行输入功能
+    - 不再被键盘 UI 修饰
 
-2. ScrollViewBar
+2. ScrollView 滚动条
     
-    In the previous versions, the ScrollView doesn't have any visual notification for the current location in view. In v3.8, we have added a scroll bar attached to the ScrollView. You could tweak the the opacity, color, width and the duration for auto hiding the scroll bar. Speical thanks to @neokim.
+    在之前的版本中，ScrollView 没有任何当前位置的可视标记。在 v3.8 版本中，我们给scrollView 添加了滚动条，你可以修改透明度，颜色，宽度和自动隐藏的时间。特别感谢 @neokim。
 
-    Usage:
+    使用:
 
     ```cpp
     ui::ScrollView* scrollView = ui::ScrollView::create();
@@ -290,15 +289,15 @@ Here is some highlighted improvments and API changes:
     this->addChild(scrollView);
     ```
 
-3. RadioButton widget
+3. RadioButton 控件
 
-    RadioButton is a specific type of two-states button that is similar to CheckBox.
+    RadioButton 是一种特殊类型的二态按钮，和 CheckBox 很像。
 
-    Additionally, it can be used together with RadioButtonGroup to interact with other radio buttons.
+    另外，它可以和 RadioButtonGroup 共用，可以和其他 radio 按钮很方便地交互。
 
-    There is only one RadioButton in checked state at the same time within a RadioButtonGroup. Special thanks to @neokim who have contributed the implementation of this new widget.
-
-    Usage: 
+    在一个 RadioButtonGroup 中，同一时间只能有一个 RadioButton 处于选中状态，特别感谢 @ neokim 提供了这个新控件的实现。
+    
+    使用: 
 
     ```cpp
     //create a RadioButtonGroup
@@ -320,11 +319,11 @@ Here is some highlighted improvments and API changes:
     radioButtonGroup->addRadioButton(radioButton2);
     ```
 
-### AudioEngine
+### 声音引擎
 
-1. Audio preloading
-
-    AudioEngine now supports preload audio files before playing it. For some large audio file, this feature can smooth the audio playing experience in user's games. Sample code: 
+1. 声音预加载
+    
+    AudioEngine 先支持播放之前的声音文件预加载。对于一些较大的声音文件，这个特性将会提高用户的游戏体验。使用方式：
 
     ```cpp
     //Use it with callback
@@ -335,15 +334,15 @@ Here is some highlighted improvments and API changes:
     AudioEngine::preload("audio2.mp3");
     ```
 
-2. JSB new AudioEngine
+2. 新声音引擎的 JSB 绑定
 
-    In JSB, the default audio engine was SimpleAudioEngine (renamed to cc.audioEngine). It was the old audio engine provided since v2, and it have some inconvenience like delay time, no event support, etc. So we decided to provide new AudioEngine in JSB, the API remains the same as C++ API, and its usage can be found in [its test case](https://github.com/cocos2d/cocos2d-x/blob/v3/tests/js-tests/src/NativeTest/AudioEngineTest.js).
+    在 JSB 中，默认的声音引擎是 SimpleAudioEngine（已改名为 cc.audioEngine）。这是一个从 v2 版本就开始提供的老声音引擎，在一些情况下使用不方便，比如延时，比如事件支持等等。所以我们觉得提供 JSB 上的 AudioEngine，API 仍然和 C++ API 一致，使用方法可以在这里找到：[测试例](https://github.com/cocos2d/cocos2d-x/blob/v3/tests/js-tests/src/NativeTest/AudioEngineTest.js)。
 
 ### FileUtils
 
-1. New file writing APIs
+1. 新的文件写入 API
 
-    In v3.8, we have provided a bunch of file writing APIs in FileUtils. Now you can use very simple APIs to write string, binary data, value map, and value vector into a file in user's file system. Each API is demonstrated in the following sample code:
+    在 v3.8 版本中，我们在 FileUtils 提供了一系列的文件写入 API。现在你可以使用很简答的 API 往用户文件系统的文件里写入字符串，二进制数据，键值表，数组。以下的每一个 API 的使用示例：
 
     ```cpp
     std::string writablePath = FileUtils::getInstance()->getWritablePath();
@@ -369,42 +368,42 @@ Here is some highlighted improvments and API changes:
     FileUtils::getInstance()->writeValueVectorToFile(valueVector, fullPath.c_str());
     ```
 
-    Besides, you can retrieve the extension (in lower case) of a file with `FileUtils::getFileExtension` API.
+    除此之外，你可以通过 `FileUtils::getFileExtension` 获取文件扩展名（小写）。
 
-### Others
+### 其他
 
-1. Bindings Generator
+1. 绑定生成工具
 
-    In v3.8, we also improved our bindings generator tool, now it's even more powerful and be able to bind almost all kind of C++ APIs to script. Here is a detailed list about improvement in bindings generator.
+    在 v3.8 我们优化了绑定生成工具，现在更给力了。而且基本上可以绑定所有的 C++ 接口到脚本上。以下是一些优化细节。
 
-    - Supported generating auto bindings code for public member variables
-    - Avoid memory leak of non-Ref classes instance by controlling C++ object memory with JS object
-    - Made JSB classes automatically extendable if configured in classes_need_extend list
-    - Improved support for Lambda functions in JS auto bindings
+    - 支持生成自动绑定公有成员变量
+    - 避免使用 JS 对象管理非引用类型的 C++ 对象内存泄露
+    - 支持 classes_need_extend 列表中配置 JSB 类的自动扩展
+    - 优化 JSB 对 Lambda 函数的自动绑定
 
-2. JSB test project
+2. JSB 测试例
 
-    In v3.8, JSB test project have been merged into C++ test project. That means cocos2d_js_tests.xcodeproj, cocos2d-js-win32.sln, cocos2d-js-win8.1-universal.sln have been removed. You can find jsb test targets in cocos2d_test.xcodeproj, cocos2d-win32.sln and cocos2d-win8.1-universal.sln.
+    在 v3.8 中， JSB 测试例被合入到 C++ 测试例中，也就是说 cocos2d_js_tests.xcodeproj，cocos2d-js-win32.sln，cocos2d-js-win8.1-universal.sln 被移除了。你可以在 cocos2d_test.xcodeproj，cocos2d-win32.sln 和 cocos2d-win8.1-universal.sln 中找到 jsb 测试例的 target。
 
-3. Compile custom framework in debug mode
+3. 编译 debug 模式的自定义引擎预编译库
 
-    From v3.7, you was able to generate customized Cocos Framework from cocos2d-x. We have improved this ability in v3.8, now  you will be able to generate framework in debug mode. Here is the some documentation about it:
+    从 v3.7 开始，你可以从 cocos2d-x 中生成自定义的 Cocos Framework。在 v3.8 中我们优化了这个功能，现在你可以生成 debug 模式下的 framework。以下是使用文档：
 
-    - [Framework compile documentation](http://www.cocos2d-x.org/wiki/Cocos_gen-libs).
-    - [How to customize Cocos Framework](http://www.cocos2d-x.org/docs/manual/studio/v4/chapter3/HowToCode/CustomizeFramework-v3.8/en)
-    - [How to generate Cocos Simulator](http://www.cocos2d-x.org/wiki/Cocos_gen-simulator)
+    - [Framework 编译文档](http://www.cocos2d-x.org/wiki/Cocos_gen-libs).
+    - [如何自定义 Cocos Framework](http://www.cocos2d-x.org/docs/manual/studio/v4/chapter3/HowToCode/CustomizeFramework-v3.8/en)
+    - [如何生成 Cocos Simulator](http://www.cocos2d-x.org/wiki/Cocos_gen-simulator)
 
-4. Portrait projects support
+4. 支持竖屏项目
 
-    From v3.8, you can generate portrait oriented games with Cocos Console:
+    从 v3.8 开始， 你使用 Cocos Console 生成竖屏项目：
 
     ```
     cocos new -l cpp|lua|js --portrait MyPortraitGame
     ```
 
-    More details can be found in [Cocos new command](http://www.cocos2d-x.org/wiki/Cocos_new) and [Cocos Console general documentation](http://www.cocos2d-x.org/wiki/Cocos2d-console)
+    更多细节可以参考 [Cocos new command](http://www.cocos2d-x.org/wiki/Cocos_new) 和 [Cocos Console general documentation](http://www.cocos2d-x.org/wiki/Cocos2d-console)。
 
-## Other changes
+## 其他变更
 
 - [NEW]           UI: Enhanced ScrollView with easing out scrolling
 - [NEW]           UI: Added PageView vertical scroll support
@@ -438,13 +437,13 @@ Here is some highlighted improvments and API changes:
 - [REFINE]        web: Avoid cc.loader resource loading being terminated while encounter errors
 - [REFINE]        web: Suspended the video player when the browser is minimized
 
-You can also take a look at [the full changelog](https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG)
+你也可以参考 [完整修改日志](https://github.com/cocos2d/cocos2d-x/blob/v3/CHANGELOG)。
 
-## New APIs
+## 新的 APIs
 
-In the above changes, there are some new APIs introduced in v3.8, they are listed here:
+以上的变更中，有一些新的 API 在 v3.8 中被引入，如下：
 
-1. PageView vertical scroll support
+1. PageView 垂直滚动支持
 
     ```
     PageView* pageView = PageView::create();
@@ -452,14 +451,14 @@ In the above changes, there are some new APIs introduced in v3.8, they are liste
     pageView->setDirection(ui::PageView::Direction::VERTICAL);
     ```
 
-2. Setter for line width in DrawNode
+2. DrawNode 线宽设置
 
     ```
     DrawNode* drawNode = DrawNode::create();
     drawNode->setLineWidth(5.0f);
     ```
 
-3. Bitwise flags of action
+3. action 位标识
 
     ```
     enum Flags {
@@ -481,7 +480,7 @@ In the above changes, there are some new APIs introduced in v3.8, they are liste
     action->setFlags(Flags::POSITION);
     ```
 
-4. Get current frame index in animation
+4. 获取动画当前帧索引
 
     ```
     auto action = RepeatForever::create( Animate::create(animation);
@@ -493,35 +492,35 @@ In the above changes, there are some new APIs introduced in v3.8, they are liste
     
     ```
 
-5. File's extension name getter
+5. 文件扩展名获取
 
     ```
     std::string extension = FileUtils::getInstance()->getFileExtension("grossini.png");
     ```
 
-6. Vibration support
+6. 震动支持
 
     ```
     // Virate the device for 0.5 second
     Device::vibrate(0.5f);
     ```
 
-7. Remove key pairs from UserDefault
+7. 从 UserDefault 移除键值对
 
     ```
     // Remove value referenced by "some key"
     UserDefault::getInstance()->deleteValueForKey("some key");
     ```
 
-# The Next Step
+# 下一步计划
 
-In v3.9, we will continue to improve our framework, several important tasks are: 
+在 v3.9 中，我们会持续优化引擎框架，目前有如下几项重要任务：
 
-1. We are about to provide a script based component system.
-2. Improve ScrollView, ListView performance in both native and web engine.
-3. Improve 2D particle system performance.
-4. Improve web engine renderer logic and performance.
-5. Support Action inheritance in JSB.
-6. Remove libcurl dependency on iOS and Android.
+1. 我们考虑提供一套基于脚本的组件系统
+2. 优化 native 和 web 引擎的 ScrollView，ListView 性能。
+3. 优化 2D 粒子系统的性能。
+4. 优化 web 引擎的渲染逻辑和性能。
+5. 支持 JSB 的 Action 继承机制。
+6. 移除 Android 和 iOS 对 libcurl 的依赖。
 
-[The v3.9 milestone tasks](https://github.com/cocos2d/cocos2d-x/milestones/v3.9) (It's still being reviewing and will be updated)
+[v3.9 里程碑](https://github.com/cocos2d/cocos2d-x/milestones/v3.9)（一直在审查和更新之中）
