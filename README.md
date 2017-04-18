@@ -2,7 +2,7 @@
 
 
 <div align="center"><img src="cocos.png" alt="" border="0" title="Cocos" /><br></br></div>
-###Cocos2d-x是什么？
+### Cocos2d-x是什么？
 
 * Cocos2d-x是一个**免费，开源，跨平台的游戏引擎**。
 
@@ -18,7 +18,7 @@
 
 * 资料大全（全版本）：[https://github.com/fusijie/Cocos-Resource](https://github.com/fusijie/Cocos-Resource)
 
-###版本发布说明
+### 版本发布说明
 
 * 本书包含中文和英文两个版本的Cocos2d-x发布说明。
 
@@ -26,13 +26,13 @@
 
 * 中文发布说明为个人翻译，如有错误，欢迎[指正](https://github.com/fusijie/Cocos2dx-Release-Note/issues)。
 
-###本书地址
+### 本书地址
 
 * GitBook地址：[http://fusijie.github.io/Cocos2dx-Release-Note](http://fusijie.github.io/Cocos2dx-Release-Note)
 
 * Github地址：[https://github.com/fusijie/Cocos2dx-Release-Note](https://github.com/fusijie/Cocos2dx-Release-Note)
 
-###联系我
+### 联系我
 
 * Email: Geek.Jacky@Gmail.com
 

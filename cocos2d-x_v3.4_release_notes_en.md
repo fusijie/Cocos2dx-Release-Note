@@ -127,7 +127,7 @@ Run
 
 Please refer to this document: [ReadMe](../README.md)
 # v3.4
-##Bugs fixed in v3.4
+## Bugs fixed in v3.4
 * C++: crash on armeabi-v7a arch device which do not support NEON instructions
 * GLProgram: crash on low end device with no more than 8 attributes support
 * New audio: game freeze if audio played two many times on android
@@ -136,14 +136,14 @@ Please refer to this document: [ReadMe](../README.md)
 
 # v3.4rc1
 
-##Highlights of v3.4rc1
+## Highlights of v3.4rc1
 * C++: added CC_USE_CULLING macro to control if enable auto culling or not
 * FileUtils::fullPathForFilename will return empty string when file can not be found
 * VertexBuffer&IndexBuffer: allow setting usage(GL_STATIC_DRAW or GL_DYNAMIC_DRAW) in create method
 * Renderer: 3D rendering support for 2d objects
 
-##Features in detail
-###3D rendering support for 2D objects
+## Features in detail
+### 3D rendering support for 2D objects
 This feature enables Sprite, Label, Particle to be rendered in 3D space by adding them as children of Sprite3D or Billboard. You can achieve effects like blob shadow, 3D particle, Visual damage number popups
 ```c++
 auto billboard = Billboard::create();
@@ -151,10 +151,10 @@ auto label = Label::create();
 label->setString("+100");
 billboard->addChild(label);
 ```
-###Culling is now an options by CC_USE_CULLING macro
+### Culling is now an options by CC_USE_CULLING macro
 Culling is an important features in cocos2d-x v3.x, but some developer may not want to use culling when all of the scene exist in one screen. A macro `CC_USE_CULLING` in `CCConfig.h` can be used to enable or disable culling.
 
-##Bugs fixed in v3.4rc1
+## Bugs fixed in v3.4rc1
 * DrawNode: fix random crash because of init opengl buffer wrongly
 * DrawNode: drawPoints() can not set ponit size
 * EventDispatcher: crash if adding/removing event listeners and dispatching event in event callback function
@@ -164,7 +164,7 @@ Culling is an important features in cocos2d-x v3.x, but some developer may not w
 * UI: fix crash when navigation controller is null
 
 # v3.4rc0
-##Bugs fixed in v3.4rc0
+## Bugs fixed in v3.4rc0
 * FileUtils::GetData() can not get data on windows
 * FileUtils::GetData() memory leaks when file size is 0 on windows
 * Crash if GLProgram log compile or link error info on windows

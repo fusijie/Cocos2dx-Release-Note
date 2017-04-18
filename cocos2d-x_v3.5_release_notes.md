@@ -131,8 +131,8 @@
 * 修复MotionStreak无法正常运行MoveTo和MoveBy的错误
 * 其他bug修复
 
-##细节
-###支持更多的particle（PU）
+## 细节
+### 支持更多的particle（PU）
 * Observer: On Count Observer, On Emission Observer, On Expire Observer, On Position observer, On Clear Observer, On Time Observer, On Quota Observer, On Velocity Observer, On Collision Observer, On Event Flag Observer, On Random Observer.
 * 
 
