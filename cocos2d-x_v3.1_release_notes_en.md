@@ -262,7 +262,7 @@ videoPlayer->play();
 
 3.1 supports focus navigation of UI widget which is very useful for OTT manufacturer.
 
-###Usage
+### Usage
 Suppose that your screen has 3 widgets layout horizontally. We could define it like this:
 
 ```c++
@@ -318,7 +318,7 @@ void UIFocusTestBase::onFocusChanged(cocos2d::ui::Widget *widgetLostFocus, cocos
 For more usage information, please refer to [this file](https://github.com/cocos2d/cocos2d-x/blob/v3/tests/cpp-tests/Classes/UITest/CocoStudioGUITest/UIFocusTest/UIFocusTest.cpp) for more information.
 
 
-###Limitations
+### Limitations
 Only Layout type `HORIZONTAL` and `VERTICAL` is supported which means we could not treat Scrollview and PageView as a base layout.
 
 The following layouts:

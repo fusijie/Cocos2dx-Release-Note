@@ -129,7 +129,7 @@
 请参考: [ReadMe](https://github.com/cocos2d/cocos2d-x/blob/cocos2d-x-3.4/README.md)
 
 # v3.4
-##v3.4 bug修复
+## v3.4 bug修复
 * C++: 在不支持NEON指令集的armeavbi-v7a架构设备上崩溃
 * GLProgram: 在不超过8个属性支持的低端设备上崩溃
 * New audio: 在安卓上播放太多次导致游戏卡死
@@ -138,14 +138,14 @@
 
 # v3.4rc1
 
-##v3.4rc1亮点
+## v3.4rc1亮点
 * C++: 添加CC_USE_CULLING宏用于控制是否开启自动剔除功能
 * 当找不到文件时，FileUtils::fullPathForFilename将返回一个空字符串
 * VertexBuffer&IndexBuffer: 在create方法中允许设置使用（L_STATIC_DRAW 或 GL_DYNAMIC_DRAW）
 * Renderer: 3D渲染支持2D物体
 
-##细节
-###3D渲染支持2D物体
+## 细节
+### 3D渲染支持2D物体
 这个特性允许将Sprite，Label，Particle作为Sprite3D或者Billboard的子节点在3D空间中进行渲染。你可以实现一些类似Blob阴影，3D粒子，以及战斗伤害文字的效果。
 ```c++
 auto billboard = Billboard::create();
@@ -153,10 +153,10 @@ auto label = Label::create();
 label->setString("+100");
 billboard->addChild(label);
 ```
-###通过CC_USE_CULLING宏控制是否进行剔除
+### 通过CC_USE_CULLING宏控制是否进行剔除
 在Cocos2d-x v3.x中，剔除是一项非常重要的功能，但是一些开发者可能不希望使用这样的功能，比如当所有的场景显示在一个屏幕内的时候。现在`CCConfig.h`中有一个`CC_USE_CULLING`的宏可以用来开启/关闭剔除功能。
 
-##v3.4rc1 bug修复
+## v3.4rc1 bug修复
 * DrawNode: 修复opengl缓存初始化错误导致的随机崩溃
 * DrawNode: drawPoints()不能设置点大小
 * EventDispatcher: 在事件回调函数中添加/移除事件监听器和分发事件导致的崩溃
@@ -166,7 +166,7 @@ billboard->addChild(label);
 * UI: 修复当navigation controller为null时的崩溃
 
 # v3.4rc0
-##v3.4rc0 bug修复
+## v3.4rc0 bug修复
 * FileUtils::GetData()在windows平台不能获取数据
 * FileUtils::GetData()在windows平台上当文件大小为0导致的内存泄漏
 * windows平台上当GLProgram记录编译或者链接错误信息时崩溃
