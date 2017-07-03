@@ -269,7 +269,7 @@ videoPlayer->play();
 
 3.1支持UI控件的焦点导航，这对OTT制造商是非常有用的。
 
-###用法
+### 用法
 
 支持屏幕中拥有3个水平排布的窗口，我们可以这么定义：
 
@@ -328,7 +328,7 @@ void UIFocusTestBase::onFocusChanged(cocos2d::ui::Widget *widgetLostFocus, cocos
 更多使用信息请参考[这个文件](https://github.com/cocos2d/cocos2d-x/blob/v3/tests/cpp-tests/Classes/UITest/CocoStudioGUITest/UIFocusTest/UIFocusTest.cpp)。
 
 
-###局限
+### 局限
 
 只支持两种类型的布局，`HORIZONTAL`和`VERTICAL`，这意味着我们不能使用Scrollview和PageView作为一个基础布局。
 

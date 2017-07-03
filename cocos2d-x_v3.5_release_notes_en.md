@@ -131,7 +131,7 @@ There are only some minor changes and bug fixes in this verison.
 * More bugs fixed
 
 ## Features in detail
-###More 3D particle features of (PU) supported
+### More 3D particle features of (PU) supported
 * Observer: On Count Observer, On Emission Observer, On Expire Observer, On Position observer, On Clear Observer, On Time Observer, On Quota Observer, On Velocity Observer, On Collision Observer, On Event Flag Observer, On Random Observer.
 
 * Event Handler: Do Enable Component Event Handler, Do Expire Event Handler, Do Placement Particle Event Handler, Do Stop System Event Handler, Do Affector Event Handler, Do Freeze Event Handler, Do Scale Event Handler.
